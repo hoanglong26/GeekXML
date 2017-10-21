@@ -20,6 +20,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import utilities.Const;
 import utilities.CrawlData;
 import utilities.Utilities;
 
@@ -29,9 +30,7 @@ import utilities.Utilities;
  */
 public class DispatcherServlet extends HttpServlet {
 
-    private final String homePage = "index.jsp";
-
-
+    private final String rankingServlet = "RankingServlet";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -45,11 +44,21 @@ public class DispatcherServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String url = homePage;
+        String url = Const.homepage;
         try {
-            GameList tmp = GameDAO.getGameRankingRange(20, 30);
-            System.out.println(tmp);
-            
+            String action = request.getParameter("action");
+
+            if (action == null) {
+                //invalid
+                url = rankingServlet;
+            } else {
+                if (action.equals("RANKING")) {
+                    url = rankingServlet;
+                } else {
+                    url = Const.homepage;
+                }
+            }
+
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);

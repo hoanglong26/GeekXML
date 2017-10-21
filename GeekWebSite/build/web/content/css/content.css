@@ -1,0 +1,188 @@
+﻿.newsupdate ul {
+	width: 100%;
+    margin-top: 0px;
+    position: relative;
+	list-style: none;
+	
+}
+
+.newsupdate ul li {
+	width: 1041px;
+    float: left;
+    background: #E9E9E9;
+    position: relative;
+    margin-left: -28px;
+    margin-bottom: 10px;
+ 
+
+}
+
+.newsupdate ul li .topper img {
+  width: 310px;
+  height: 200px;
+  float: left;
+
+}
+.newsupdate ul li img {
+  width: 220px;
+  height: 160px;
+  float: left;
+  margin-right: 15px;
+}
+
+
+
+.startnews ul {
+	width: 100%;
+    margin-top: 0px;
+    position: relative;
+	list-style: none;
+  z-index:3;
+  
+}
+
+.startnews ul li {
+	width: 1041px;
+    float: left;
+    background: #E9E9E9;
+    position: relative;
+    margin-left: -28px;
+    margin-bottom: 10px;
+
+
+}
+
+.startnews ul li .topper img {
+  width: 310px;
+  height: 200px;
+  float: left;
+
+}
+.startnews ul li img {
+  width: 220px;
+  height: 160px;
+  float: left;
+  margin-right: 15px;
+ 
+
+}
+
+.newsupdate{
+	display: inline-block;
+	left: 143px;
+	top: 663px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	opacity: 0;
+	z-index:2;
+	transition: all 0.7s ease-in-out;
+}
+
+.startnews{
+	display: inline-block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	z-index:2;
+	transition: all 0.7s ease-in-out;
+}
+
+.newsupdate:target{
+    margin-left: 0%;
+	opacity: 1;
+	z-index:4;
+	transition: all 0.6s ease-in-out;
+}
+
+
+.maintitle{
+	width:900px;
+	font-family:Roboto;
+	font-size:16px;
+	margin:5px;
+	
+
+}
+
+.maincontent{
+	font-family:Roboto;
+	font-size:16px;
+	width:900px;
+	margin:5px;
+	font-weight:450;
+
+
+}
+
+
+.navigator{
+	top:1343px; 
+	margin-left:350px;
+	position:absolute;
+	width:373px;
+}
+
+.navigator ul{
+	position:absolute;
+	margin-left:20px;
+}
+
+
+
+.navigator ul li{
+	display:inline;
+	position:relative;
+	list-style:none;
+	padding-top:4px;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	margin-left:10px;
+	font-family:"Roboto Light";
+	font-size:16px;
+	font-weight:500;
+	background-color:#EA0000;
+	border-bottom-left-radius:35px;
+	border-top-left-radius:35px;
+	border-bottom-right-radius:35px;
+	border-top-right-radius:35px;
+	cursor:pointer;
+}
+
+.navigator ul li:hover{
+	background-color:#000;
+}
+
+.navigator ul li a{
+	color:#FFF;
+}
+
+
+#more{
+	cursor: pointer;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#previous{
+	cursor: pointer;
+	font-size:18px;
+	font-weight:bold;
+}
+
+.pageAfter{
+	top:-22px;
+	position:fixed;
+	left:35px;
+	visibility:hidden;
+}
+
+.blank{
+	visibility:hidden;
+}
+
+.pageAfter2{
+	top:-43px;
+	position:fixed;
+	left:35px;
+	visibility:hidden;
+}

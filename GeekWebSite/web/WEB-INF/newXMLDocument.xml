@@ -1,40 +1,223 @@
-<root>
-    <content>
-        <div class="content-detail">
-            <div id="">
-                <table align="center" class="imageBox">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center;">
-                                <img src="http://image1.ictnews.vn/_Files/2017/10/19/gmail-app-icon-ios.jpg" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="PCaption"> </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>Google muốn biến Gmail thành nơi bạn có thể kiểm tra mọi tài khoản email. Công ty vừa thông báo đang thử nghiệm phiên bản Gmail mới trên iOS cho phép người dùng bổ sung các tài khoản không phải của Google, như Outlook (Hotmail hoặc Live), Yahoo. Google mời mọi người <a href="https://services.google.com/fb/forms/gmail-ios-beta/">đăng ký dùng thử</a> phiên bản này trên Twitter.</p>
-                <blockquote class="twitter-tweet" data-lang="en">
-                    <p dir="ltr" lang="en">Calling Gmail iOS users! Help us test a new feature - check your non-Google accounts from the official Gmail iOS app <a href="https://t.co/qVG44ygii2">https://t.co/qVG44ygii2</a> 
-                        <a href="https://t.co/WZlUDSOtWX">pic.twitter.com/WZlUDSOtWX</a>
-                    </p>— Gmail (@gmail) <a href="https://twitter.com/gmail/status/920361277473677314?ref_src=twsrc%5Etfw">October 17, 2017</a>
-                </blockquote>
-            </div>
-            <div id="AdAsia"></div><!-- BEGIN TAG - DO NOT MODIFY -->
-        </script><!-- END TAG -->
-        <div id="">
-            <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <p>Khi bấm vào liên kết, họ được đưa đến mẫu đăng ký trực tuyến để tham gia vào chương trình. Để đăng ký, người dùng phải dùng bản Gmail mới nhất trên iOS 10 trở lên và có ít nhất một tài khoản email không phải Gmail. Sau đó, họ xác nhận các loại đang sử dụng từ danh sách, bao gồm Outlook, Hotmail, Live, Yahoo, Yandex, Mail.ru hoặc “other”.</p>
-            <p>Do là bản thử nghiệm, bạn không thể tải trực tiếp ứng dụng từ App Store mà bản beta được phát hành qua nền tảng Apple TestFlight. Một điều đáng chú ý theo người phát ngôn Google chính là đây là lần đầu công ty viết bản thử nghiệm Gmail cho iOS thông qua TestFlight với người dùng bên ngoài. Khi được hỏi chi tiết về chương trình, phát ngôn viên từ chối tiết lộ mà chỉ khẳng định công ty luôn tìm mọi cách để nâng cao trải nghiệm người dùng. Google cũng không nói bao nhiêu người được thử nghiệm phiên bản mới hay mục đích sâu xa hơn.</p>
-        </div>
-        </div>
-    </content>
-    <author>
-        <p align="right">
-            <b>Du Lam (Theo TechCrunch)</b>
-        </p>
-    </author>
-</root>
+<?xml version='1.0' ?>
+<gameList xmlns="http://www.game.net">
+    <game>
+        <id>32946</id>
+        <name>Super Mario Galaxy</name>
+        <link>https://www.gamerankings.com/wii/915692-super-mario-galaxy/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 2007</pulisherAndReleaseDate>
+        <platform>WII</platform>
+        <overallScore>97.64%</overallScore>
+        <totalVote>78 đánh giá</totalVote>
+        <description>The ultimate Nintendo hero is taking the ultimate step ... out into space. Join Mario as he ushers in a new era of video games, defying gravity across all the planets in the galaxy. When some creature escapes into space with Princess Peach, Mario gives chase, exploring bizarre planets all across the galaxy. Mario, Peach and enemies new and old are here. Players run, jump and battle enemies as they explore all the planets in the galaxy. Since this game makes full use of all the features of the Wii Remote, players have to do all kinds of things to succeed: pressing buttons, swinging the Wii Remote and the Nunchuk, and even pointing at and dragging things with the pointer. Since he''s in space, Mario can perform mind-bending jumps unlike anything he''s done before. He''ll also have a wealth of new moves that are all based around tilting, pointing and shaking the Wii Remote. Shake, tilt and point! Mario takes advantage of all the unique aspects of the Wii Remote and Nunchuk controller, unleashing new moves as players shake the controller and even point at and drag items with the pointer.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/9/7/55597_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>32956</id>
+        <name>The Legend of Zelda: Ocarina of Time</name>
+        <link>https://www.gamerankings.com/n64/197771-the-legend-of-zelda-ocarina-of-time/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 1998</pulisherAndReleaseDate>
+        <platform>N64</platform>
+        <overallScore>97.54%</overallScore>
+        <totalVote>28 đánh giá</totalVote>
+        <description>As a young boy, Link is tricked by Ganondorf, the King of the Gerudo Thieves. The evil human uses Link to gain access to the Sacred Realm, where he places his tainted hands on Triforce and transforms the beautiful Hyrulean landscape into a barren wasteland. Link is determined to fix the problems he helped to create, so with the help of Rauru he travels through time gathering the powers of the Seven Sages.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/7/6/4/4764_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>32966</id>
+        <name>Super Mario Galaxy 2</name>
+        <link>https://www.gamerankings.com/wii/960551-super-mario-galaxy-2/index.html</link>
+        <pulisherAndReleaseDate>Nintendo EAD Tokyo /Nintendo, 2010</pulisherAndReleaseDate>
+        <platform>WII</platform>
+        <overallScore>97.35%</overallScore>
+        <totalVote>56 đánh giá</totalVote>
+        <description>This adventure for the Wii console marks the first time a second 3-D Mario game has arrived in the same console generation. In the game, Mario rides his trusty dinosaur companion, Yoshi, to new stars and the fantastic worlds found there. This 3-D platforming adventure provides longtime video game fans with a fresh round of out-of-this-world challenges in the style introduced in the critically acclaimed original.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/8/2/8/113828_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>32974</id>
+        <name>The Legend of Zelda: Breath of the Wild</name>
+        <link>https://www.gamerankings.com/switch/189707-the-legend-of-zelda-breath-of-the-wild/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 2017</pulisherAndReleaseDate>
+        <platform>NS</platform>
+        <overallScore>97.28%</overallScore>
+        <totalVote>62 đánh giá</totalVote>
+        <description>STEP INTO A WORLD OF ADVENTURE!Forget everything you know about The Legend of Zelda games. Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure.Features:*    Explore the wilds of Hyrule any way you like - Climb up towers and mountain peaks in search of new destinations, then set your own path to get there and plunge into the wilderness. Along the way, you''ll battle towering enemies, hunt wild beasts and gather ingredients for the food and elixirs you''ll need to sustain you on your journey.*    More than 100 Shrines of Trials to discover and explore - Shrines dot the landscape, waiting to be discovered in any order you want. Search for them in various ways, and solve a variety of puzzles inside. Work your way through the traps and devices inside to earn special items and other rewards that will help you on your adventure.*    Be prepared and properly equipped - With an entire world waiting to be explored, you''ll need a variety of outfits and gear to reach every corner. You may need to bundle up with warmer clothes or change into something better suited to the desert heat. Some clothing even has special effects that, for example, can make you faster and stealthier.*    Battling enemies requires strategy - The world is inhabited with enemies of all shapes and sizes. Each one has its own attack method and weaponry, so you must think quickly and develop the right strategies to defeat them.*    amiibo compatibility - Tap the Wolf Link amiibo (sold separately) to make Wolf Link appear in game. Wolf Link will attack enemies on his own and help you find items you''re searching for.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/6/2/599662_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>32984</id>
+        <name>Grand Theft Auto IV</name>
+        <link>https://www.gamerankings.com/ps3/933036-grand-theft-auto-iv/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2008</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>97.04%</overallScore>
+        <totalVote>60 đánh giá</totalVote>
+        <description>For Niko Bellic, fresh off the boat from Europe, it is the hope he can escape his past. For his cousin, Roman, it is the vision that together they can find fortune in Liberty City, gateway to the land of opportunity. As they slip into debt and are dragged into a criminal underworld by a series of shysters, thieves and sociopaths, they discover that the reality is very different from the dream in a city that worships money and status, and is heaven for those who have them and a living nightmare for those who don''t.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/0/2/76202_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>32994</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/ps3/634490-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2013</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>97.01%</overallScore>
+        <totalVote>34 đánh giá</totalVote>
+        <description>Los Santos: a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty and cheap reality TV.Amidst the turmoil, three very different criminals plot their own chances of survival and success: Franklin, a street hustler looking for real opportunities and serious money; Michael, a professional ex-con whose retirement is a lot less rosy than he hoped it would be; and Trevor, a violent maniac driven by the chance of a cheap high and the next big score. Running out of options, the crew risks everything in a series of daring and dangerous heists that could set them up for life.The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game''s three lead characters, playing all sides of the game''s interwoven story.All the classic hallmarks of the groundbreaking series return, including incredible attention to detail and Grand Theft Auto''s darkly humorous take on modern culture, alongside a brand new and ambitious approach to open world multiplayer.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/4/6/4/196464_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33003</id>
+        <name>Grand Theft Auto IV</name>
+        <link>https://www.gamerankings.com/xbox360/933037-grand-theft-auto-iv/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2008</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>96.67%</overallScore>
+        <totalVote>81 đánh giá</totalVote>
+        <description>For Niko Bellic, fresh off the boat from Europe, it is the hope he can escape his past. For his cousin, Roman, it is the vision that together they can find fortune in Liberty City, gateway to the land of opportunity. As they slip into debt and are dragged into a criminal underworld by a series of shysters, thieves and sociopaths, they discover that the reality is very different from the dream in a city that worships money and status, and is heaven for those who have them and a living nightmare for those who don''t.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/1/8/76218_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33013</id>
+        <name>SoulCalibur</name>
+        <link>https://www.gamerankings.com/dreamcast/198705-soulcalibur/index.html</link>
+        <pulisherAndReleaseDate>Namco, 1999</pulisherAndReleaseDate>
+        <platform>DC</platform>
+        <overallScore>96.56%</overallScore>
+        <totalVote>25 đánh giá</totalVote>
+        <description>This is a tale of souls and swords, transcending the world and all its history, told for all eternity... The greatest weapons-based fighter returns, this time on Sega Dreamcast. Soul Calibur unleashes incredible graphics, fantastic fighters, and combos so amazing they''ll make your head spin!</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/7/9/7379_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33021</id>
+        <name>Uncharted 2: Among Thieves</name>
+        <link>https://www.gamerankings.com/ps3/955125-uncharted-2-among-thieves/index.html</link>
+        <pulisherAndReleaseDate>Naughty Dog/SCE Australia, 2009</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>96.43%</overallScore>
+        <totalVote>82 đánh giá</totalVote>
+        <description>In 1292, after spending nearly 20 years in the court of emperor Kublai Khan, Marco Polo departed China with 14 ships filled with over 600 passengers and crew. Eighteen months later, when Marco Polo arrived at his destination, only one ship remained and only 18 passengers survived. Although Marco Polo described every aspect of his adventures in detail, he never revealed what happened to these lost ships, passengers or treasure on board - even on his deathbed. Drawn in by the potential riches to be found - but most inspired by the intrigue of the historical mystery - Drake embarks on a quest to find the lost fleet. He soon realizes that Marco Polo was hiding a much bigger secret - he had gone on a secret expedition on behalf of the emperor to find the mythical kingdom of Shambhala (otherwise known as Shangri-La) and to recover the legendary Cintamani Stone, the</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/0/7/106607_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33031</id>
+        <name>Super Mario 64</name>
+        <link>https://www.gamerankings.com/n64/198848-super-mario-64/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 1996</pulisherAndReleaseDate>
+        <platform>N64</platform>
+        <overallScore>96.41%</overallScore>
+        <totalVote>22 đánh giá</totalVote>
+        <description>Mario is super in a whole new way! Combining the finest 3-D graphics ever developed for a video game and an explosive sound track, Super Mario 64 becomes a new standard for video games. It''s packed with bruising battles, daunting obstacle courses and underwater adventures. Retrieve the Power Stars from their hidden locations and confront your arch nemesis - Bowser, King of the Koopas!</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/7/9/3/7793_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33041</id>
+        <name>The Orange Box</name>
+        <link>https://www.gamerankings.com/xbox360/934384-the-orange-box/index.html</link>
+        <pulisherAndReleaseDate>Valve Software/EA Games, 2007</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>96.36%</overallScore>
+        <totalVote>58 đánh giá</totalVote>
+        <description>Games included in The Orange Box compilation: The original Half-Life 2 - The player again picks up the crowbar of research scientist Gordon Freeman, who finds himself on an alien-infested Earth being picked to the bone, its resources depleted, its populace dwindling. Freeman is thrust into the unenviable role of rescuing the world from the wrong he unleashed back at Black Mesa. And a lot of people - people he cares about - are counting on him. Half-Life 2: Episode One - The player reprises his role of Dr. Freeman, who must immediately face the repercussions of his actions in City 17 and the Citadel. Freeman reconnects with Alyx Vance and her robot, Dog, as they continue their support of the resistance''s battle against the Combine forces. Half-Life 2: Episode Two -- the second installment in Valve''s episodic trilogy advances the award-winning story, leading the player to new locations outside of City 17. Portal - a pioneering type of single player action game that rewrites the rules for how players approach and manipulate their environment � much like how Half-Life 2''s Gravity Gun reinvented the way gamers interact with objects in the game. Team Fortress 2 - an all-new version of the legendary title that spawned team based multiplayer action games. The game''s daring new art style features the most advanced graphics of any Source-based game released to date.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/1/5/78315_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33051</id>
+        <name>Metroid Prime</name>
+        <link>https://www.gamerankings.com/gamecube/447244-metroid-prime/index.html</link>
+        <pulisherAndReleaseDate>Retro Studios/Nintendo, 2002</pulisherAndReleaseDate>
+        <platform>GC</platform>
+        <overallScore>96.33%</overallScore>
+        <totalVote>87 đánh giá</totalVote>
+        <description>Samus returns in a new mission to unravel the mystery behind the ruined walls scattered across Tallon IV. In Metroid Prime, you''ll play the role of this bounty hunter and view the world through her visor, which displays information ranging from current energy levels to ammunition. Equipped with a Power Beam and Gravity Suit, you must shoot locked switches, solve puzzles, and eliminate enemies. It''s up to you to explore the world and recover more power-ups and weapons, which gradually open more gameplay areas.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/1/3/1/12131_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33061</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/ps4/805601-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2014</pulisherAndReleaseDate>
+        <platform>PS4</platform>
+        <overallScore>96.33%</overallScore>
+        <totalVote>41 đánh giá</totalVote>
+        <description>Los Santos: a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty and cheap reality TV.Amidst the turmoil, three very different criminals plot their own chances of survival and success: Franklin, a street hustler looking for real opportunities and serious money; Michael, a professional ex-con whose retirement is a lot less rosy than he hoped it would be; and Trevor, a violent maniac driven by the chance of a cheap high and the next big score. Running out of options, the crew risks everything in a series of daring and dangerous heists that could set them up for life.The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game''s three lead characters, playing all sides of the game''s interwoven story.All the classic hallmarks of the groundbreaking series return, including incredible attention to detail and Grand Theft Auto''s darkly humorous take on modern culture, alongside a brand new and ambitious approach to open world multiplayer.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/8/6/402386_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33071</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/xbox360/634491-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2013</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>96.10%</overallScore>
+        <totalVote>39 đánh giá</totalVote>
+        <description>Los Santos: a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty and cheap reality TV.Amidst the turmoil, three very different criminals plot their own chances of survival and success: Franklin, a street hustler looking for real opportunities and serious money; Michael, a professional ex-con whose retirement is a lot less rosy than he hoped it would be; and Trevor, a violent maniac driven by the chance of a cheap high and the next big score. Running out of options, the crew risks everything in a series of daring and dangerous heists that could set them up for life.The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game''s three lead characters, playing all sides of the game''s interwoven story.All the classic hallmarks of the groundbreaking series return, including incredible attention to detail and Grand Theft Auto''s darkly humorous take on modern culture, alongside a brand new and ambitious approach to open world multiplayer.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/4/7/5/196475_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33081</id>
+        <name>Batman: Arkham City</name>
+        <link>https://www.gamerankings.com/ps3/981375-batman-arkham-city/index.html</link>
+        <pulisherAndReleaseDate>Rocksteady Studios/Warner Bros. Interactive Entertainment, 2011</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>95.94%</overallScore>
+        <totalVote>33 đánh giá</totalVote>
+        <description>Developed by Rocksteady Studios, Batman: Arkham City builds upon the intense, atmospheric foundation of Batman: Arkham Asylum, sending players soaring into Arkham City, the new maximum security</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/0/3/2/136032_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33091</id>
+        <name>The Orange Box</name>
+        <link>https://www.gamerankings.com/pc/938210-the-orange-box/index.html</link>
+        <pulisherAndReleaseDate>Valve Software/EA Games, 2007</pulisherAndReleaseDate>
+        <platform>PC</platform>
+        <overallScore>95.88%</overallScore>
+        <totalVote>30 đánh giá</totalVote>
+        <description>Games included in The Orange Box compilation: The original Half-Life 2 - The player again picks up the crowbar of research scientist Gordon Freeman, who finds himself on an alien-infested Earth being picked to the bone, its resources depleted, its populace dwindling. Freeman is thrust into the unenviable role of rescuing the world from the wrong he unleashed back at Black Mesa. And a lot of people - people he cares about - are counting on him. Half-Life 2: Episode One - The player reprises his role of Dr. Freeman, who must immediately face the repercussions of his actions in City 17 and the Citadel. Freeman reconnects with Alyx Vance and her robot, Dog, as they continue their support of the resistance''s battle against the Combine forces. Half-Life 2: Episode Two -- the second installment in Valve''s episodic trilogy advances the award-winning story, leading the player to new locations outside of City 17. Portal - a pioneering type of single player action game that rewrites the rules for how players approach and manipulate their environment � much like how Half-Life 2''s Gravity Gun reinvented the way gamers interact with objects in the game. Team Fortress 2 - an all-new version of the legendary title that spawned team based multiplayer action games. The game''s daring new art style features the most advanced graphics of any Source-based game released to date.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/0/8/78308_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33100</id>
+        <name>Resident Evil 4</name>
+        <link>https://www.gamerankings.com/ps2/925156-resident-evil-4/index.html</link>
+        <pulisherAndReleaseDate>Capcom, 2005</pulisherAndReleaseDate>
+        <platform>PS2</platform>
+        <overallScore>95.85%</overallScore>
+        <totalVote>54 đánh giá</totalVote>
+        <description>Resident Evil 4 marks a new chapter in the Resident Evil series. You''ll rejoin Leon S. Kennedy six years after his first mission as a rookie cop from Resident Evil 2. Now a US agent, Leon is on a top secret mission to investigate the disappearance of the president''s daughter. As Leon, you must make your way to a mysterious location in Europe, where new enemies await. Take them down by using enhanced aim-and-shoot features and a new action button.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/2/8/15528_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33110</id>
+        <name>Resident Evil 4</name>
+        <link>https://www.gamerankings.com/gamecube/535840-resident-evil-4/index.html</link>
+        <pulisherAndReleaseDate>Capcom, 2005</pulisherAndReleaseDate>
+        <platform>GC</platform>
+        <overallScore>95.83%</overallScore>
+        <totalVote>99 đánh giá</totalVote>
+        <description>Resident Evil 4 marks a new chapter in the Resident Evil series. You''ll rejoin Leon S. Kennedy six years after his first mission as a rookie cop from Resident Evil 2. Now a US agent, Leon is on a top secret mission to investigate the disappearance of the president''s daughter. As Leon, you must make your way to a mysterious location in Europe, where new enemies await. Take them down by using enhanced aim-and-shoot features and a new action button.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/2/2/15522_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33120</id>
+        <name>Tekken 3</name>
+        <link>https://www.gamerankings.com/ps/198900-tekken-3/index.html</link>
+        <pulisherAndReleaseDate>Namco, 1998</pulisherAndReleaseDate>
+        <platform>PS</platform>
+        <overallScore>95.80%</overallScore>
+        <totalVote>23 đánh giá</totalVote>
+        <description>An ancient evil force has reawakened, attacking in secret and feeding on the souls of mighty warriors. To lure it out of hiding will take the greatest fighting contest the world has ever seen...Tekken 3. Some are fighting for revenge, some for honor, Ultimately, all are fighting for their lives and the fate of all mankind.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/9/6/5/7965_thumb.jpg</thumbnail>
+    </game>
+    <game>
+        <id>33129</id>
+        <name>Mass Effect 2</name>
+        <link>https://www.gamerankings.com/xbox360/944907-mass-effect-2/index.html</link>
+        <pulisherAndReleaseDate>BioWare/Electronic Arts, 2010</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>95.77%</overallScore>
+        <totalVote>75 đánh giá</totalVote>
+        <description>The Mass Effect trilogy is an emotionally charged science fiction adventure set in a vast universe filled with dangerous alien life and mysterious, uncharted planets. In Mass Effect 2, players will once again step into the role of the heroic Commander Shepard, commanding their crew of some of the most dangerous operatives from across the galaxy on a mission so challenging that it''s potentially suicidal. Featuring intense shooter action, a rich futuristic storyline, space exploration and emotionally engaging character interaction, the game delivers an unparalleled cinematic experience.</description>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/6/6/94366_thumb.jpg</thumbnail>
+    </game>
+</gameList>

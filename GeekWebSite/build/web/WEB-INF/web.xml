@@ -8,9 +8,17 @@
         <servlet-name>DispatcherServlet</servlet-name>
         <servlet-class>servlets.DispatcherServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RankingServlet</servlet-name>
+        <servlet-class>servlets.RankingServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/DispatcherServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RankingServlet</servlet-name>
+        <url-pattern>/RankingServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,0 +1,95 @@
+@charset "utf-8";
+.article{
+	padding:10px;
+}
+
+.article-title{
+	margin-left:10px;
+	font-family:Roboto;
+	font-size:26px;
+	font-weight:700;
+	padding:5px;		
+}
+
+.article-author{
+	margin-left:10px;
+	padding:5px;
+	font-family:"Roboto Light";
+	font-size:14px;
+	font-weight:600;
+}
+.article-body{
+	letf:100px;
+	padding:5px;
+	margin-left:10px;
+	font-family:Roboto;
+	font-size:16px;
+	font-weight:400;
+	text-align:justify;
+	width:96%;
+}
+
+.article-img{
+	width:100%;
+	text-align:center;
+}
+
+.article-img img{
+	min-width:50%;
+	max-width:70%;
+	padding-bottom:10px;
+	text-align:center;
+}
+
+.comment{
+	background-color:#E6E6E6;
+	padding-left:20px;
+	padding-bottom:5px;
+	margin-bottom:-20px;
+	border-top:solid 2px #CCCCCC;
+}
+
+.comment-title{
+	font-family:Roboto;
+	font-size:20px;
+	font-weight:500;
+	padding:5px;
+	padding-left:0px;
+}
+
+.comment form ul li{
+	display:table-cell;
+	alignment-adjust:central;
+}
+
+.cmt-line{
+	width:155%;
+	height:160px;
+	font-family:Roboto;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+.butt{
+	border-bottom-left-radius:7px;
+	border-bottom-right-radius:7px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	margin:5px;
+	margin-bottom:-10px;
+	margin-left:0px;
+}
+
+.bookmark{
+	background-color:#FFF;
+	margin-bottom:-30px;
+	border:solid 1px  #666666; 
+	width:500px;
+	height:190px;
+	border-bottom-left-radius:7px;
+	border-bottom-right-radius:7px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+}

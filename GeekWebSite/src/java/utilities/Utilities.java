@@ -5,12 +5,8 @@
  */
 package utilities;
 
-import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
-import entities.Article;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringReader;
@@ -36,7 +32,6 @@ import javax.xml.transform.sax.SAXSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import org.jcp.xml.dsig.internal.dom.Utils;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -71,6 +66,14 @@ public class Utilities {
 
         return doc;
     }
+    
+    public static Document stringToDom(String xmlSource) 
+            throws SAXException, ParserConfigurationException, IOException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        return builder.parse(new InputSource(new StringReader(xmlSource)));
+    }
+
 
     public static <T> void marshallerToTransfer(T object, OutputStream os) {
         try {
@@ -79,7 +82,6 @@ public class Utilities {
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
             marshaller.marshal(object, os);
         } catch (JAXBException ex) {
-            Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
