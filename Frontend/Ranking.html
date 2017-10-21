@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="Hinh/favicon.ico" />
+  <title>GeeK - Where players become gamers</title>
+  <link href="HomePage.css" rel="stylesheet" type="text/css">
+  <link href="article.css" rel="stylesheet" type="text/css">
+  <link href="ranking.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="Geek.js"></script>
+  
+</head>
+
+<body onload="picSwap()">
+
+  <div class="background">
+    <div class="container" style="background-image:url(Hinh/test.jpg);">
+
+
+      <div class="top">
+        <div class="topcontainer">
+          <input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="showResult();" id="key" />
+          <span class="ltop">
+			<img src="Hinh/search.png"  onMouseDown="showResult();"/>
+		</span>
+
+          <span class="rtop">
+			<a href="https://www.facebook.com/" ><img src="Hinh/facebook.png"/></a>
+			<a href="http://www.vimeo.com/" ><img src="Hinh/vimeo.png"/></a>
+            <a href="https://www.yahoo.com/" ><img src="Hinh/yahoo.png"/></a>
+            <a href="http://store.steampowered.com/" ><img src="Hinh/steam.png"/></a>
+		</span>
+        </div>
+      </div>
+
+
+
+      <div class="header">
+        <a href="Geek.html"><img src="Hinh/Geekf.png" alt="Logo" class="logo"/></a>
+        <img src="Hinh/banner15.png" class="banner" />
+        <img src="Hinh/banner12.png" id="pic" onMouseOver="picStop(false);" onMouseOut="picStop(true)" class="banner2" />
+        <!-- end .header -->
+      </div>
+
+      <div class="menu row">
+        <ul>
+          <li class="col-xs-2">|</li>
+          <li class="mlink col-xs-2"><a href="Geek.html">Home</a></li>
+          <li class="col-xs-2">|</li>
+          <li style="background-color:#C60000;" class="mlink col-xs-2"><a href="PcConsole.html">Ranking</a></li>
+          <li class="col-xs-2">|</li>
+          <li class="col-xs-1"></li>
+
+        </ul>
+      </div>
+
+
+      <div>
+        <table>
+          <caption>
+            <h1>Game Ranking</h1>
+          </caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th>NAME</th>
+              <th>RATING</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://gamefaqs.akamaized.net/box/3/0/4/629304_thumb.jpg" alt="" id="myImg" class="gameAvt"></td>
+              <td>1995</td>
+              <td>1987</td>
+            </tr>
+            <tr>
+              <td><img src="https://gamefaqs.akamaized.net/box/8/8/2/601882_thumb.jpg" alt="" id="myImg" class="gameAvt"></td>
+              <td>Web Development</td>
+              <td>Report Processing</td>
+            </tr>
+            <tr>
+              <td>Learning Curve</td>
+              <td>Easy</td>
+              <td>Complicated</td>
+            </tr>
+            <tr>
+              <td>Speed</td>
+              <td>Fast Development</td>
+              <td>Fast Execution</td>
+            </tr>
+            <tr>
+              <td>Integration</td>
+              <td>HTML</td>
+              <td>DBI</td>
+            </tr>
+            <tr>
+              <td>Code Libraries</td>
+              <td>Many Frameworks</td>
+              <td>CPAN Archives</td>
+            </tr>
+            <tr>
+              <td>Use</td>
+              <td>Widespread</td>
+              <td>Rare</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <div class="modal-content">
+          <img id="img01">
+          <h1>haaaaaaaaaaaa</h1>
+        </div>
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
+
+
+
+      <div class="menu row">
+        <ul>
+          <li class="col-xs-2">|</li>
+          <li class="mlink col-xs-2"><a href="Geek.html">Home</a></li>
+          <li class="col-xs-2">|</li>
+          <li style="background-color:#C60000;" class="mlink col-xs-2"><a href="PcConsole.html">Ranking</a></li>
+          <li class="col-xs-2">|</li>
+          <li class="col-xs-1"></li>
+
+        </ul>
+      </div>
+
+      <div class="footer">
+        <ul>
+          <li>Gee<span style="color:#d42020; font-weight:900;">K</span>.com &copy; Long Pham</li>
+          <li><img src="Hinh/add.png" />:&nbsp;Lầu 2, tòa nhà Innovation, lô 24, Công viên phần mềm Quang Trung, P.Tân Chánh
+            Hiệp, Quận 12, TP. Hồ Chí Minh.</li>
+          <li><img src="Hinh/tele.png" />:&nbsp;01682087435</li>
+          <li><img src="Hinh/mail.png" />:&nbsp;long.phamlp94@gmail.com</li>
+        </ul>
+        <!-- end .footer -->
+      </div>
+
+      <!-- end .container -->
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    var elts = document.getElementsByClassName('gameAvt');
+    for (var i = elts.length - 1; i >= 0; --i) {
+      elts[i].addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      });
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    function showModal(img2) {
+      // Get the modal
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      // var img = img2;
+
+      // Get the <span> element that closes the modal
+
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.image.net"
+           xmlns="http://www.image.net">
+    <xs:element name="image" type="imageItem"/>
+    <xs:complexType name="imageItem">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="link" type="xs:string"/>
+            <xs:element name="altImg" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

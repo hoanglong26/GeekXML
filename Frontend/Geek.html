@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="Hinh/favicon.ico" />
+	<title>GeeK - Where players become gamers</title>
+	<link href="HomePage.css" rel="stylesheet" type="text/css">
+	<link href="Thumbail.css" rel="stylesheet" type="text/css">
+	<link href="slider.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="Geek.js"></script>
+</head>
+
+<body onLoad="picSwap()">
+
+	<div class="background">
+		<div class="container" style="background-image:url(Hinh/test.jpg);">
+			<div class="top">
+				<div class="topcontainer">
+					<input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="showResult();" id="key" />
+					<span class="ltop">
+			<img src="Hinh/search.png"  onMouseDown="showResult();"/>
+					</span>
+
+
+					<span class="rtop">
+			<a href="https://www.facebook.com/" ><img src="Hinh/facebook.png"/></a>
+			<a href="http://www.vimeo.com/" ><img src="Hinh/vimeo.png"/></a>
+            <a href="https://www.yahoo.com/" ><img src="Hinh/yahoo.png"/></a>
+            <a href="http://store.steampowered.com/" ><img src="Hinh/steam.png"/></a>
+		</span>
+
+				</div>
+			</div>
+
+
+			<div class="header">
+				<a href="Geek.html"><img src="Hinh/Geekf.png" alt="Logo" class="logo"/></a>
+				<img src="Hinh/banner15.png" class="banner" />
+				<img src="Hinh/banner12.png" id="pic" onMouseOver="picStop(false);" onMouseOut="picStop(true)" class="banner2" />
+				<!-- end .header -->
+			</div>
+
+			<div class="menu row">
+				<ul>
+					<li class="col-xs-2">|</li>
+					<li style="background-color:#C60000;" class="mlink col-xs-2"><a href="Geek.html">Home</a></li>
+					<li class="col-xs-2">|</li>
+					<li class="mlink col-xs-2"><a href="ranking.html">Ranking</a></li>
+					<li class="col-xs-2">|</li>
+					<li class="col-xs-1"></li>
+
+				</ul>
+			</div>
+
+
+			<!-- BEGIN CONTENT-->
+
+			<div class="content">
+
+				<div class="boxTag">
+					<span class="tag">Mới cập nhật</span>
+				</div>
+
+				<div class="accordian">
+					<ul>
+						<li>
+							<div class="image_title">
+								<a href="bphone.html">Bphone: mua để chơi game, nên hay không?</a>
+								<div class="img-content">Bphone vô cùng xứng đáng được xếp vào danh sách những thiết bị đáng sở hữu nhất để phục vụ cho nhu cầu chiến game</div>
+							</div>
+							<a href="bphone.html">
+								<img src="Hinh/bphone.jpg" height="320" width="643"/>
+							</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="echo.html">Echo Prime - Game "đỉnh" bất ngờ miễn phí trên iOS</a>
+								<div class="img-content">Mới đây, game phiêu lưu hành động cũ mà hay Echo Prime từ hãng Robot Entertainment đã bất ngờ cho tải về miễn phí
+									trên App Store.</div>
+							</div>
+							<a href="echo.html">
+								<img src="Hinh/echo.jpg"  height="320" width="643"/>
+							</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="idea.html">Idea - Game chặt chém tuyệt đẹp xứ Hàn xâm chiếm mobile</a>
+								<div class="img-content">Idea là dự án game mobile chặt chém mới nhất sắp được phát hành dưới bàn tay của hãng game nổi tiếng Hàn Quốc Netmarble.</div>
+							</div>
+							<a href="idea.html">
+								<img src="Hinh/idea.jpg" height="320" width="643"/>
+							</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="cyper.html">Tại sao Nhật Bản là thị trường game mobile khó "ăn" nhất thế giới?</a>
+								<div class="img-content">Thị trường game mobile Nhật Bản là miền đất "dữ" cho mọi nhà phát triển nước ngoài cho dù nó đang có giá trị lớn
+									nhất thế giới..</div>
+							</div>
+							<a href="japan.html">
+								<img src="Hinh/japan.jpg" height="320" width="643"/>
+							</a>
+						</li>
+						<li>
+							<div class="image_title">
+								<a href="war.html">This War of Mine - Phiên bản mobile của game sinh tồn sắp ra mắt</a>
+								<div class="img-content">This War of Mine là tựa game sinh tồn lấy bối cảnh chiến tranh khốc liệt được nhào nặn dưới bàn tay nhà phát triển
+									11 bit studios sẽ ra mắt tháng 7.</div>
+							</div>
+							<a href="war.html">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg" height="320" width="643"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="boxTag">
+					<span class="tag">News</span>
+				</div>
+
+				<div id="grid-wrap">
+					<div class="grid-box featured" style="position: absolute; left: 0px; top: 0px;height:365px">
+
+						<article class="post entry1" style="height: 100%;background-color:#F33">
+
+							<div class="grid-box-img"><a href="ti5.html" rel="bookmark" title="Giải DOTA 2 TI5 tự phá vỡ kỉ lục tiền thưởng của mình">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+							<header class="entry-header">
+								<h2 class="entry-title">
+									<a href="ti5.html" title="Giải DOTA 2 TI5 tự phá vỡ kỉ lục tiền thưởng của mình">Giải DOTA 2 TI5 tự phá vỡ kỉ lục tiền thưởng của mình</a></h2>
+							</header>
+							<!-- .entry-header -->
+
+							<div class="entry-content ">
+								<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+									are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to do
+									is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+								<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+									series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+									it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+									chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+									ballgame on TNT.</p>
+								<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+									it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+									mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+							</div>
+							<!-- .entry-content -->
+						</article>
+					</div>
+
+
+					<div class="grid-box " style="position: absolute; left: 480px; top: 0px; height: 320px;">
+
+						<article class="post entry2" style="height: 100%;background-color: #1e73be">
+
+							<div class="grid-box-img"><a href="castle.html" title="Báo động, Castle Crasher tấn công Mobile">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1406/14063904/3173466-3582733582-Stard.jpg"></a></div>
+
+							<header class="entry-header">
+								<h2 class="entry-title"><a href="castle.html" title="Castle Crasher tấn công Mobile">Báo động, Castle Crasher tấn công Mobile!</a></h2>
+							</header>
+
+							<div class="entry-content ">
+								<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+									are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to do
+									is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+								<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+									series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+									it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+									chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+									ballgame on TNT.</p>
+								<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+									it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+									mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+							</div>
+							<!-- .entry-content -->
+
+						</article>
+					</div>
+
+
+					<div class="grid-box " style="position: absolute; left: 770px; top: 0px;height:396px">
+
+						<article class="post entry3" style="height: 100%;background-color:#093">
+
+							<div class="grid-box-img"><a href="aoshin.html" title="Ao Shin: Thần Rồng Sét sắp xuất hiện trong thế giới Liên Minh Huyền Thoại?">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+							<header class="entry-header">
+								<h2 class="entry-title"><a href="aoshin.html" title="Ao Shin: Thần Rồng Sét sắp xuất hiện trong thế giới Liên Minh Huyền Thoại?">Ao Shin: Thần Rồng Sét sắp xuất hiện trong thế giới Liên Minh Huyền Thoại?</a></h2>
+							</header>
+
+							<div class="entry-content ">
+								<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+									are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to do
+									is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+								<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+									series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+									it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+									chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+									ballgame on TNT.</p>
+								<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+									it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+									mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+							</div>
+							<!-- .entry-content -->
+
+						</article>
+					</div>
+
+
+					<div class="grid-box" style="position: absolute; left: 10px; top: 370px; width:250px; height:359px">
+
+						<article class="post entry4" style="height: 100%;background-color: #093">
+
+							<div class="grid-box-img"><a href="cat.html" title="Ngộ nghĩnh với hình ảnh mèo bên máy chơi game">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+							<header class="entry-header">
+								<h2 class="entry-title"><a href="cat.html" title="Ngộ nghĩnh với hình ảnh mèo bên máy chơi game	">Ngộ nghĩnh với hình ảnh mèo bên máy chơi game</a></h2>
+							</header>
+
+							<div class="entry-content ">
+								<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+									are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to do
+									is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+								<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+									series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+									it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+									chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+									ballgame on TNT.</p>
+								<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+									it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+									mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+							</div>
+							<!-- .entry-content -->
+
+						</article>
+					</div>
+
+
+					<div class="grid-box " style="position: absolute; left: 270px; top: 370px; width:200px;height:335px">
+
+						<article class="post entry5" style="height: 100%;background-color:#000;">
+
+							<div class="grid-box-img"><a href="fanart.html" title="Fanart hấp dẫn về các nữ Champion trong Liên Minh Huyền Thoại">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+							<header class="entry-header">
+								<h2 class="entry-title"><a href="fanart.html" title="Fanart hấp dẫn về các nữ Champion trong Liên Minh Huyền Thoại">Fanart hấp dẫn về các nữ Champion trong Liên Minh Huyền Thoại</a></h2>
+							</header>
+
+							<div class="entry-content ">
+								<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+									are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to do
+									is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+								<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+									series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+									it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+									chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+									ballgame on TNT.</p>
+								<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+									it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+									mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+
+						</article>
+						</div>
+
+						<div class="grid-box " style="position: absolute; left: 480px; top: 330px; height: 320px;">
+
+							<article class="post entry6" style="height: 100%;background-color: #F33">
+
+								<div class="grid-box-img"><a href="castle.html" title="Báo động, Castle Crasher tấn công Mobile">
+																						<img src="https://static.gamespot.com/uploads/screen_medium/1406/14063904/3173466-3582733582-Stard.jpg"></a></div>
+
+								<header class="entry-header">
+									<h2 class="entry-title"><a href="castle.html" title="Castle Crasher tấn công Mobile">Báo động, Castle Crasher tấn công Mobile!</a></h2>
+								</header>
+
+								<div class="entry-content ">
+									<p dir="ltr">Figment doesn't spend too long on the details of the background--only a few seconds of audio without visuals; a
+										family's car wreck that ends in a child's screams. The vagueness feels intentional, as it lets you see the following
+										hours as a metaphor for our own (potential) struggles with depression, inadequacy, and apathy. As such, it seems
+										determined not to scare away any players who might benefit from its message, slamming you not with graphic imagery
+										but with vividly colored storybook landscapes channeling Escher, Dalí, and Maurice Sendak. Personality abounds,
+										whether it's the bright greens of the creative side of the mind or the clockwork and steam of the logical left.
+										It creatively embraces music beyond the song-and-dance routines of the bosses, right down to French horns jutting
+										from cliffs or ukelele plants that strum in harmony with the soundtrack as you pass. By the time it decides to
+										get gloomy as you’re navigating through stacks of unpaid bills and spilled coffee near the conscious mind, you’re
+										ready to face it. It’s a beautiful transition.</p>
+								</div>
+								<!-- .entry-content -->
+
+							</article>
+						</div>
+
+						<div class="grid-box " style="position: absolute; left: 770px; top: 405px;height:300px">
+
+							<article class="post entry7" style="height: 100%;background-color:#000">
+
+								<div class="grid-box-img">
+									<a href="faker.html" title="Liên Minh Huyền Thoại - Faker: Kẻ bất khả chiến bại">
+									<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg">
+									</a>
+								</div>
+								<header class="entry-header">
+									<h2 class="entry-title"><a href="faker.html" title="Liên Minh Huyền Thoại - Faker: Kẻ bất khả chiến bại">Liên Minh Huyền Thoại - Faker: Kẻ bất khả chiến bại</a>
+									</h2>
+								</header>
+
+								<div class="entry-content">
+									<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+										are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to
+										do is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+									<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+										series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+										it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+										chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+										ballgame on TNT.</p>
+									<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+										it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+										mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+								</div>
+							</article>
+						</div>
+
+
+						<div class="grid-box " style="position: absolute; left: 10px; top: 737px; width:250px; height: 341px">
+
+							<article class="post entry8" style="height: 100%;background-color:#1e73be">
+
+								<div class="grid-box-img"><a href="summer.html" title="Xuất hiện game có tên dài nhất lịch sử">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+								<header class="entry-header">
+									<h2 class="entry-title"><a href="summer.html" title="Xuất hiện game có tên dài nhất lịch sử">Xuất hiện game có tên dài nhất lịch sử</a></h2>
+								</header>
+
+								<div class="entry-content ">
+									<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+										are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to
+										do is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+									<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+										series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+										it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+										chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+										ballgame on TNT.</p>
+									<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+										it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+										mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+								</div>
+								<!-- .entry-content -->
+
+							</article>
+						</div>
+
+
+						<div class="grid-box " style="position: absolute; left: 270px; top: 715px; width:200px; height:363px;">
+
+							<article class="post entry9" style="height: 100%;background-color:#093">
+
+								<div class="grid-box-img"><a href="info.html" title="Những nhân vật đình đám nhất làng game đã lột xác ra sao?">
+											<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+								<header class="entry-header">
+									<h2 class="entry-title"><a href="info.html" title="Những nhân vật đình đám nhất làng game đã lột xác ra sao?">Những nhân vật đình đám làng game đã "lột xác" ra sao?</a></h2>
+								</header>
+
+								<div class="entry-content ">
+									<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+										are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to
+										do is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+									<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+										series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+										it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+										chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+										ballgame on TNT.</p>
+									<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+										it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+										mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+								</div>
+
+							</article>
+						</div>
+
+
+						<div class="grid-box " style="position: absolute; left: 480px; top: 660px;height:418px">
+
+							<article class="post entry10" style="height: 100%;background-color: #1e73be">
+
+								<div class="grid-box-img"><a href="hots.html" title="Giải đấu Heroes of the Storm 10 tỷ đồng dành cho sinh viên chính thức khởi tranh">
+								<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+								<header class="entry-header">
+									<h2 class="entry-title"><a href="hots.html" title="Giải đấu Heroes of the Storm 10 tỷ đồng dành cho sinh viên chính thức khởi tranh">Giải đấu Heroes of the Storm 10 tỷ đồng dành cho sinh viên chính thức khởi tranh</a></h2>
+								</header>
+
+								<div class="entry-content ">
+									<p dir="ltr">Figment doesn't spend too long on the details of the background--only a few seconds of audio without visuals; a
+										family's car wreck that ends in a child's screams. The vagueness feels intentional, as it lets you see the following
+										hours as a metaphor for our own (potential) struggles with depression, inadequacy, and apathy. As such, it seems
+										determined not to scare away any players who might benefit from its message, slamming you not with graphic imagery
+										but with vividly colored storybook landscapes channeling Escher, Dalí, and Maurice Sendak. Personality abounds,
+										whether it's the bright greens of the creative side of the mind or the clockwork and steam of the logical left.
+										It creatively embraces music beyond the song-and-dance routines of the bosses, right down to French horns jutting
+										from cliffs or ukelele plants that strum in harmony with the soundtrack as you pass. By the time it decides to
+										get gloomy as you’re navigating through stacks of unpaid bills and spilled coffee near the conscious mind, you’re
+										ready to face it. It’s a beautiful transition.</p>
+								</div>
+								<!-- .entry-content -->
+
+							</article>
+						</div>
+
+
+						<div class="grid-box" style="position: absolute; left: 770px; top: 715px;height:363px">
+
+							<article class="post entry11" style="height: 100%;background-color: #F33">
+
+								<div class="grid-box-img">
+									<a href="overwatch.html" title="Bom tấn Overwatch tham vọng trở thành bộ môn eSports">
+									<img src="https://static.gamespot.com/uploads/screen_medium/1575/15759911/3298250-a-hat-in-time-review-thumb-nologo.jpg"></a></div>
+
+								<header class="entry-header">
+									<h2 class="entry-title"><a href="overwatch.html" title="Bom tấn Overwatch tham vọng trở thành bộ môn eSports">Bom tấn Overwatch tham vọng trở thành bộ môn eSports</a></h2>
+								</header>
+
+								<div class="entry-content ">
+									<p>NBA 2K18 is a hardcore sports simulation. If you want to get good, you have to put in the work. Fortunately, there
+										are plenty of ways to improve your skills no matter how you want to play. And the fact that there's so much to
+										do is a bonus, because on the court, NBA 2K18 is also an amazingly well-crafted experience.</p>
+									<p dir="ltr">The first thing that strikes you is how it looks and feels like a real-life professional basketball game. The 2K
+										series' attention to detail has always been incredible, and this year is the best yet. Using the default camera,
+										it's almost hard to discern between the game and an actual NBA broadcast. Great, varied commentary and the three-way
+										chemistry of Ernie Johnson, Kenny Smith and Shaquille O'Neal during halftime make it feel like a Thursday night
+										ballgame on TNT.</p>
+									<p dir="ltr">NBA 2K18 is also on Nintendo's less powerful Switch, but don't discount that version: it still looks great for what
+										it is, even if it falls short of its bigger brothers. Of course, there's the added bonus of playing in portable
+										mode, which also helps diminish graphical flaws given the Switch's small screen.</p>
+								</div>
+								<!-- .entry-content -->
+
+							</article>
+						</div>
+
+					</div>
+
+					<a href="PcConsole.html" class="btn">View all news</a>
+
+				</div>
+
+
+				<!-- END CONTENT-->
+
+				<!-- BEGIN FOOTER-->
+
+				<div class="menu row">
+					<ul>
+						<li class="col-xs-2">|</li>
+						<li style="background-color:#C60000;" class="mlink col-xs-2"><a href="Geek.html">Home</a></li>
+						<li class="col-xs-2">|</li>
+						<li class="mlink col-xs-2"><a href="ranking.html">Ranking</a></li>
+						<li class="col-xs-2">|</li>
+						<li class="col-xs-1"></li>
+
+					</ul>
+				</div>
+
+				<div class="footer">
+					<ul>
+						<li>Gee<span style="color:#d42020; font-weight:900;">K</span>.com &copy; Long Pham</li>
+						<li><img src="Hinh/add.png" />:&nbsp;Lầu 2, tòa nhà Innovation, lô 24, Công viên phần mềm Quang Trung, P.Tân Chánh Hiệp,
+							Quận 12, TP. Hồ Chí Minh.</li>
+						<li><img src="Hinh/tele.png" />:&nbsp;01682087435</li>
+						<li><img src="Hinh/mail.png" />:&nbsp;long.phamlp94@gmail.com</li>
+					</ul>
+				</div>
+
+				<!-- END FOOTER-->
+
+				<!-- end .container -->
+			</div>
+		</div>
+
+		<script>
+
+		</script>
+
+</body>
+
+</html>
