@@ -46,7 +46,7 @@ public class ArticleOverviewHandler extends DefaultHandler {
         if (qName.equalsIgnoreCase("img")) {
             String thumbnail = atrbts.getValue("src");
             imgLink = thumbnail;
-        } else if (qName.equalsIgnoreCase("br")) {
+        } else if (qName.equalsIgnoreCase("br") || qName.equalsIgnoreCase("span")) {
             inOverviewRow = true;
         }
     }

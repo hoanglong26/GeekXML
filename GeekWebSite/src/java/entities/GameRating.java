@@ -31,7 +31,7 @@ import utilities.Const;
  */
 @Entity
 @Table(name = "GameRating")
-@XmlRootElement(namespace = Const.gameRatingNamespace)
+@XmlRootElement(namespace = Const.gameNamespace)
 @XmlAccessorType(XmlAccessType.FIELD)
 @NamedQueries({
     @NamedQuery(name = "GameRating.findAll", query = "SELECT g FROM GameRating g")
@@ -48,16 +48,16 @@ public class GameRating implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "Id")
-    @XmlElement(namespace = Const.gameRatingNamespace)
+    @XmlElement(namespace = Const.gameNamespace)
     private Integer id;
     @Column(name = "Score")
-    @XmlElement(namespace = Const.gameRatingNamespace)
+    @XmlElement(namespace = Const.gameNamespace)
     private String score;
     @Column(name = "Reviewer")
-    @XmlElement(namespace = Const.gameRatingNamespace)
+    @XmlElement(namespace = Const.gameNamespace)
     private String reviewer;
     @Column(name = "ReviewedDate")
-    @XmlElement(namespace = Const.gameRatingNamespace)
+    @XmlElement(namespace = Const.gameNamespace)
     private String reviewedDate;
     @JoinColumn(name = "GameId", referencedColumnName = "ID")
     @ManyToOne(cascade = CascadeType.ALL)

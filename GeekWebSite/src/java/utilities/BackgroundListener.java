@@ -34,16 +34,17 @@ public class BackgroundListener implements ServletContextListener {
                 System.out.println("Deploying...");
 
                 CrawlData crawl = new CrawlData(context);
-                crawl.saxParserForArticle("http://ictnews.vn/rss/game");
-                crawl.saxParserForArticle("http://ictnews.vn/rss/internet");
-                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt");
-                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt/phan-mem");
+//                crawl.saxParserForArticle("http://ictnews.vn/rss/game");
+//                crawl.saxParserForArticle("http://ictnews.vn/rss/internet");
+//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt");
+//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt/phan-mem");
 //                crawl.saxParserForGameRanking("https://www.gamerankings.com/browse.html?page=", 1);
+                crawl.saxParserForArticle("http://gamek.vn//pc-console.rss");
 
             }
         };
 
-//        scheduler.scheduleAtFixedRate(runnable, 0, 22, TimeUnit.HOURS);
+        scheduler.scheduleAtFixedRate(runnable, 0, 22, TimeUnit.HOURS);
     }
 
     @Override

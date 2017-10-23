@@ -6,23 +6,15 @@
 package servlets;
 
 import dao.GameDAO;
-import entities.Game;
 import entities.GameList;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.parsers.ParserConfigurationException;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 import utilities.Const;
-import utilities.CrawlData;
 
 /**
  *
@@ -46,13 +38,9 @@ public class RankingServlet extends HttpServlet {
         try {
             GameList topGames = GameDAO.getGameRankingRange(0, 20);
             String topGamesString = utilities.Utilities.marshallerToString(topGames);
-            topGamesString=topGamesString.replace("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>","<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-            Document test = utilities.Utilities.stringToDom(topGamesString);
+            topGamesString = topGamesString.replace("standalone=\"yes\"", "");
+
             request.setAttribute("TOP_GAME", topGamesString);
-        } catch (SAXException ex) {
-            Logger.getLogger(RankingServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParserConfigurationException ex) {
-            Logger.getLogger(RankingServlet.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(Const.rankingPage);
             rd.forward(request, response);

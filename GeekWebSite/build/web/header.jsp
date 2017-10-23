@@ -3,10 +3,11 @@
     Created on : Oct 21, 2017, 3:01:11 PM
     Author     : hoanglong
 --%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<header>
 <div class="top">
     <div class="topcontainer">
-        <input type="text" placeHolder="Nh?p t? kh�a" class="search" onkeyup="showResult();" id="key" />
+        <input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="showResult();" id="key" />
         <span class="ltop">
             <img src="content/img/search.png"  onMouseDown="showResult();"/>
         </span>
@@ -19,8 +20,6 @@
         </span>
     </div>
 </div>
-
-
 
 <div class="header">
     <a href="Geek.html"><img src="content/img/Geekf.png" alt="Logo" class="logo"/></a>
@@ -39,3 +38,4 @@
         <li class="col-xs-1"></li>
     </ul>
 </div>
+</header>

@@ -191,4 +191,20 @@ public class GameDAO {
         }
 
     }
+    
+    public static void resetIdent() {
+        EntityManager em = Utilities.getEntityManager();
+        String query = "DBCC CHECKIDENT (Game, RESEED, 0)";
+        try {
+            em.getTransaction().begin();
+            em.createNativeQuery(query).executeUpdate();
+            em.getTransaction().commit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+
+    }
 }

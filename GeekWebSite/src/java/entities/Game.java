@@ -77,8 +77,8 @@ public class Game implements Serializable {
     @XmlElement(namespace = Const.gameNamespace)
     private String thumbnail;
     @OneToMany(mappedBy = "gameId", cascade = CascadeType.ALL)
-    @XmlTransient
-    private List<GameRating> gameRatingList;
+    @XmlElement(namespace = Const.gameNamespace)
+    private List<GameRating> gameRating = new ArrayList<GameRating>();
 
     public Game() {
     }
@@ -95,12 +95,12 @@ public class Game implements Serializable {
     public Game(String name, String releaseDate, String pulisher, String developer, String thumbnail, List<GameRating> gameRatingList) {
         this.name = name;
         this.thumbnail = thumbnail;
-        this.gameRatingList = gameRatingList;
+        this.gameRating = gameRatingList;
     }
     
     public void addRating(GameRating rating) {
         rating.setGameId(this);
-        gameRatingList.add(rating);
+        gameRating.add(rating);
     }
 
     public Integer getId() {
@@ -129,11 +129,11 @@ public class Game implements Serializable {
 
     @XmlTransient
     public List<GameRating> getGameRatingList() {
-        return gameRatingList;
+        return gameRating;
     }
 
     public void setGameRatingList(List<GameRating> gameRatingList) {
-        this.gameRatingList = gameRatingList;
+        this.gameRating = gameRatingList;
     }
 
     @Override

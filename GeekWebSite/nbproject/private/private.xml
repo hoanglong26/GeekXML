@@ -3,14 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/Utilities.java</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/ranking.jsp</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/GameList.xsl</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/BackgroundListener.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/xslt/GameList.xsl</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/GameDAO.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/ArticleData.xsd</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/newXMLDocument.xml</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/ArticleOverviewHandler.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/Game.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/servlets/RankingServlet.java</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/GameList.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/ArticleDAO.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/ArticleDetailHandler.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/CrawlData.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/GameDetailHandler.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/Utilities.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/ranking.jsp</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/GameRatingDAO.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/Article.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/ArticleHandler.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/GameRatingData.xsd</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/BackgroundListener.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/GameData.xsd</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/GameRating.java</file>
         </group>
     </open-files>
 </project-private>

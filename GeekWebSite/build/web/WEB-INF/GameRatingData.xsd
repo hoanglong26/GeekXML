@@ -8,15 +8,15 @@ and open the template in the editor.
 <xs:schema version="1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="http://www.gamerating.net"
-           xmlns="http://www.gamerating.net">
+           targetNamespace="http://www.game.net"
+           xmlns="http://www.game.net">
     <xs:element name="gameRating" type="ratingItem"/>
     <xs:complexType name="ratingItem">
-        <xs:sequence>
+        <xs:all>
             <xs:element name="id" type="xs:integer"/>
             <xs:element name="score" type="xs:string"/>
             <xs:element name="reviewer" type="xs:string"/>
             <xs:element name="reviewedDate" type="xs:string"/>
-        </xs:sequence>
+        </xs:all>
     </xs:complexType>
 </xs:schema>

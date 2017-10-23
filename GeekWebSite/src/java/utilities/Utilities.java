@@ -66,14 +66,13 @@ public class Utilities {
 
         return doc;
     }
-    
-    public static Document stringToDom(String xmlSource) 
+
+    public static Document stringToDom(String xmlSource)
             throws SAXException, ParserConfigurationException, IOException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         return builder.parse(new InputSource(new StringReader(xmlSource)));
     }
-
 
     public static <T> void marshallerToTransfer(T object, OutputStream os) {
         try {
@@ -84,36 +83,6 @@ public class Utilities {
         } catch (JAXBException ex) {
         }
     }
-
-//    public static void saveToXML(String xmlDataFilePath, Article listMedicines) {
-//        //JAXB marshall
-//        try {
-//
-////            NamespacePrefixMapper mapper = new NamespacePrefixMapper() {
-////                private static final String FOO_URI = "article.net";
-////
-////                @Override
-////                public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
-////                    if (FOO_URI.equals(namespaceUri)){
-////                        return "";
-////                    }else return suggestion;                    
-////                }
-////
-////                @Override
-////                public String[] getPreDeclaredNamespaceUris() {
-////                    return new String[]{"article.net"};
-////                }
-////            };
-//            JAXBContext context = JAXBContext.newInstance(listMedicines.getClass());
-//            Marshaller ms = context.createMarshaller();
-//            ms.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-//            ms.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-////            ms.setProperty("com.sun.xml.internal.bind.namespacePrefixMapper", mapper);
-//            ms.marshal(listMedicines, new File(xmlDataFilePath));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public static <T> String marshallerToString(T object) {
         try {
@@ -155,6 +124,10 @@ public class Utilities {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public static String insertString(String str, int index, String value) {
+        return str.substring(0, index) + value + str.substring(index);
     }
 
     public static String downloadImage(String realPath, String folderPath, String fileName, String uri) {

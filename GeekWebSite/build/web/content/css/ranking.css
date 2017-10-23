@@ -9,11 +9,11 @@ table
 {
   display: block;
   text-align: left;
-  width: 625px;
+  /*width: 625px;*/
   border-collapse:collapse;
   margin: 0 auto;
-  max-width: 625px;
-  background: rgba(255, 255, 255, 0.50);
+  /*max-width: 625px;*/
+  background: rgba(255, 255, 255, 0.70);
 }
 
 td, th
@@ -50,6 +50,10 @@ tbody
   width: 100%;
   display: block;
   text-align: center;
+}
+
+tr{
+    cursor:pointer;
 }
 
 tr:nth-child(even)

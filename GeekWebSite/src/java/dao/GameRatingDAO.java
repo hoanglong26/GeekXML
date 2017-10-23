@@ -75,6 +75,21 @@ public class GameRatingDAO {
         } finally {
             em.close();
         }
+    }
+     
+     public static void resetIdent() {
+        EntityManager em = Utilities.getEntityManager();
+        String query = "DBCC CHECKIDENT (GameRating, RESEED, 0)";
+        try {
+            em.getTransaction().begin();
+            em.createNativeQuery(query).executeUpdate();
+            em.getTransaction().commit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
 
     }
 //    public static Article findGameRating(String title) {

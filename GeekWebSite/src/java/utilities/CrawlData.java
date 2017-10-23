@@ -97,6 +97,7 @@ public class CrawlData {
                 line = line.replaceAll("&gt;", ">");
                 line = line.replaceAll("&lt;", "<");
                 line = line.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                line = line.replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
                 if (line.contains("<channel>")) {
                     inArticleRow = true;
                 }
@@ -124,28 +125,40 @@ public class CrawlData {
 
 //            ArticleDAO.deleteAll();
             for (Article item : articleList) {
-                //fix the format of publish date
-                String datePosted = item.getPubDate().substring(0, item.getPubDate().indexOf("T"));
-                String timePosted = item.getPubDate().substring(item.getPubDate().indexOf("T") + 1, item.getPubDate().indexOf("+"));
-                item.setPubDate("Đăng vào " + datePosted + " " + timePosted);
+                if (uri.contains("ictnews")) {
+                    //fix the format of publish date
+                    String datePosted = item.getPubDate().substring(0, item.getPubDate().indexOf("T"));
+                    String timePosted = item.getPubDate().substring(item.getPubDate().indexOf("T") + 1, item.getPubDate().indexOf("+"));
+                    item.setPubDate("Đăng vào " + datePosted + " " + timePosted);
+                }else{
+                    item.setPubDate("Đăng vào " + item.getPubDate());
+                }
 
                 //get author and content of article by using article link
-                Article detail = saxParserForArticleDetail(item);
-                if (detail.getAuthor() != null && detail.getDescription() != null) {
-                    item.setAuthor(detail.getAuthor().trim());
-                    item.setDescription(detail.getDescription().trim());
+                Article detail = null;
+                if (uri.contains("ictnews")) {
+                    detail = saxParserForArticleDetail(item);
+                } else {
+                    detail = saxParserForArticleDetail2(item);
+                }
 
-                    //get overview and thumbnail from CDATA of "description" tag 
-                    Article overview = saxParserForArticleOverview(item.getOverview());
-                    item.setOverview(overview.getOverview().trim());
-                    item.setThumbnail(overview.getThumbnail().trim());
+                if (detail != null) {
+                    if (detail.getAuthor() != null && detail.getDescription() != null) {
+                        item.setAuthor(detail.getAuthor().trim());
+                        item.setDescription(detail.getDescription().trim());
 
-                    //validate by using schema
-                    boolean isValidArticle = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(item), articleDataFilepath);
-                    if (isValidArticle) {
+                        //get overview and thumbnail from CDATA of "description" tag 
+                        Article overview = saxParserForArticleOverview(item.getOverview());
+                        if (overview != null) {
+                            item.setOverview(overview.getOverview().trim());
+                            item.setThumbnail(overview.getThumbnail().trim());
 
-                        //save image of each article
-                        for (Image aImage : detail.getImageList()) {
+                            //validate by using schema
+                            boolean isValidArticle = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(item), articleDataFilepath);
+                            if (isValidArticle) {
+
+                                //save image of each article
+                                for (Image aImage : detail.getImageList()) {
 //                            aImage.setArticleId(item);
 //                            String[] tmp = item.getLink().split("/");
 //                            String fileName = "\\" + tmp[tmp.length - 1];
@@ -154,13 +167,16 @@ public class CrawlData {
 //                            fileName = fileName.replaceAll(":", "");
 //                            System.out.println(Utilities.downloadImage("./GeekWebsite/ArticleImage", fileName.substring(0, 30), aImage.getId() + "", aImage.getLink()));
 
-                            boolean isValidImage = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(aImage), imageDataFilepath);
-                            if (isValidImage) {
-                                item.addImage(aImage);
+                                    boolean isValidImage = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(aImage), imageDataFilepath);
+                                    if (isValidImage) {
+                                        item.addImage(aImage);
+                                    }
+                                }
+
+                                ArticleDAO.createArticle(item);
+
                             }
                         }
-
-                        ArticleDAO.createArticle(item);
 
                     }
                 }
@@ -208,8 +224,11 @@ public class CrawlData {
                         line = line.replace(removePart, "");
 
                         line = line.replace(" \"=\"\"", "");
-                        if (line.contains("jpg\">")) {
+                        if (line.contains("jpg\">") || line.contains("png\">") || line.contains("gif\">")) {
                             line = line.replace("jpg\">", "jpg\" />");
+                            line = line.replace("png\">", "png\" />");
+                            line = line.replace("gif\">", "gif\" />");
+
                         } else {
                             String tmpline = new StringBuilder(line).insert(line.indexOf("</") - 1, " /").toString();
                             line = tmpline;
@@ -266,6 +285,127 @@ public class CrawlData {
             System.out.println(document.indexOf("<script"));
             System.out.println(document.indexOf("</script>"));
             System.out.println(article.getTitle());
+            return null;
+
+        }
+        return result;
+    }
+
+    public Article saxParserForArticleDetail2(Article article) {
+        Article result = new Article();
+        String line = "";
+        String document = "<root>";
+
+        try {
+            URL url = new URL(article.getLink());
+            URLConnection conn = url.openConnection();
+            conn.addRequestProperty("User-Agent",
+                    "Chrome");
+
+            BufferedReader in = getBufferedReaderFromHtml(article.getLink());
+
+            boolean inArticleRow = false;
+            boolean inAuthorRow = false;
+
+            while ((line = in.readLine()) != null) {
+                line = line.trim();
+                line = line.replaceAll("&", "&amp;");
+
+                if (line.contains("magazine")) {
+                    return null;
+                }
+
+                if (line.contains("<div") && line.contains("class=\"rightdetail\"") && !line.contains("id=\"ShareDetail\"")) {
+                    inArticleRow = true;
+                    document += "<content>";
+                }
+
+                if (line.contains("<p class=\"mgt15\">")) {
+                    inAuthorRow = true;
+                    document += "<author>";
+                }
+
+                if (line.contains("<input") && line.contains("id=\"hidCatId\"")) {
+                    inArticleRow = false;
+                    document += "</content>";
+
+                }
+
+                if (inArticleRow) {
+                    if (line.contains("<img")) {
+                        if (line.contains("alt") && line.contains("src")) {
+                            String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
+                            line = line.replace(removePart, "");
+                        }
+
+                        line = line.replace(" \"=\"\"", "");
+
+                    }
+
+                    if (line.contains("jpg\">")) {
+                        line = line.replace("jpg\">", "jpg\" />");
+                    }
+
+                    if (line.contains("png\">")) {
+                        line = line.replace("png\">", "png\" />");
+                    }
+
+                    if (line.contains("gif\">")) {
+                        line = line.replace("gif\">", "gif\" />");
+                    }
+
+                    document += line;
+                }
+
+                if (inAuthorRow) {
+                    document += line;
+                    if (line.contains("</p>")) {
+                        inAuthorRow = false;
+                        document += "</author>";
+                    }
+                }
+            }
+            document += "</root>";
+            in.close();
+
+            document = document.replaceAll("<br>", "<br />");
+            document = document.replaceAll("<hr>", "<hr />");
+            document = document.replace("<=>", "đối đầu");
+
+            while (document.contains("<script")) {
+                int scriptBeginTag = document.indexOf("<script");
+                int scriptEndTag = document.indexOf("</script>");
+                if (scriptBeginTag <= scriptEndTag) {
+                    String javascript = document.substring(scriptBeginTag, scriptEndTag + 9);
+                    document = document.replace(javascript, "");
+                }
+
+            }
+
+            document = document.replace("</script>", "");
+            document = document.replace("<meta charset=\"utf-8\">", "");
+            String content = document.substring(document.indexOf("<content>") + 9, document.indexOf("</content>"));
+
+            document = document.replace("\n", "");
+            document = document.replace("\t", "");
+
+            InputStream is = new ByteArrayInputStream(document.getBytes("UTF-8"));
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            ArticleDetailHandler articleDetailHandler = new ArticleDetailHandler();
+            saxParser.parse(is, articleDetailHandler);
+
+            result.setDescription(content);
+            result.setAuthor(articleDetailHandler.getAuthor().replace("null", ""));
+            result.setImageList(articleDetailHandler.getList());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(document.indexOf("<script"));
+            System.out.println(document.indexOf("</script>"));
+            System.out.println(article.getTitle());
+            return null;
+
         }
         return result;
     }
@@ -291,6 +431,7 @@ public class CrawlData {
             result.setOverview(articleOverviewHandler.getOverView());
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
         return result;
 
@@ -298,9 +439,10 @@ public class CrawlData {
 
     public void saxParserForGameRanking(String uri, int pageNum) {
         //refresh DB
-//        GameRatingDAO.deleteAll();
-//        GameDAO.deleteAll();
-
+        GameRatingDAO.deleteAll();
+        GameDAO.deleteAll();
+        GameDAO.resetIdent();
+        GameRatingDAO.resetIdent();
         for (int i = 0; i <= pageNum; i++) {
             try {
                 uri += i;
@@ -358,25 +500,33 @@ public class CrawlData {
                     item.setName(name.trim());
                     item.setDescription(tmp.getDescription().replaceAll("'", "''").trim());
 //                GameDAO.createGame2(item);
-
+//                    item.setGameRatingList(tmp.getGameRatingList());
+//                    String t = Utilities.marshallerToString(item);
                     //validate game data by using schema
                     boolean isValidGame = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(item), gameDataFilepath);
                     if (isValidGame) {
                         for (GameRating aRating : tmp.getGameRatingList()) {
-                            aRating.setGameId(item);
-
+//                            aRating.setGameId(item);
+                            if (aRating.getScore() == null) {
+                                aRating.setScore("Chưa đánh giá");
+                            }
                             //validate game rating data by using schema
                             boolean isValidRating = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(aRating), gameRatingDataFilepath);
                             if (isValidRating) {
-                                GameRatingDAO.createGameRating(aRating);
+                                item.addRating(aRating);
+//                                GameRatingDAO.createGameRating(aRating);
                             }
+//                            else{
+//                                System.out.println(document);
+//                            }
                         }
+                        GameDAO.createGame(item);
                     }
 
                 }
 
             } catch (Exception e) {
-                //e.printStackTrace();
+                e.printStackTrace();
             }
         }
 

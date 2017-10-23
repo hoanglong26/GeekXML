@@ -8,7 +8,7 @@
 <%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
 <c:set var="topGames" value="${requestScope.TOP_GAME}" />
-<c:import var="xsldoc" url="WEB-INF/GameList.xsl" />
+<c:import var="xsldoc" url="WEB-INF/xslt/GameList.xsl" />
 
 <!DOCTYPE html>
 <html>
@@ -24,12 +24,27 @@
     <body onload="picSwap()">
 
         <div class="background">
-            <div class="container" style="background-image:url(content/img/test.jpg);">
+            <div class="container" style="background-image:url(content/img/test.png);">
                 <c:import url="header.jsp" charEncoding="UTF-8" />
 
                 <div>
-                    <x:transform xml="${topGames}" xslt="${xsldoc}" />
-
+                    <table>
+                        <caption>
+                            <h1>Bảng xếp hạng game</h1>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>HẠNG</th>
+                                <th>ẢNH BÌA</th>
+                                <th>TÊN</th>
+                                <th>NỀN TẢNG</th>
+                                <th>ĐÁNH GIÁ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <x:transform xml="${topGames}" xslt="${xsldoc}" />
+                        </tbody>
+                    </table>
                 </div>
 
                 <div id="myModal" class="modal">
@@ -58,12 +73,14 @@
                         var modalImg = document.getElementById("img01");
                         var captionText = document.getElementById("caption");
 
-                        var elts = document.getElementsByClassName('gameAvt');
+                        var elts = document.getElementsByClassName('gameRow');
                         for (var i = elts.length - 1; i >= 0; --i) {
                             elts[i].addEventListener("click", function () {
                                 modal.style.display = "block";
-                                modalImg.src = this.src;
-                                captionText.innerHTML = this.alt;
+                                var tdChild = this.childNodes[2];
+                                var imgChild = tdChild.childNodes[0];
+                                modalImg.src = imgChild.src;
+                                captionText.innerHTML = imgChild.alt;
                             });
                         }
 
