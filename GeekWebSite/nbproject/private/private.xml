@@ -7,7 +7,6 @@
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/GameDAO.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/ArticleData.xsd</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/newXMLDocument.xml</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/ArticleOverviewHandler.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/Game.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/servlets/RankingServlet.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/ArticleDAO.java</file>
@@ -17,7 +16,6 @@
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/Utilities.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/ranking.jsp</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/GameRatingDAO.java</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/Article.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/ArticleHandler.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/GameRatingData.xsd</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/BackgroundListener.java</file>

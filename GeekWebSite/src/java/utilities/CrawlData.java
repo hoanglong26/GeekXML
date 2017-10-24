@@ -23,6 +23,10 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import javax.servlet.ServletContext;
@@ -119,7 +123,7 @@ public class CrawlData {
             saxParser.parse(is, articleHandler);
             articleList = articleHandler.getList();
 
-            String realPath = srvlContext.getRealPath("/");;
+            String realPath = srvlContext.getRealPath("/");
             String articleDataFilepath = realPath + "WEB-INF/ArticleData.xsd";
             String imageDataFilepath = realPath + "WEB-INF/ImageData.xsd";
 
@@ -130,8 +134,12 @@ public class CrawlData {
                     String datePosted = item.getPubDate().substring(0, item.getPubDate().indexOf("T"));
                     String timePosted = item.getPubDate().substring(item.getPubDate().indexOf("T") + 1, item.getPubDate().indexOf("+"));
                     item.setPubDate("Đăng vào " + datePosted + " " + timePosted);
-                }else{
-                    item.setPubDate("Đăng vào " + item.getPubDate());
+                } else {
+                    SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss");
+                    Date date = sdf.parse(item.getPubDate());
+
+                    SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    item.setPubDate("Đăng vào " + sdf2.format(date));
                 }
 
                 //get author and content of article by using article link
@@ -159,14 +167,6 @@ public class CrawlData {
 
                                 //save image of each article
                                 for (Image aImage : detail.getImageList()) {
-//                            aImage.setArticleId(item);
-//                            String[] tmp = item.getLink().split("/");
-//                            String fileName = "\\" + tmp[tmp.length - 1];
-//                            String fileName = "\\" + item.getTitle().substring(0, 20);
-//                            fileName = fileName.replaceAll("\"", "");
-//                            fileName = fileName.replaceAll(":", "");
-//                            System.out.println(Utilities.downloadImage("./GeekWebsite/ArticleImage", fileName.substring(0, 30), aImage.getId() + "", aImage.getLink()));
-
                                     boolean isValidImage = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(aImage), imageDataFilepath);
                                     if (isValidImage) {
                                         item.addImage(aImage);
@@ -220,6 +220,7 @@ public class CrawlData {
                 }
                 if (inArticleRow) {
                     if (line.contains("<img")) {
+
                         String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
                         line = line.replace(removePart, "");
 
@@ -306,6 +307,7 @@ public class CrawlData {
 
             boolean inArticleRow = false;
             boolean inAuthorRow = false;
+            boolean inVideoRow = false;
 
             while ((line = in.readLine()) != null) {
                 line = line.trim();
@@ -331,11 +333,25 @@ public class CrawlData {
 
                 }
 
+                //don't record the line if it is video
                 if (inArticleRow) {
-                    if (line.contains("<img")) {
+
+                    if (line.contains("type=\"VideoStream\"")) {
+                        inVideoRow = true;
+                    }
+
+                    if (!inVideoRow && line.contains("<img")) {
                         if (line.contains("alt") && line.contains("src")) {
-                            String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
-                            line = line.replace(removePart, "");
+                            if (line.indexOf("alt") < line.indexOf("src")) {
+                                String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
+                                line = line.replace(removePart, "");
+                            }
+
+                            if (line.indexOf("<div><img") == 0) {
+                                line = line.replace("></div>", " /></div>");
+                            }
+
+                            line = line.replace("contenteditable=\"false\">", "contenteditable=\"false\" />");
                         }
 
                         line = line.replace(" \"=\"\"", "");
@@ -352,6 +368,14 @@ public class CrawlData {
 
                     if (line.contains("gif\">")) {
                         line = line.replace("gif\">", "gif\" />");
+                    }
+
+                    if (line.contains("class=\"NLPlaceholderShow\"")) {
+                        inVideoRow = false;
+                        document += line;
+                        line = "";
+                        String removeVideo = document.substring(document.indexOf("type=\"VideoStream\""), document.length());
+                        document = document.replace(removeVideo, "><div>");
                     }
 
                     document += line;
@@ -416,7 +440,10 @@ public class CrawlData {
         try {
             overview = overview.replaceAll("</br>", "<br/>");
             overview = overview.replaceAll("width=130 height=100", "width=\"130\" height=\"100\"");
-
+            overview = overview.replaceAll("“", "&quot;");
+            overview = overview.replaceAll("”", "&quot;");
+            overview = overview.replaceAll("&amp;", " và ");
+//            overview = removeQuote(overview);
             document += overview;
 
             document += "</root>";
@@ -430,7 +457,7 @@ public class CrawlData {
             result.setThumbnail(articleOverviewHandler.getImgLink());
             result.setOverview(articleOverviewHandler.getOverView());
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             return null;
         }
         return result;
@@ -613,7 +640,5 @@ public class CrawlData {
             //e.printStackTrace();
         }
         return result;
-
     }
-
 }
