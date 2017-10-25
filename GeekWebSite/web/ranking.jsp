@@ -15,7 +15,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="content/img/favicon.ico" />
-        <title>GeeK - Where players become gamers</title>
+        <title>GeeK - Trang tin công nghệ và game</title>
         <link href="content/css/HomePage.css" rel="stylesheet" type="text/css">
         <link href="content/css/article.css" rel="stylesheet" type="text/css">
         <link href="content/css/ranking.css" rel="stylesheet" type="text/css">
@@ -45,6 +45,8 @@
                             <x:transform xml="${topGames}" xslt="${xsldoc}" />
                         </tbody>
                     </table>
+                    <button class="btn">Xem thêm</button>
+
                 </div>
 
                 <div id="myModal" class="modal">
@@ -54,8 +56,42 @@
 
                     <!-- Modal Content (The Image) -->
                     <div class="modal-content">
-                        <img id="img01">
-                        <h1>haaaaaaaaaaaa</h1>
+                        <div class="game-modal-info">
+                            <div class="col-xs-2">
+                                <a id="game-link-img" href="https://www.gamerankings.com/wii/915692-super-mario-galaxy/index.html">
+                                    <img id="img01">
+                                </a>
+                            </div>
+                            <div class="col-xs-10">
+                                <div><a id="game-link" href="https://www.gamerankings.com/wii/915692-super-mario-galaxy/index.html">
+                                        <span class="tag">Tên game</span>
+                                        <span class="game-modal-text" id="game-name">Alibaba và 70 tên cướp</span>
+                                    </a></div>
+                                <div><span class="tag">Nền tảng</span><span class="game-modal-text" id="game-platform">NES</span></div>
+                                <div><span class="tag">Nhà phát hành</span><span class="game-modal-text" id="game-pulisher">Nintendo, 2001</span></div>
+                                <div><span class="tag">Điểm</span><span class="game-modal-text" id="game-overallRating">97% với 70 đánh giá</span></div>
+                            </div>
+                        </div>
+
+                        <table style="width: 80%;">
+                            <caption>
+                                <h1>Danh sách các đánh giá</h1>
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>NGƯỜI ĐÁNH GIÁ</th>
+                                    <th>ĐIỂM</th>
+                                    <th>NGÀY ĐÁNH GIÁ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rating-list">
+                                <tr>
+                                    <td>test</td>
+                                    <td>test</td>
+                                    <td>test</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <!-- Modal Caption (Image Text) -->
@@ -71,16 +107,42 @@
         <script>
                         var modal = document.getElementById('myModal');
                         var modalImg = document.getElementById("img01");
-                        var captionText = document.getElementById("caption");
+                        var nameText = document.getElementById("game-name");
+                        var pulisherText = document.getElementById("game-pulisher");
+                        var platformText = document.getElementById("game-platform");
+                        var overallRatingText = document.getElementById("game-overallRating");
+                        var linkHref = document.getElementById("game-link");
+                        var linkImgHref = document.getElementById("game-link-img");
+                        var ratingList = document.getElementById("rating-list");
 
                         var elts = document.getElementsByClassName('gameRow');
                         for (var i = elts.length - 1; i >= 0; --i) {
                             elts[i].addEventListener("click", function () {
                                 modal.style.display = "block";
-                                var tdChild = this.childNodes[2];
-                                var imgChild = tdChild.childNodes[0];
+                                var tdImgChild = this.childNodes[2];
+                                var imgChild = tdImgChild.childNodes[0];
                                 modalImg.src = imgChild.src;
-                                captionText.innerHTML = imgChild.alt;
+
+                                var hiddenGameInfo = tdImgChild.childNodes[1];
+                                console.log(hiddenGameInfo);
+                                linkImgHref.href = hiddenGameInfo.dataset.link;
+                                linkHref.href = hiddenGameInfo.dataset.link;
+                                nameText.innerHTML = hiddenGameInfo.dataset.name;
+                                platformText.innerHTML = hiddenGameInfo.dataset.platform;
+                                pulisherText.innerHTML = hiddenGameInfo.dataset.pulisher;
+                                overallRatingText.innerHTML = hiddenGameInfo.dataset.score + " với " + hiddenGameInfo.dataset.vote;
+
+
+                                ratingList.innerHTML = "";
+                                var tdNameChild = this.childNodes[3];
+                                var arrInput = tdNameChild.getElementsByTagName("input");
+                                for (var i = 0; i < arrInput.length; i++) {
+                                    ratingList.innerHTML += "<tr>\n" +
+                                            "<td>" + arrInput[i].dataset.reviewer + "</td>" +
+                                            "<td>" + arrInput[i].dataset.score + "</td>" +
+                                            "<td>" + arrInput[i].dataset.reviewdate + "</td>" +
+                                            "</tr>";
+                                }
                             });
                         }
 
@@ -89,7 +151,27 @@
                         span.onclick = function () {
                             modal.style.display = "none";
                         };
-
         </script>
+
+        <script>
+            function applyXSLforGameList(xml, start, end, noInitElem, elemId) {
+                var xslPath = realPath + "WEB-INF/xslt/RatinngList.xsl";
+                loadXMLDoc(xslPath);
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        xsl = this.responseXML.childNodes[1];
+                        xsltProcessor = new XSLTProcessor();
+                        xsltProcessor.importStylesheet(xsl);
+                        resultDocument = xsltProcessor.transformToFragment(xml, document);
+
+
+                        document.getElementById(elemId).innerHTML = '';
+                        document.getElementById(elemId).appendChild(div);
+                    }
+                }
+                ;
+            }
+        </script>
+
     </body>
 </html>

@@ -470,8 +470,11 @@ public class CrawlData {
         GameDAO.deleteAll();
         GameDAO.resetIdent();
         GameRatingDAO.resetIdent();
+        String originalUrl = uri;
+        String gameName = "";
         for (int i = 0; i <= pageNum; i++) {
             try {
+                uri = originalUrl;
                 uri += i;
                 URL url = new URL(uri);
                 URLConnection conn = url.openConnection();
@@ -525,6 +528,7 @@ public class CrawlData {
                     Game tmp = saxParserForGameDetail(item);
                     String name = item.getName().replaceAll("'", "''");
                     item.setName(name.trim());
+                    gameName = name.trim();
                     item.setDescription(tmp.getDescription().replaceAll("'", "''").trim());
 //                GameDAO.createGame2(item);
 //                    item.setGameRatingList(tmp.getGameRatingList());
@@ -554,6 +558,8 @@ public class CrawlData {
 
             } catch (Exception e) {
                 e.printStackTrace();
+                System.out.println(pageNum);
+                System.out.println(gameName);
             }
         }
 

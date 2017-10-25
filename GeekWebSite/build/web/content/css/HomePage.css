@@ -1,6 +1,6 @@
 
 .background{
-	background-image:url(Hinh/minimal2.jpg); 
+	background-image:url(../img/minimal2.jpg); 
 	background-attachment:fixed;
 	width:100%;
 	z-index:2;

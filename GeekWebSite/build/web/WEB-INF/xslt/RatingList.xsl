@@ -13,26 +13,6 @@
                             <xsl:value-of select="./*[local-name()='thumbnail']" />
                         </xsl:attribute>
                     </img>
-                    <input type="hidden">
-                        <xsl:attribute name="data-name">
-                            <xsl:value-of select="./*[local-name()='name']" />
-                        </xsl:attribute>
-                        <xsl:attribute name="data-platform">
-                            <xsl:value-of select="./*[local-name()='platform']" />
-                        </xsl:attribute>
-                        <xsl:attribute name="data-score">
-                            <xsl:value-of select="./*[local-name()='overallScore']" />
-                        </xsl:attribute>
-                        <xsl:attribute name="data-pulisher">
-                            <xsl:value-of select="./*[local-name()='pulisherAndReleaseDate']" />
-                        </xsl:attribute>
-                        <xsl:attribute name="data-link">
-                            <xsl:value-of select="./*[local-name()='link']" />
-                        </xsl:attribute>
-                        <xsl:attribute name="data-vote">
-                            <xsl:value-of select="./*[local-name()='totalVote']" />
-                        </xsl:attribute>
-                    </input>
                 </td>
                 <td>
                     <xsl:value-of select="./*[local-name()='name']" />

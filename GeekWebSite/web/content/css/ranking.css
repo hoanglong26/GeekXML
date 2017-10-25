@@ -1,55 +1,55 @@
 @charset "utf-8";
 caption{
-	padding: 5px;
+    padding: 5px;
     display: block;
     margin-top: 20px;
 }
 
 table
 {
-  display: block;
-  text-align: left;
-  /*width: 625px;*/
-  border-collapse:collapse;
-  margin: 0 auto;
-  /*max-width: 625px;*/
-  background: rgba(255, 255, 255, 0.70);
+    display: block;
+    text-align: left;
+    /*width: 80%;*/
+    border-collapse:collapse;
+    margin: 0 auto;
+    /*max-width: 650px;*/
+    background: rgba(255, 255, 255, 0.70);
 }
 
 td, th
 {
-  padding: 16px;
-  width: 200px;
-  line-height: 18px;
-  font-weight: 300;
+    padding: 16px;
+    width: 200px;
+    line-height: 18px;
+    font-weight: 300;
 }
 
 thead
 {
-  display: block;
-  background: rgba(255, 255, 255, 0.5);
-  text-align: center;
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
 
 th
 {
-  border-bottom: 0;
-  color: white;
-  color: #444;
-  font-weight: 700;
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
+    border-bottom: 0;
+    color: white;
+    color: #444;
+    font-weight: 700;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
 }
 
 th:last-child
 {
-  width: 219px;
+    width: 219px;
 }
 
 tbody
 {
-  width: 100%;
-  display: block;
-  text-align: center;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
 
 tr{
@@ -58,12 +58,12 @@ tr{
 
 tr:nth-child(even)
 {
-  background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 tr td:first-child
 {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 
@@ -87,8 +87,8 @@ tr td:first-child
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 800px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -144,4 +144,16 @@ tr td:first-child
     .modal-content {
         width: 100%;
     }
+}
+
+.game-modal-info{
+    height: 150px;
+    display: -webkit-box;
+}
+
+.game-modal-text{
+    font-size: 23px;
+    color: white;
+    padding: 10px;
+    line-height: 36px;
 }

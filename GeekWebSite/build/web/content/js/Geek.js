@@ -71,3 +71,17 @@ function hide(begin, end) {
 		n = 3;
 	}
 }
+
+function loadData(url)
+{
+    if (window.ActiveXObject)
+    {
+        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } else
+    {
+        xhttp = new XMLHttpRequest();
+    }
+    xhttp.open("GET", url, true);
+    xhttp.contentType = "application/xml";
+    xhttp.send();
+}

@@ -36,12 +36,12 @@ public class BackgroundListener implements ServletContextListener {
                 CrawlData crawl = new CrawlData(context);
 //                crawl.saxParserForArticle("http://ictnews.vn/rss/game");
 //                crawl.saxParserForArticle("http://ictnews.vn/rss/internet");
-                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt");
-                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt/phan-mem");
-//                crawl.saxParserForGameRanking("https://www.gamerankings.com/browse.html?page=", 2);
+//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt");
+//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt/phan-mem");
 //                crawl.saxParserForArticle("http://gamek.vn//pc-console.rss");
 //                crawl.saxParserForArticle("http://gamek.vn/game-online.rss");
 
+//                crawl.saxParserForGameRanking("https://www.gamerankings.com/browse.html?page=", 7);
             }
         };
 

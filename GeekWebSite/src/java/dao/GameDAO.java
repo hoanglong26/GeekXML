@@ -41,6 +41,7 @@ public class GameDAO {
 
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println(aGame.getName());
         } finally {
             em.close();
         }
