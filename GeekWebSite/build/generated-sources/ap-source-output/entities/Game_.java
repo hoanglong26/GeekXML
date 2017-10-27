@@ -6,12 +6,12 @@ import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-10-21T15:23:28")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-10-28T02:49:22")
 @StaticMetamodel(Game.class)
 public class Game_ { 
 
     public static volatile SingularAttribute<Game, String> thumbnail;
-    public static volatile ListAttribute<Game, GameRating> gameRatingList;
+    public static volatile ListAttribute<Game, GameRating> gameRating;
     public static volatile SingularAttribute<Game, String> totalVote;
     public static volatile SingularAttribute<Game, String> overallScore;
     public static volatile SingularAttribute<Game, String> name;

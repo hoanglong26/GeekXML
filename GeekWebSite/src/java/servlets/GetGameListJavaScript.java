@@ -5,6 +5,8 @@
  */
 package servlets;
 
+import dao.GameDAO;
+import entities.GameList;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -18,9 +20,7 @@ import utilities.Const;
  *
  * @author hoanglong
  */
-public class DispatcherServlet extends HttpServlet {
-
-    private final String rankingServlet = "RankingServlet";
+public class GetGameListJavaScript extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,28 +33,21 @@ public class DispatcherServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String url = Const.homepage;
+        String from = request.getParameter("from");
+        String maxResult = request.getParameter("maxResult");
+
         try {
-            String action = request.getParameter("action");
-
-            if (action == null) {
-                //invalid
-                url = rankingServlet+"?from=0&maxResult=20";
-
-            } else {
-                if (action.equals("RANKING")) {
-                    url = rankingServlet;
-                } else {
-                    url = Const.homepage;
-                }
-            }
-
+            GameList topGames = GameDAO.getGameRankingRange(Integer.parseInt(from), Integer.parseInt(maxResult));
+            String topGamesString = utilities.Utilities.marshallerToString(topGames);
+            topGamesString = topGamesString.replace("standalone=\"yes\"", "");
+            out.print(topGamesString);
+//            request.setAttribute("TOP_GAME", topGamesString);
         } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request, response);
-            out.close();
+//            RequestDispatcher rd = request.getRequestDispatcher(Const.rankingPage);
+//            rd.forward(request, response);
+
         }
     }
 

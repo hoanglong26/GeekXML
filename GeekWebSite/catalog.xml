@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8780/GeekWebSite/NewWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/NewWebService/wsdl/localhost_8780/GeekWebSite/NewWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8780/GeekWebSite/NewWebService?wsdl" uri="src/conf/xml-resources/web-service-references/NewWebService/wsdl/localhost_8780/GeekWebSite/NewWebService.wsdl"/>
+    <system systemId="http://localhost:8780/GeekWebSite/GameWebService?wsdl" uri="src/conf/xml-resources/web-service-references/GameWebService/wsdl/localhost_8780/GeekWebSite/GameWebService.wsdl"/>
+    <system systemId="http://localhost:8780/GeekWebSite/GameWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/GameWebService/wsdl/localhost_8780/GeekWebSite/GameWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8780/GeekWebSite/GameWebService?xsd=2" uri="src/conf/xml-resources/web-service-references/GameWebService/wsdl/localhost_8780/GeekWebSite/GameWebService.xsd_2.xsd"/>
+</catalog>

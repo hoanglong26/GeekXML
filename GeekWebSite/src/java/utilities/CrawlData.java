@@ -220,7 +220,6 @@ public class CrawlData {
                 }
                 if (inArticleRow) {
                     if (line.contains("<img")) {
-
                         String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
                         line = line.replace(removePart, "");
 
@@ -234,6 +233,10 @@ public class CrawlData {
                             String tmpline = new StringBuilder(line).insert(line.indexOf("</") - 1, " /").toString();
                             line = tmpline;
                         }
+                    }
+
+                    if (line.contains("bs_mobileinpage")) {
+                        line += "</p>";
                     }
 
                     document += line;

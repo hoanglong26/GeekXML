@@ -35,8 +35,11 @@ public class RankingServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String from = request.getParameter("from");
+        String maxResult = request.getParameter("maxResult");
+
         try {
-            GameList topGames = GameDAO.getGameRankingRange(0, 20);
+            GameList topGames = GameDAO.getGameRankingRange(Integer.parseInt(from), Integer.parseInt(maxResult));
             String topGamesString = utilities.Utilities.marshallerToString(topGames);
             topGamesString = topGamesString.replace("standalone=\"yes\"", "");
 

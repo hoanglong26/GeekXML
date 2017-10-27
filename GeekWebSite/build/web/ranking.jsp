@@ -8,7 +8,7 @@
 <%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
 <c:set var="topGames" value="${requestScope.TOP_GAME}" />
-<c:import var="xsldoc" url="WEB-INF/xslt/GameList.xsl" />
+<c:import var="xsldoc" url="content/xslt/GameList.xsl" />
 
 <!DOCTYPE html>
 <html>
@@ -21,14 +21,15 @@
         <link href="content/css/ranking.css" rel="stylesheet" type="text/css">
 
     </head>
-    <body onload="picSwap()">
+    <body onload="picSwap();
+            bindingModalClick(false);">
 
         <div class="background">
             <div class="container" style="background-image:url(content/img/test.png);">
                 <c:import url="header.jsp" charEncoding="UTF-8" />
 
                 <div>
-                    <table>
+                    <table id="gameListTable">
                         <caption>
                             <h1>Bảng xếp hạng game</h1>
                         </caption>
@@ -45,7 +46,7 @@
                             <x:transform xml="${topGames}" xslt="${xsldoc}" />
                         </tbody>
                     </table>
-                    <button class="btn">Xem thêm</button>
+                    <button class="btn" onclick="getMoreGame()">Xem thêm</button>
 
                 </div>
 
@@ -105,71 +106,38 @@
 
         <script type="text/javascript" src="content/js/Geek.js"></script>
         <script>
-                        var modal = document.getElementById('myModal');
-                        var modalImg = document.getElementById("img01");
-                        var nameText = document.getElementById("game-name");
-                        var pulisherText = document.getElementById("game-pulisher");
-                        var platformText = document.getElementById("game-platform");
-                        var overallRatingText = document.getElementById("game-overallRating");
-                        var linkHref = document.getElementById("game-link");
-                        var linkImgHref = document.getElementById("game-link-img");
-                        var ratingList = document.getElementById("rating-list");
+                        
 
-                        var elts = document.getElementsByClassName('gameRow');
-                        for (var i = elts.length - 1; i >= 0; --i) {
-                            elts[i].addEventListener("click", function () {
-                                modal.style.display = "block";
-                                var tdImgChild = this.childNodes[2];
-                                var imgChild = tdImgChild.childNodes[0];
-                                modalImg.src = imgChild.src;
-
-                                var hiddenGameInfo = tdImgChild.childNodes[1];
-                                console.log(hiddenGameInfo);
-                                linkImgHref.href = hiddenGameInfo.dataset.link;
-                                linkHref.href = hiddenGameInfo.dataset.link;
-                                nameText.innerHTML = hiddenGameInfo.dataset.name;
-                                platformText.innerHTML = hiddenGameInfo.dataset.platform;
-                                pulisherText.innerHTML = hiddenGameInfo.dataset.pulisher;
-                                overallRatingText.innerHTML = hiddenGameInfo.dataset.score + " với " + hiddenGameInfo.dataset.vote;
-
-
-                                ratingList.innerHTML = "";
-                                var tdNameChild = this.childNodes[3];
-                                var arrInput = tdNameChild.getElementsByTagName("input");
-                                for (var i = 0; i < arrInput.length; i++) {
-                                    ratingList.innerHTML += "<tr>\n" +
-                                            "<td>" + arrInput[i].dataset.reviewer + "</td>" +
-                                            "<td>" + arrInput[i].dataset.score + "</td>" +
-                                            "<td>" + arrInput[i].dataset.reviewdate + "</td>" +
-                                            "</tr>";
-                                }
-                            });
-                        }
-
-                        var span = document.getElementsByClassName("close")[0];
-                        // When the user clicks on <span> (x), close the modal
-                        span.onclick = function () {
-                            modal.style.display = "none";
-                        };
         </script>
 
         <script>
-            function applyXSLforGameList(xml, start, end, noInitElem, elemId) {
-                var xslPath = realPath + "WEB-INF/xslt/RatinngList.xsl";
-                loadXMLDoc(xslPath);
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState === 4 && this.status === 200) {
-                        xsl = this.responseXML.childNodes[1];
-                        xsltProcessor = new XSLTProcessor();
-                        xsltProcessor.importStylesheet(xsl);
-                        resultDocument = xsltProcessor.transformToFragment(xml, document);
+            var realPath = '${pageContext.request.contextPath}';
 
+            function getMoreGame() {
+                var gameTable = document.getElementById("gameListTable");
+                var lastRow = gameTable.rows[gameTable.rows.length - 1];
+                var idOfLastRow = lastRow.childNodes[1];
+                var from = parseInt(idOfLastRow.textContent) + 1;
 
-                        document.getElementById(elemId).innerHTML = '';
-                        document.getElementById(elemId).appendChild(div);
-                    }
-                }
-                ;
+//                from = 21;
+//                localStorage.setItem("geek_list_game_from_21", null);
+
+                initStorageTimeout(from);
+                var tableRef = document.getElementById('gameListTable').getElementsByTagName('tbody')[0];
+                console.log(tableRef);
+                saveGameListData(from, realPath, tableRef);
+                var xml = localStorage.getItem("geek_list_game_from_" + from);
+                applyXSL(xml, realPath, "/content/GameList.xsl", tableRef);
+//                tableRef.appendChild()
+//// Insert a row in the table at the last row
+//                var newRow = tableRef.insertRow(tableRef.rows.length);
+//
+//// Insert a cell in the row at index 0
+//                var newCell = newRow.insertCell(0);
+//
+//// Append a text node to the cell
+//                var newText = document.createTextNode('New row');
+//                newCell.appendChild(newText);
             }
         </script>
 

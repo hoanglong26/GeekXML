@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://www.w3.org/2005/Atom" uri="www.w3.org/2005/atom.xml"/>
+    <system systemId="http://www.w3.org/1999/xhtml" uri="www.w3.org/1999/xhtml/index.xml"/>
+    <system systemId="http://ogp.me/ns" uri="ogp.me/index"/>
+    <system systemId="http://www.game.net" uri="www.game.co.uk/index"/>
 </catalog>
