@@ -6,7 +6,9 @@
 package servlets;
 
 import dao.ArticleDAO;
+import dao.GameDAO;
 import entities.ArticleList;
+import entities.GameList;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -20,7 +22,7 @@ import utilities.Const;
  *
  * @author hoanglong
  */
-public class ArticlesServlet extends HttpServlet {
+public class GetArticleListJavaScript extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,28 +35,21 @@ public class ArticlesServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
-//        String from = request.getParameter("from");
-//        String maxResult = request.getParameter("maxResult");
+        String from = request.getParameter("from");
+        String maxResult = request.getParameter("maxResult");
 
         try {
-            ArticleList newestArticles = ArticleDAO.getArticleByRange(0, 6);
+            ArticleList newestArticles = ArticleDAO.getArticleByRange(Integer.parseInt(from), Integer.parseInt(maxResult));
             String newestArticlesString = utilities.Utilities.marshallerToString(newestArticles);
             newestArticlesString = newestArticlesString.replace("standalone=\"yes\"", "");
 
-            request.setAttribute("NEWEST_ARTICLES", newestArticlesString);
-
-            ArticleList otherArticles = ArticleDAO.getArticleByRange(6, 10);
-            String otherArticlesString = utilities.Utilities.marshallerToString(otherArticles);
-            otherArticlesString = otherArticlesString.replace("standalone=\"yes\"", "");
-
-            request.setAttribute("OTHER_ARTICLES", otherArticlesString);
-
+            out.print(newestArticlesString);
         } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(Const.articlesPage);
-            rd.forward(request, response);
-            out.close();
+//            RequestDispatcher rd = request.getRequestDispatcher(Const.rankingPage);
+//            rd.forward(request, response);
+
         }
     }
 

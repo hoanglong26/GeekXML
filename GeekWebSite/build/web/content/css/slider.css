@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .accordian {
-    background:url(Hinh/minimal2.jpg);
+    background:url(../img/minimal2.jpg);
     width: 1040px; height: 320px;
     overflow: hidden;
     position:relative;

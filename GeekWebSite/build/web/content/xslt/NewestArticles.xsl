@@ -4,10 +4,13 @@
     <xsl:template match="/">
         <ul>
             <xsl:for-each select="//*[local-name()='article']">
-
                 <li>
                     <div class="image_title">
-                        <a href="faker.html">
+                        <a>
+                            <xsl:attribute name="title">
+                                <xsl:value-of select="./*[local-name()='title']" />
+                            </xsl:attribute>
+                            <xsl:attribute name="href">ArticleDetail?articleId=<xsl:value-of select="./*[local-name()='id']" /></xsl:attribute>
                             <xsl:value-of select="./*[local-name()='title']" />
                         </a>
                         <div class="img-content">
@@ -15,13 +18,19 @@
                             <br/> 
                         </div>
                     </div>
-                    <a href="faker.html">
+                    <a>
+                        <xsl:attribute name="title">
+                            <xsl:value-of select="./*[local-name()='title']" />
+                        </xsl:attribute>
+                        <xsl:attribute name="href">ArticleDetail?articleId=<xsl:value-of select="./*[local-name()='id']" /></xsl:attribute>
                         <img height="320" width="560">
                             <xsl:attribute name="src">
                                 <xsl:value-of select="./*[local-name()='thumbnail']" />
                             </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:value-of select="./*[local-name()='title']" />
+                            </xsl:attribute>
                         </img>
-                        <!--<img src="content/img/faker.png" height="320" width="643"/>-->
                     </a>
                 </li>
             </xsl:for-each>

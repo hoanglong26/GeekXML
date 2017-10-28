@@ -125,7 +125,15 @@
 
                 initStorageTimeout(from);
                 var tableRef = document.getElementById('gameListTable').getElementsByTagName('tbody')[0];
-                saveGameListData(from, realPath, tableRef);
+                if (localStorage.getItem("geek_list_game_from_1") !== null) {
+                    loadMoreGame(tableRef, from);
+                } else {
+                    saveGameListData(from, realPath, tableRef);
+                }
+
+                //future load
+                initStorageTimeout(from + 20);
+                saveGameListData(from + 20, realPath, tableRef);
             }
         </script>
 

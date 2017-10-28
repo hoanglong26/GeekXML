@@ -71,7 +71,6 @@ function hide(begin, end) {
 
 function hightlightMenuItem(itemName) {
     var menuRow = document.getElementsByClassName("menu");
-    console.log(menuRow);
     for (var i = 0; i < menuRow.length; i++) {
         var liRow = menuRow[i].getElementsByTagName("a");
         for (var j = 0; j < liRow.length; j++) {
@@ -97,20 +96,98 @@ function scrollFunction() {
 }
 
 function scrollToTop(scrollDuration) {
-    var scrollStep = -window.scrollY / (scrollDuration / 15),
-            scrollInterval = setInterval(function () {
-                if (window.scrollY !== 0) {
-                    window.scrollBy(0, scrollStep);
-                }
-                else
-                    clearInterval(scrollInterval);
-            }, 15);
+    var scrollStep = -window.scrollY / (scrollDuration / 15);
+    var scrollInterval = setInterval(function () {
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+        }
+        else
+            clearInterval(scrollInterval);
+    }, 15);
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-    document.documentElement.scrollTop = 0; // For IE and Firefox
+//// When the user clicks on the button, scroll to the top of the document
+//function topFunction() {
+//    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+//    document.documentElement.scrollTop = 0; // For IE and Firefox
+//}
+
+var xhttp;
+var xDom;
+function getXmlHtmlObj() {
+    var xmlHttp = null;
+    try {
+        xmlHttp = new XMLHttpRequest();
+    } catch (e) {
+        try {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (ex) {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    }
+    return xmlHttp;
+}
+
+function loadData(url)
+{
+    xhttp = getXmlHtmlObj();
+    if (xhttp === null) {
+        alert("Your browser doesn't support Ajax");
+        return;
+    }
+
+    xhttp.open("GET", url, true);
+    xhttp.contentType = "application/xml";
+    xhttp.send(null);
+}
+
+function saveArticleListData(from, realPath, ele) {
+    var savedData = sessionStorage.getItem("geek_list_article_from_" + from);
+    if (savedData === null) {
+        var url = realPath + '/GetArticleListJavaScript?from=' + (from - 1) + '&maxResult=10';
+        loadData(url);
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                var xmlRes = this.responseXML;
+                if (xmlRes !== null) {
+
+                    console.log(xmlRes);
+
+                    var xslPath = realPath + "/content/xslt/OtherArticles.xsl";
+                    loadData(xslPath);
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState === 4 && this.status === 200) {
+                            xsl = this.responseXML;
+                            xsltProcessor = new XSLTProcessor();
+                            xsltProcessor.importStylesheet(xsl);
+                            var resultDocument = xsltProcessor.transformToFragment(xmlRes, document);
+                            sessionStorage.setItem("geek_list_article_from_" + from, resultDocument.getElementById("articleList").innerHTML);
+
+                            if (from === 7) {
+                                loadMoreArticle(ele, from);
+                            }
+                        }
+                    };
+                }
+            }
+        };
+    } else {
+//        loadMoreGame(ele, from);
+    }
+}
+
+function loadMoreArticle(ele, from) {
+//    while (ele.firstChild) {
+//        ele.removeChild(ele.firstChild);
+//    }
+
+    var d = document.createElement("div");
+    d.innerHTML = sessionStorage.getItem("geek_list_article_from_" + from);
+
+    ele.appendChild(d);
+//    bindingModalClick(true);
+//    scroll(0, 0);
+
 }
 
 function bindingModalClick(isLoadFromXSLT) {
@@ -173,45 +250,15 @@ function bindingModalClick(isLoadFromXSLT) {
     };
 }
 
-var xhttp;
-var xDom;
-function getXmlHtmlObj() {
-    var xmlHttp = null;
-    try {
-        xmlHttp = new XMLHttpRequest();
-    } catch (e) {
-        try {
-            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (ex) {
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-    }
-    return xmlHttp;
-}
-
-function loadData(url)
-{
-    xhttp = getXmlHtmlObj();
-    if (xhttp === null) {
-        alert("Your browser doesn't support Ajax");
-        return;
-    }
-
-    xhttp.open("GET", url, true);
-    xhttp.contentType = "application/xml";
-    xhttp.send(null);
-}
-
 function saveGameListData(from, realPath, ele) {
     var savedData = localStorage.getItem("geek_list_game_from_" + from);
-    if (savedData === null || savedData === "null" || isLocalStorageExpired(from)) {
+    if (savedData === null || isLocalStorageExpired(from)) {
         var url = realPath + '/GetGameListJavaScript?from=' + (from - 1) + '&maxResult=20';
         loadData(url);
         xhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 var xmlRes = this.responseXML;
                 if (xmlRes !== null) {
-
                     var xslPath = realPath + "/content/xslt/LoadMoreGameList.xsl";
                     loadData(xslPath);
                     xhttp.onreadystatechange = function () {
@@ -224,14 +271,16 @@ function saveGameListData(from, realPath, ele) {
                             var b = document.createElement("tbody");
                             b.innerHTML = htmlResult.innerHTML;
                             localStorage.setItem("geek_list_game_from_" + from, b.innerHTML);
-                            loadMoreGame(ele, from);
+                            if (from === 1) {
+                                loadMoreGame(ele, from);
+                            }
                         }
                     };
                 }
             }
         };
     } else {
-        loadMoreGame(ele, from);
+//        loadMoreGame(ele, from);
     }
 }
 
@@ -270,7 +319,7 @@ function isLocalStorageExpired(from) {
 function clearStorage(from) {
     var currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
-    localStorage.setItem("geek_list_game_from_" + from, null);
+    localStorage.removeItem("geek_list_game_from_" + from);
     localStorage.setItem("geek_last_date_list_from_" + from, currentDate);
 }
 
@@ -289,6 +338,8 @@ function initStorageTimeout(from) {
         localStorage.setItem("geek_last_date_list_from_" + from, currentDate);
     }
 }
+
+
 
 
 function applyXSL(xml, realPath, xslFilePath, ele) {

@@ -20,6 +20,10 @@
         <servlet-class>servlets.GetGameListJavaScript</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>GetArticleListJavaScript</servlet-name>
+        <servlet-class>servlets.GetArticleListJavaScript</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ArticlesServlet</servlet-name>
         <servlet-class>servlets.ArticlesServlet</servlet-class>
     </servlet>
@@ -34,6 +38,10 @@
     <servlet-mapping>
         <servlet-name>GetGameListJavaScript</servlet-name>
         <url-pattern>/GetGameListJavaScript</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetArticleListJavaScript</servlet-name>
+        <url-pattern>/GetArticleListJavaScript</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ArticlesServlet</servlet-name>
