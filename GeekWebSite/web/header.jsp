@@ -30,12 +30,12 @@
 
 <div class="menu row">
     <ul>
-        <li class="col-xs-2">|</li>
-        <li class="mlink col-xs-2"><a href="Geek.html">Home</a></li>
-        <li class="col-xs-2">|</li>
-        <li style="background-color:#C60000;" class="mlink col-xs-2"><a href="PcConsole.html">Ranking</a></li>
-        <li class="col-xs-2">|</li>
-        <li class="col-xs-1"></li>
+        <li class="zone-2">|</li>
+        <li class="mlink zone-2"><a href="DispatcherServlet">Trang chủ</a></li>
+        <li class="zone-2">|</li>
+        <li class="mlink zone-2"><a href="DispatcherServlet?action=RANKING">Bảng xếp hạng</a></li>
+        <li class="zone-2">|</li>
+        <li class="zone-1"></li>
     </ul>
 </div>
 </header>

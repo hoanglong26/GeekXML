@@ -20,7 +20,8 @@ import utilities.Const;
  */
 public class DispatcherServlet extends HttpServlet {
 
-    private final String rankingServlet = "RankingServlet";
+    private final String rankingServlet = "ranking.jsp";
+    private final String articlesServlet = "ArticlesServlet";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,13 +42,13 @@ public class DispatcherServlet extends HttpServlet {
 
             if (action == null) {
                 //invalid
-                url = rankingServlet+"?from=0&maxResult=20";
+                url = articlesServlet;
 
             } else {
                 if (action.equals("RANKING")) {
                     url = rankingServlet;
                 } else {
-                    url = Const.homepage;
+                    url = articlesServlet;
                 }
             }
 

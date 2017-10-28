@@ -6,12 +6,18 @@
 package dao;
 
 import entities.Article;
+import entities.ArticleList;
 import entities.Game;
+import entities.GameList;
 import entities.Image;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import utilities.Utilities;
 
 /**
@@ -59,6 +65,36 @@ public class ArticleDAO {
             em.close();
         }
         return articles;
+    }
+
+    public static ArticleList getArticleByRange(int startFrom, int maxResult) {
+        EntityManager em = Utilities.getEntityManager();
+        ArticleList list = new ArticleList();
+        try {
+            CriteriaBuilder cb = em.getCriteriaBuilder();
+            CriteriaQuery cq = cb.createQuery(Article.class);
+            Root<Article> p = cq.from(Article.class);
+            cq.orderBy(cb.desc(p.get("pubDate")));
+            cq.select(p);
+            Query query = em.createQuery(cq);
+            query.setFirstResult(startFrom);
+            query.setMaxResults(maxResult);
+            List<Article> articleList = query.getResultList();
+
+            for (Article item : articleList) {
+                if (item.getThumbnail().contains("genknews")) {
+                    String newThumbnail = item.getImageList().get(0).getLink();
+                    item.setThumbnail(newThumbnail);
+                }
+            }
+
+            list.setArticleList(articleList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+        return list;
     }
 
     public static List<Article> findArticleByTitle(String title) {

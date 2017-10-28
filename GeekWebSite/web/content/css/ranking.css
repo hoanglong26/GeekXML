@@ -1,8 +1,10 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 caption{
     padding: 5px;
     display: block;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 table
@@ -19,7 +21,7 @@ table
 td, th
 {
     padding: 16px;
-    width: 200px;
+    width: 250px;
     line-height: 18px;
     font-weight: 300;
 }
@@ -40,10 +42,10 @@ th
     text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
 }
 
-th:last-child
+/*th:last-child
 {
     width: 219px;
-}
+}*/
 
 tbody
 {
@@ -67,31 +69,28 @@ tr td:first-child
 }
 
 
-
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 90%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 90%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
-/* Modal Content (Image) */
 .modal-content {
     margin: auto;
     display: block;
     width: 90%;
     max-width: 800px;
+    margin-bottom: 50px;
 }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
     margin: auto;
     display: block;
@@ -103,7 +102,6 @@ tr td:first-child
     height: 150px;
 }
 
-/* Add Animation - Zoom in the Modal */
 .modal-content, #caption { 
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -121,7 +119,6 @@ tr td:first-child
     to {transform:scale(1)}
 }
 
-/* The Close Button */
 .close {
     position: absolute;
     top: 15px;
@@ -137,13 +134,6 @@ tr td:first-child
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
 }
 
 .game-modal-info{

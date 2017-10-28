@@ -45,7 +45,7 @@ public class BackgroundListener implements ServletContextListener {
             }
         };
 
-        scheduler.scheduleAtFixedRate(runnable, 0, 22, TimeUnit.HOURS);
+        scheduler.scheduleAtFixedRate(runnable, 0, 24, TimeUnit.HOURS);
     }
 
     @Override

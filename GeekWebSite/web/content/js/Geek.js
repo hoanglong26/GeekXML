@@ -1,13 +1,13 @@
 function showResult() {
     var check = document.getElementById("key")
 
-    if (((event.keyCode == 13) && (check.value == "")) || ((window.event.which == 1) && (check.value == ""))) {
+    if (((event.keyCode === 13) && (check.value === "")) || ((window.event.which === 1) && (check.value === ""))) {
         alert("Xin nhập từ khóa");
         check.focus();
     }
-    if (/\S/.test(check.value) == true) {
+    if (/\S/.test(check.value) === true) {
 
-        if (((event.keyCode == 13) || (window.event.which == 1)) && (check.value != "")) {
+        if (((event.keyCode === 13) || (window.event.which === 1)) && (check.value !== "")) {
             window.open().location = "https://www.google.com/#q=" + check.value + "+site:gamek.vn";
         }
     }
@@ -18,7 +18,6 @@ function showResult() {
 
 var list = ["banner13.png", "banner16.png", "banner12.png", "banner10.jpg"];
 var i = 0;
-
 var time_id;
 function picSwap() {
     var tag = document.getElementById("pic");
@@ -29,10 +28,9 @@ function picSwap() {
     i++;
     i = i % 4;
     time_id = setTimeout("picSwap()", 2000);
-
 }
 function picStop(flag) {
-    if (flag == true) {
+    if (flag === true) {
         time_id = setTimeout("picSwap()", 2000);
     }
     else {
@@ -46,7 +44,6 @@ var n = 3;
 function expand(begin, end) {
     m = m + 3;
     n = n + 3;
-
     if (m > begin || n > end) {
         m = m - 3;
         n = n - 3;
@@ -59,7 +56,6 @@ function expand(begin, end) {
 
 
 function hide(begin, end) {
-
     if (m >= begin || n >= end) {
         for (i = m; i <= n; i++) {
             document.getElementById("page" + i).style.visibility = "hidden";
@@ -73,6 +69,50 @@ function hide(begin, end) {
     }
 }
 
+function hightlightMenuItem(itemName) {
+    var menuRow = document.getElementsByClassName("menu");
+    console.log(menuRow);
+    for (var i = 0; i < menuRow.length; i++) {
+        var liRow = menuRow[i].getElementsByTagName("a");
+        for (var j = 0; j < liRow.length; j++) {
+            if (liRow[j].textContent === itemName) {
+                console.log();
+                liRow[j].parentNode.setAttribute("style", "background-color:#C60000;");
+            }
+        }
+    }
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+    scrollFunction();
+};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("topBtn").style.display = "block";
+    } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+}
+
+function scrollToTop(scrollDuration) {
+    var scrollStep = -window.scrollY / (scrollDuration / 15),
+            scrollInterval = setInterval(function () {
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                }
+                else
+                    clearInterval(scrollInterval);
+            }, 15);
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+
 function bindingModalClick(isLoadFromXSLT) {
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById("img01");
@@ -83,17 +123,14 @@ function bindingModalClick(isLoadFromXSLT) {
     var linkHref = document.getElementById("game-link");
     var linkImgHref = document.getElementById("game-link-img");
     var ratingList = document.getElementById("rating-list");
-
     var elts = document.getElementsByClassName('gameRow');
     for (var i = elts.length - 1; i >= 0; --i) {
         elts[i].addEventListener("click", function () {
             modal.style.display = "block";
-
             var indexOfTd;
             var indexOfImg;
             var indexOfGameInfo;
             var indexOfRatingList;
-
             if (isLoadFromXSLT) {
                 indexOfTd = 3;
                 indexOfImg = 1;
@@ -104,13 +141,11 @@ function bindingModalClick(isLoadFromXSLT) {
                 indexOfImg = 0;
                 indexOfGameInfo = 1;
                 indexOfRatingList = 3;
-
             }
 
             var tdImgChild = this.childNodes[indexOfTd];
             var imgChild = tdImgChild.childNodes[indexOfImg];
             modalImg.src = imgChild.src;
-
             var hiddenGameInfo = tdImgChild.childNodes[indexOfGameInfo];
             linkImgHref.href = hiddenGameInfo.dataset.link;
             linkHref.href = hiddenGameInfo.dataset.link;
@@ -118,8 +153,6 @@ function bindingModalClick(isLoadFromXSLT) {
             platformText.innerHTML = hiddenGameInfo.dataset.platform;
             pulisherText.innerHTML = hiddenGameInfo.dataset.pulisher;
             overallRatingText.innerHTML = hiddenGameInfo.dataset.score + " với " + hiddenGameInfo.dataset.vote;
-
-
             ratingList.innerHTML = "";
             var tdNameChild = this.childNodes[indexOfRatingList];
             var arrInput = tdNameChild.getElementsByTagName("input");
@@ -142,7 +175,6 @@ function bindingModalClick(isLoadFromXSLT) {
 
 var xhttp;
 var xDom;
-
 function getXmlHtmlObj() {
     var xmlHttp = null;
     try {
@@ -160,7 +192,6 @@ function getXmlHtmlObj() {
 function loadData(url)
 {
     xhttp = getXmlHtmlObj();
-
     if (xhttp === null) {
         alert("Your browser doesn't support Ajax");
         return;
@@ -181,46 +212,19 @@ function saveGameListData(from, realPath, ele) {
                 var xmlRes = this.responseXML;
                 if (xmlRes !== null) {
 
-//                    var xslUrl = realPath + "/content/GameList.xsl";
-
-//                    var xsl = new ActiveXObject('Msxml2.FreeThreadedDOMDocument.6.0');
-//                    xsl.load(xslUrl);
-
                     var xslPath = realPath + "/content/xslt/LoadMoreGameList.xsl";
                     loadData(xslPath);
-
                     xhttp.onreadystatechange = function () {
                         if (this.readyState === 4 && this.status === 200) {
                             xsl = this.responseXML;
-
                             xsltProcessor = new XSLTProcessor();
                             xsltProcessor.importStylesheet(xsl);
                             var resultDocument = xsltProcessor.transformToFragment(xmlRes, document);
-
                             var htmlResult = resultDocument.getElementById("remove-tag");
-
-//                            var childNodes = htmlResult.childNodes;
-
                             var b = document.createElement("tbody");
                             b.innerHTML = htmlResult.innerHTML;
-
-//                            for (var i = 0, len = childNodes.length; i < len; i++) {
-//                                if (childNodes[i] !== undefined) {
-//                                    if (childNodes[i].tagName === "TR") {
-//                                        ele.appendChild(childNodes[i]);
-//                                    }
-//                                }
-//                            }
-
                             localStorage.setItem("geek_list_game_from_" + from, b.innerHTML);
-//                            while (ele.firstChild) {
-//                                ele.removeChild(ele.firstChild);
-//                            }
-//                            var d = document.createElement("tbody");
-//                            d.innerHTML = localStorage.getItem("geek_list_game_from_" + from);
-//                            ele.replaceWith(d);
-//                            bindingModalClick(true);
-                            loadMoreGame(ele,from);
+                            loadMoreGame(ele, from);
                         }
                     };
                 }
@@ -232,14 +236,15 @@ function saveGameListData(from, realPath, ele) {
 }
 
 function loadMoreGame(ele, from) {
-    while (ele.firstChild) {
-        ele.removeChild(ele.firstChild);
-    }
+//    while (ele.firstChild) {
+//        ele.removeChild(ele.firstChild);
+//    }
+
     var d = document.createElement("tbody");
-    d.innerHTML = localStorage.getItem("geek_list_game_from_" + from);
+    d.innerHTML = ele.innerHTML + localStorage.getItem("geek_list_game_from_" + from);
     ele.replaceWith(d);
     bindingModalClick(true);
-    scroll(0,0);
+//    scroll(0, 0);
 
 }
 
@@ -247,10 +252,8 @@ function loadMoreGame(ele, from) {
 function isLocalStorageExpired(from) {
     var lastUpdatedDate = localStorage.getItem("geek_last_date_list_from_" + from);
     var lastDate = new Date(lastUpdatedDate);
-
     var currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
-
     if (lastDate !== null) {
         lastDate.setHours(0, 0, 0, 0);
         lastDate.setDate(lastDate.getDate() + 7);
@@ -274,10 +277,8 @@ function clearStorage(from) {
 function initStorageTimeout(from) {
     var lastUpdatedDate = localStorage.getItem("geek_last_date_list_from_" + from);
     var lastDate = new Date(lastUpdatedDate);
-
     var currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
-
     if (lastDate !== null) {
         lastDate.setHours(0, 0, 0, 0);
         lastDate.setDate(lastDate.getDate() + 7);

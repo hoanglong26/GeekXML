@@ -37,7 +37,9 @@
                             </input>
                         </td>
                         <td>
-                            <xsl:value-of select="./*[local-name()='name']" />
+                            <h4>
+                                <xsl:value-of select="./*[local-name()='name']" />
+                            </h4>
                             <xsl:for-each select="./*[local-name()='gameRating']">
                                 <input type="hidden">
                                     <xsl:attribute name="data-id">
@@ -59,7 +61,9 @@
                             <xsl:value-of select="./*[local-name()='platform']" />
                         </td>
                         <td>
-                            <xsl:value-of select="./*[local-name()='overallScore']" />
+                            <h4>
+                                <xsl:value-of select="./*[local-name()='overallScore']" />
+                            </h4>
                         </td>
                     </tr>
         

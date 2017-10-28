@@ -7,8 +7,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
-<c:set var="topGames" value="${requestScope.TOP_GAME}" />
-<c:import var="xsldoc" url="content/xslt/GameList.xsl" />
+<%--<c:set var="topGames" value="${requestScope.TOP_GAME}" />--%>
+<%--<c:import var="xsldoc" url="content/xslt/GameList.xsl" />--%>
 
 <!DOCTYPE html>
 <html>
@@ -22,13 +22,20 @@
 
     </head>
     <body onload="picSwap();
+            getMoreGame(0);
+            hightlightMenuItem('Bảng xếp hạng');
             bindingModalClick(false);">
 
         <div class="background">
             <div class="container" style="background-image:url(content/img/test.png);">
                 <c:import url="header.jsp" charEncoding="UTF-8" />
-
                 <div>
+                    <div class="export-zone">
+                        <button class="btn btnExport" style="background-color: #1565C0">In ra PDF</button>
+                        <button class="btn btnExport" style="background-color: #00C853">In ra Excel</button>
+
+                    </div>
+
                     <table id="gameListTable">
                         <caption>
                             <h1>Bảng xếp hạng game</h1>
@@ -43,27 +50,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <x:transform xml="${topGames}" xslt="${xsldoc}" />
+                            <%--<x:transform xml="${topGames}" xslt="${xsldoc}" />--%>
                         </tbody>
                     </table>
-                    <button class="btn" onclick="getMoreGame()">Xem thêm</button>
-
+                    <button class="btn btnMore" onclick="getMoreGame(1)">Xem thêm</button>
                 </div>
 
                 <div id="myModal" class="modal">
-
                     <!-- The Close Button -->
                     <span class="close" onclick="document.getElementById('myModal').style.display = 'none'">&times;</span>
 
-                    <!-- Modal Content (The Image) -->
                     <div class="modal-content">
                         <div class="game-modal-info">
-                            <div class="col-xs-2">
+                            <div class="zone-2">
                                 <a id="game-link-img" href="https://www.gamerankings.com/wii/915692-super-mario-galaxy/index.html">
                                     <img id="img01">
                                 </a>
                             </div>
-                            <div class="col-xs-10">
+                            <div class="zone-10">
                                 <div><a id="game-link" href="https://www.gamerankings.com/wii/915692-super-mario-galaxy/index.html">
                                         <span class="tag">Tên game</span>
                                         <span class="game-modal-text" id="game-name">Alibaba và 70 tên cướp</span>
@@ -74,7 +78,7 @@
                             </div>
                         </div>
 
-                        <table style="width: 80%;">
+                        <table style="background: rgba(194, 198, 228, 0.7);">
                             <caption>
                                 <h1>Danh sách các đánh giá</h1>
                             </caption>
@@ -94,50 +98,34 @@
                             </tbody>
                         </table>
                     </div>
-
-                    <!-- Modal Caption (Image Text) -->
-                    <div id="caption"></div>
                 </div>
-
-
                 <c:import url="footer.jsp" charEncoding="UTF-8" />
             </div>
         </div>
 
         <script type="text/javascript" src="content/js/Geek.js"></script>
         <script>
-                        
 
         </script>
 
         <script>
             var realPath = '${pageContext.request.contextPath}';
-
-            function getMoreGame() {
+            function getMoreGame(from) {
                 var gameTable = document.getElementById("gameListTable");
                 var lastRow = gameTable.rows[gameTable.rows.length - 1];
                 var idOfLastRow = lastRow.childNodes[1];
-                var from = parseInt(idOfLastRow.textContent) + 1;
+                if (from !== 0) {
+                    from = parseInt(idOfLastRow.textContent) + 1;
+                } else {
+                    from = from + 1;
+                }
 
 //                from = 21;
 //                localStorage.setItem("geek_list_game_from_21", null);
 
                 initStorageTimeout(from);
                 var tableRef = document.getElementById('gameListTable').getElementsByTagName('tbody')[0];
-                console.log(tableRef);
                 saveGameListData(from, realPath, tableRef);
-                var xml = localStorage.getItem("geek_list_game_from_" + from);
-                applyXSL(xml, realPath, "/content/GameList.xsl", tableRef);
-//                tableRef.appendChild()
-//// Insert a row in the table at the last row
-//                var newRow = tableRef.insertRow(tableRef.rows.length);
-//
-//// Insert a cell in the row at index 0
-//                var newCell = newRow.insertCell(0);
-//
-//// Append a text node to the cell
-//                var newText = document.createTextNode('New row');
-//                newCell.appendChild(newText);
             }
         </script>
 

@@ -38,13 +38,12 @@
 		max-width:100%;
 }
 
-
 .grid-box .entry-title{
 	padding-left:12px;
 	padding-right:12px;
 	font-family:"Roboto";
 	font-size: 15px; 
-	font-weight: 320;
+	font-weight: 300;
 	text-transform: uppercase;
 }
 
