@@ -6,6 +6,7 @@
 package servlets;
 
 import dao.ArticleDAO;
+import entities.Article;
 import entities.ArticleList;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +21,7 @@ import utilities.Const;
  *
  * @author hoanglong
  */
-public class ArticlesServlet extends HttpServlet {
+public class ArticleDetail extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,25 +36,27 @@ public class ArticlesServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-//        String from = request.getParameter("from");
-//        String maxResult = request.getParameter("maxResult");
+        String id = request.getParameter("articleId");
 
         try {
-            ArticleList newestArticles = ArticleDAO.getArticleByRange(0, 6);
-            String newestArticlesString = utilities.Utilities.marshallerToString(newestArticles);
-            newestArticlesString = newestArticlesString.replace("standalone=\"yes\"", "");
-            
-            request.setAttribute("LAST_ARTICLE", newestArticles.getArticleList().get(0).getId());
-            request.setAttribute("NEWEST_ARTICLES", newestArticlesString);
+            Article article = ArticleDAO.findArticleById(Integer.parseInt(id));
+            if (article.getLink().contains("gamek")) {
+                if (article.getDescription().contains("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>")) {
+                    String removedLink = article.getDescription().substring(article.getDescription().indexOf("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>"),
+                            article.getDescription().indexOf("</a></strong></span>"));
 
-//            ArticleList otherArticles = ArticleDAO.getArticleByRange(6, 10);
-//            String otherArticlesString = utilities.Utilities.marshallerToString(otherArticles);
-//            otherArticlesString = otherArticlesString.replace("standalone=\"yes\"", "");
-//
-//            request.setAttribute("OTHER_ARTICLES", otherArticlesString);
+                    article.setDescription(article.getDescription().replace(removedLink, ""));
+                }
+
+            }
+
+            String articlesString = utilities.Utilities.marshallerToString(article);
+            articlesString = articlesString.replace("standalone=\"yes\"", "");
+
+            request.setAttribute("ARTICLE_DETAIL", articlesString);
 
         } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(Const.articlesPage);
+            RequestDispatcher rd = request.getRequestDispatcher(Const.articleDetailPage);
             rd.forward(request, response);
             out.close();
         }

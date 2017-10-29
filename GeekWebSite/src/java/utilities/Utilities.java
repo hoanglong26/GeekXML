@@ -49,7 +49,8 @@ public class Utilities {
         try {
             emf = Persistence.createEntityManagerFactory("GeekWebSitePU");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            e.printStackTrace();
         }
     }
 
@@ -81,6 +82,7 @@ public class Utilities {
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
             marshaller.marshal(object, os);
         } catch (JAXBException ex) {
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -93,7 +95,8 @@ public class Utilities {
             marshaller.marshal(object, sw);
             return sw.toString();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//            ex.printStackTrace();
         }
         return null;
     }
@@ -106,7 +109,8 @@ public class Utilities {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             marshaller.marshal(object, file);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//            ex.printStackTrace();
         }
     }
 
@@ -121,7 +125,8 @@ public class Utilities {
             return true;
             //saveToDatabase(articleList);
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            e.printStackTrace();
             return false;
         }
     }
@@ -145,9 +150,13 @@ public class Utilities {
             }
             ImageIO.write(img, extension, file);
         } catch (MalformedURLException ex) {
-            ex.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+
+//            ex.printStackTrace();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+
+//            ex.printStackTrace();
         }
 
         filePath = filePath.replaceAll("\\\\", "/");
@@ -160,7 +169,9 @@ public class Utilities {
             Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
             return pattern.matcher(temp).replaceAll("").toLowerCase().replaceAll(" ", "-").replaceAll("đ", "d");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+
+//            e.printStackTrace();
         }
         return "";
     }

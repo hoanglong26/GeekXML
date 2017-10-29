@@ -9,6 +9,8 @@ import entities.GameRating;
 import entities.Image;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import utilities.Utilities;
@@ -33,32 +35,17 @@ public class ImageDAO {
             em.persist(aImage);
             em.getTransaction().commit();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
             try {
                 em.getTransaction().begin();
                 em.merge(aImage);
                 em.getTransaction().commit();
             } catch (Exception ex) {
-                ex.printStackTrace();
-            }
+//                ex.printStackTrace();
+                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
 
-//            try {
-//                String query = "INSERT INTO [GeekDB].[dbo].[Image]\n"
-//                        + "           ([AltImg]\n"
-//                        + "           ,[Type]\n"
-//                        + "           ,[ArticleId]\n"
-//                        + "           ,[Link])"
-//                        + "     VALUES\n"
-//                        + "('" + aImage.getAltImg() + "',\n"
-//                        + "'" + aImage.getType() + "',\n"
-//                        + "" + aImage.getArticleId().getId() + ",\n"
-//                        + "'" + aImage.getLink() + "')";
-//                em.getTransaction().begin();
-//                em.createNativeQuery(query).executeUpdate();
-//                em.getTransaction().commit();
-//            } catch (Exception ex) {
-//                
-//            }
+            }
         } finally {
             em.close();
         }
@@ -77,7 +64,8 @@ public class ImageDAO {
                 images = result;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }

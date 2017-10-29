@@ -12,6 +12,8 @@ import entities.GameList;
 import entities.Image;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
@@ -36,12 +38,11 @@ public class ArticleDAO {
         EntityManager em = Utilities.getEntityManager();
 
         try {
-
             em.getTransaction().begin();
             em.persist(article);
             em.getTransaction().commit();
         } catch (Exception e) {
-
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -60,7 +61,8 @@ public class ArticleDAO {
                 articles = result;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -87,14 +89,33 @@ public class ArticleDAO {
                     item.setThumbnail(newThumbnail);
                 }
             }
-
             list.setArticleList(articleList);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
         return list;
+    }
+
+    public static Article findArticleById(int id) {
+        EntityManager em = Utilities.getEntityManager();
+        Article result = null;
+        try {
+            TypedQuery<Article> query = em.createNamedQuery(
+                    "Article.findById",
+                    Article.class);
+            query.setParameter("id", id);
+
+            result = query.getSingleResult();
+        } catch (Exception e) {
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            em.close();
+        }
+        return result;
     }
 
     public static List<Article> findArticleByTitle(String title) {
@@ -111,7 +132,8 @@ public class ArticleDAO {
                 articleList = result;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -127,7 +149,8 @@ public class ArticleDAO {
             em.getTransaction().commit();
 
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }

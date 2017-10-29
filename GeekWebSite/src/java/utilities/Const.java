@@ -19,6 +19,7 @@ public class Const {
     public static final String homepage = "index.jsp";
     public static final String rankingPage = "ranking.jsp";
     public static final String articlesPage = "articles.jsp";
+    public static final String articleDetailPage = "articleDetail.jsp";
 
 //    public static final String FILE_PATH = "D:\\PRX301_Project_Files";
 //    public static final String IMAGE_PATH = FILE_PATH + "\\Images";

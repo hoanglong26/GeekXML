@@ -150,9 +150,6 @@ function saveArticleListData(from, realPath, ele) {
             if (this.readyState === 4 && this.status === 200) {
                 var xmlRes = this.responseXML;
                 if (xmlRes !== null) {
-
-                    console.log(xmlRes);
-
                     var xslPath = realPath + "/content/xslt/OtherArticles.xsl";
                     loadData(xslPath);
                     xhttp.onreadystatechange = function () {

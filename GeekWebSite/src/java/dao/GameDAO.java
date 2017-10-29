@@ -11,6 +11,8 @@ import entities.Game;
 import entities.GameList;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
@@ -40,8 +42,9 @@ public class GameDAO {
             em.getTransaction().commit();
 
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println(aGame.getName());
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            System.out.println(aGame.getName());
         } finally {
             em.close();
         }
@@ -76,7 +79,8 @@ public class GameDAO {
             em.getTransaction().commit();
 
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -95,7 +99,8 @@ public class GameDAO {
                 games = result;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -116,27 +121,13 @@ public class GameDAO {
             query.setMaxResults(maxResult);
             list.setGameList(query.getResultList());
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
         return list;
     }
-
-//    public List<ProductDTO> getProductByCategory(int categoryID, int maxResult, int firstResult) {
-//        CategoryDAO cateDAO = new CategoryDAO();
-//        CategoryDTO category = cateDAO.findById(categoryID);
-//        CriteriaBuilder cb = em.getCriteriaBuilder();
-//        CriteriaQuery cq = cb.createQuery(ProductDTO.class);
-//        Root<ProductDTO> p = cq.from(ProductDTO.class);
-//        cq.where(cb.equal(p.get("categoryID"), category));
-//        cq.orderBy(cb.desc(p.get("addedDate")));
-//        cq.select(p);
-//        Query query = em.createQuery(cq);
-//        query.setFirstResult(firstResult);
-//        query.setMaxResults(maxResult);
-//        return (List<ProductDTO>) query.getResultList();
-//    }
 
     public static List<Game> findGameByName(String name) {
         EntityManager em = Utilities.getEntityManager();
@@ -152,7 +143,8 @@ public class GameDAO {
                 gameList = result;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -169,7 +161,8 @@ public class GameDAO {
 
             game = query.getSingleResult();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
@@ -186,13 +179,14 @@ public class GameDAO {
             em.getTransaction().commit();
 
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }
 
     }
-    
+
     public static void resetIdent() {
         EntityManager em = Utilities.getEntityManager();
         String query = "DBCC CHECKIDENT (Game, RESEED, 0)";
@@ -202,7 +196,8 @@ public class GameDAO {
             em.getTransaction().commit();
 
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }

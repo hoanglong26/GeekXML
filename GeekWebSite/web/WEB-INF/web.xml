@@ -27,6 +27,10 @@
         <servlet-name>ArticlesServlet</servlet-name>
         <servlet-class>servlets.ArticlesServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ArticleDetail</servlet-name>
+        <servlet-class>servlets.ArticleDetail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/DispatcherServlet</url-pattern>
@@ -46,6 +50,10 @@
     <servlet-mapping>
         <servlet-name>ArticlesServlet</servlet-name>
         <url-pattern>/ArticlesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticleDetail</servlet-name>
+        <url-pattern>/ArticleDetail</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

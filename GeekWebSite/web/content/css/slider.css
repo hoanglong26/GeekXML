@@ -43,7 +43,8 @@
     left: 0;
     bottom: 0;
     width: 500px;
-
+    height: 140px;
+    line-height: 20px;
 }
 
 .accordian ul li:last-child .image_title {

@@ -3,24 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/css/ranking.css</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/servlets/GetArticleListJavaScript.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/css/HomePage.css</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/footer.jsp</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/ArticleList.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/articles.jsp</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/WEB-INF/newXMLDocument.xml</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/dao/ArticleDAO.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/xslt/NewestArticles.xsl</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/xslt/LoadMoreGameList.xsl</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/Const.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/articleDetail.jsp</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/Utilities.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/servlets/ArticlesServlet.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/ranking.jsp</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/entities/Article.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/utilities/BackgroundListener.java</file>
             <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/js/Geek.js</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/servlets/DispatcherServlet.java</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/index.jsp</file>
-            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/css/slider.css</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/src/java/servlets/ArticleDetail.java</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/header.jsp</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/xslt/ArticleDetail.xsl</file>
+            <file>file:/D:/GitHub/MyGithub/GeekXML/GeekWebSite/web/content/xslt/OtherArticles.xsl</file>
         </group>
     </open-files>
 </project-private>

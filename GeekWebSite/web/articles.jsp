@@ -8,10 +8,11 @@
 <%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
 <c:set var="newestArticles" value="${requestScope.NEWEST_ARTICLES}" />
+<c:set var="lastArticle" value="${requestScope.LAST_ARTICLE}" />
 <c:import var="xsldocNewest" url="content/xslt/NewestArticles.xsl" />
 
-<c:set var="otherArticles" value="${requestScope.OTHER_ARTICLES}" />
-<c:import var="xsldocOther" url="content/xslt/OtherArticles.xsl" />
+<%--<c:set var="otherArticles" value="${requestScope.OTHER_ARTICLES}" />
+<c:import var="xsldocOther" url="content/xslt/OtherArticles.xsl" />--%>
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +26,7 @@
 
     </head>
     <body onload="picSwap();
-            getMoreArticle(6);
+            getArticleOnLoad();
             hightlightMenuItem('Trang chủ');">
         <div class="background">
             <div class="container" style="background-image:url(content/img/test.png);">
@@ -48,13 +49,11 @@
                         <span class="tag">Các tin khác</span>
                     </div>
 
-
                     <div id="" class="startnews">
                         <ul id="otherArticleList">
                             <%--<x:transform xml="${otherArticles}" xslt="${xsldocOther}" />--%>
                         </ul>
                         <button class="btn btnMore" onclick="getMoreArticle(null)">Xem thêm</button>
-
                     </div>
                 </div>
                 <c:import url="footer.jsp" charEncoding="UTF-8" />
@@ -67,6 +66,20 @@
 
         <script>
             var realPath = '${pageContext.request.contextPath}';
+
+            function getArticleOnLoad() {
+                var lastArticleId = ${lastArticle};
+                if (sessionStorage.getItem("lastArticleId") === null) {
+                    sessionStorage.setItem("lastArticleId", lastArticleId);
+                } else {
+                    if (sessionStorage.getItem("lastArticleId") !== lastArticleId) {
+                        sessionStorage.clear();
+                        sessionStorage.setItem("lastArticleId", lastArticleId);
+                    }
+                }
+                getMoreArticle(6);
+            }
+
             function getMoreArticle(from) {
                 if (from === null) {
                     from = parseInt(sessionStorage.getItem('article_index')) + 10;

@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletContext;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -75,9 +77,11 @@ public class CrawlData {
             in = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 
         } catch (MalformedURLException ex) {
-            ex.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//            ex.printStackTrace();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//            ex.printStackTrace();
         }
 
         return in;
@@ -156,7 +160,7 @@ public class CrawlData {
                         item.setDescription(detail.getDescription().trim());
 
                         //get overview and thumbnail from CDATA of "description" tag 
-                        Article overview = saxParserForArticleOverview(item.getOverview());
+                        Article overview = saxParserForArticleOverview(item.getOverview(), item.getTitle());
                         if (overview != null) {
                             item.setOverview(overview.getOverview().trim());
                             item.setThumbnail(overview.getThumbnail().trim());
@@ -183,7 +187,8 @@ public class CrawlData {
 
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            e.printStackTrace();
         }
     }
 
@@ -285,10 +290,12 @@ public class CrawlData {
             result.setImageList(articleDetailHandler.getList());
 
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println(document.indexOf("<script"));
-            System.out.println(document.indexOf("</script>"));
-            System.out.println(article.getTitle());
+//            e.printStackTrace();
+//            System.out.println(document.indexOf("<script"));
+//            System.out.println(document.indexOf("</script>"));
+//            System.out.println(article.getTitle());
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+
             return null;
 
         }
@@ -338,6 +345,11 @@ public class CrawlData {
 
                 //don't record the line if it is video
                 if (inArticleRow) {
+
+                    //remove ref link
+                    if (line.contains("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>")) {
+                        line = "";
+                    }
 
                     if (line.contains("type=\"VideoStream\"")) {
                         inVideoRow = true;
@@ -427,17 +439,19 @@ public class CrawlData {
             result.setImageList(articleDetailHandler.getList());
 
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println(document.indexOf("<script"));
-            System.out.println(document.indexOf("</script>"));
-            System.out.println(article.getTitle());
+//            e.printStackTrace();
+//            System.out.println(document.indexOf("<script"));
+//            System.out.println(document.indexOf("</script>"));
+//            System.out.println(article.getTitle());
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+
             return null;
 
         }
         return result;
     }
 
-    public Article saxParserForArticleOverview(String overview) {
+    public Article saxParserForArticleOverview(String overview, String articleName) {
         Article result = new Article();
         String document = "<root>";
         try {
@@ -447,6 +461,12 @@ public class CrawlData {
             overview = overview.replaceAll("”", "&quot;");
             overview = overview.replaceAll("&amp;", " và ");
 //            overview = removeQuote(overview);
+
+            if (articleName.contains("\"")) {
+                String tmpTitle = articleName.replace("\"", "'");
+                overview = overview.replaceAll(articleName, tmpTitle);
+            }
+
             document += overview;
 
             document += "</root>";
@@ -461,6 +481,8 @@ public class CrawlData {
             result.setOverview(articleOverviewHandler.getOverView());
         } catch (Exception e) {
 //            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+
             return null;
         }
         return result;
@@ -560,9 +582,11 @@ public class CrawlData {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println(pageNum);
-                System.out.println(gameName);
+//                e.printStackTrace();
+//                System.out.println(pageNum);
+//                System.out.println(gameName);
+                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+
             }
         }
 
@@ -647,6 +671,8 @@ public class CrawlData {
             result.setGameRatingList(gameDetailHandler.getList());
         } catch (Exception e) {
             //e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+
         }
         return result;
     }
