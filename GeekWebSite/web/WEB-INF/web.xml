@@ -31,6 +31,10 @@
         <servlet-name>ArticleDetail</servlet-name>
         <servlet-class>servlets.ArticleDetail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchArticleServlet</servlet-name>
+        <servlet-class>servlets.SearchArticleServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/DispatcherServlet</url-pattern>
@@ -54,6 +58,10 @@
     <servlet-mapping>
         <servlet-name>ArticleDetail</servlet-name>
         <url-pattern>/ArticleDetail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchArticleServlet</servlet-name>
+        <url-pattern>/SearchArticleServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

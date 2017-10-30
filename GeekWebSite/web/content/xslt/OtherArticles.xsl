@@ -7,7 +7,7 @@
                 <li class="topper">
                     <a>
                         <xsl:attribute name="title">
-                            vvv<xsl:value-of select="./*[local-name()='title']" />
+                            <xsl:value-of select="./*[local-name()='title']" />
                         </xsl:attribute>
                         <xsl:attribute name="href">ArticleDetail?articleId=<xsl:value-of select="./*[local-name()='id']" /></xsl:attribute>
                         <img>
@@ -29,10 +29,6 @@
                         </a>
                     </div>
                     <div class="maincontent">
-                            <xsl:attribute name="title">
-                                <xsl:value-of select="./*[local-name()='title']" />
-                            </xsl:attribute>
-                            <xsl:attribute name="href">ArticleDetail?articleId=<xsl:value-of select="./*[local-name()='id']" /></xsl:attribute>
                             <xsl:value-of select="./*[local-name()='overview']" />
                     </div>
                     

@@ -85,8 +85,10 @@ public class ArticleDAO {
 
             for (Article item : articleList) {
                 if (item.getThumbnail().contains("genknews")) {
-                    String newThumbnail = item.getImageList().get(0).getLink();
-                    item.setThumbnail(newThumbnail);
+                    if (item.getImageList().size() > 0) {
+                        String newThumbnail = item.getImageList().get(0).getLink();
+                        item.setThumbnail(newThumbnail);
+                    }
                 }
             }
             list.setArticleList(articleList);
@@ -130,6 +132,47 @@ public class ArticleDAO {
             List<Article> result = query.getResultList();
             if (!result.isEmpty()) {
                 articleList = result;
+
+                for (Article item : articleList) {
+                    if (item.getThumbnail().contains("genknews")) {
+                        if (item.getImageList().size() > 0) {
+                            String newThumbnail = item.getImageList().get(0).getLink();
+                            item.setThumbnail(newThumbnail);
+                        }
+                    }
+                }
+
+            }
+        } catch (Exception e) {
+//            e.printStackTrace();
+            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            em.close();
+        }
+        return articleList;
+    }
+
+    public static List<Article> findArticleByDescription(String str) {
+        EntityManager em = Utilities.getEntityManager();
+        List<Article> articleList = null;
+        try {
+            TypedQuery<Article> query = em.createNamedQuery(
+                    "Article.findByDescription",
+                    Article.class);
+            query.setParameter("title", "%" + str + "%");
+
+            List<Article> result = query.getResultList();
+            if (!result.isEmpty()) {
+                articleList = result;
+                
+                for (Article item : articleList) {
+                    if (item.getThumbnail().contains("genknews")) {
+                        if (item.getImageList().size() > 0) {
+                            String newThumbnail = item.getImageList().get(0).getLink();
+                            item.setThumbnail(newThumbnail);
+                        }
+                    }
+                }
             }
         } catch (Exception e) {
 //            e.printStackTrace();

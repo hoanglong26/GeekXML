@@ -350,6 +350,10 @@ public class CrawlData {
                     if (line.contains("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>")) {
                         line = "";
                     }
+                    
+                    if (line.contains("<div class=\"VCSortableInPreviewMode link-content-footer\"")) {
+                        line = "";
+                    }
 
                     if (line.contains("type=\"VideoStream\"")) {
                         inVideoRow = true;

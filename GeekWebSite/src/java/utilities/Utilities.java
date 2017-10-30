@@ -58,33 +58,33 @@ public class Utilities {
         return emf.createEntityManager();
     }
 
-    public static Document parseDOMFromFile(String fileXMLPath)
-            throws ParserConfigurationException, IOException, SAXException {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
+//    public static Document parseDOMFromFile(String fileXMLPath)
+//            throws ParserConfigurationException, IOException, SAXException {
+//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder builder = factory.newDocumentBuilder();
+//
+//        Document doc = builder.parse(fileXMLPath);
+//
+//        return doc;
+//    }
 
-        Document doc = builder.parse(fileXMLPath);
+//    public static Document stringToDom(String xmlSource)
+//            throws SAXException, ParserConfigurationException, IOException {
+//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder builder = factory.newDocumentBuilder();
+//        return builder.parse(new InputSource(new StringReader(xmlSource)));
+//    }
 
-        return doc;
-    }
-
-    public static Document stringToDom(String xmlSource)
-            throws SAXException, ParserConfigurationException, IOException {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        return builder.parse(new InputSource(new StringReader(xmlSource)));
-    }
-
-    public static <T> void marshallerToTransfer(T object, OutputStream os) {
-        try {
-            JAXBContext jaxb = JAXBContext.newInstance(object.getClass());
-            Marshaller marshaller = jaxb.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            marshaller.marshal(object, os);
-        } catch (JAXBException ex) {
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+//    public static <T> void marshallerToTransfer(T object, OutputStream os) {
+//        try {
+//            JAXBContext jaxb = JAXBContext.newInstance(object.getClass());
+//            Marshaller marshaller = jaxb.createMarshaller();
+//            marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+//            marshaller.marshal(object, os);
+//        } catch (JAXBException ex) {
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 
     public static <T> String marshallerToString(T object) {
         try {
@@ -101,18 +101,18 @@ public class Utilities {
         return null;
     }
 
-    public static <T> void marshallerToFile(T object, File file) {
-        try {
-            JAXBContext jaxb = JAXBContext.newInstance(object.getClass());
-            Marshaller marshaller = jaxb.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-            marshaller.marshal(object, file);
-        } catch (Exception ex) {
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
-//            ex.printStackTrace();
-        }
-    }
+//    public static <T> void marshallerToFile(T object, File file) {
+//        try {
+//            JAXBContext jaxb = JAXBContext.newInstance(object.getClass());
+//            Marshaller marshaller = jaxb.createMarshaller();
+//            marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+//            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+//            marshaller.marshal(object, file);
+//        } catch (Exception ex) {
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+////            ex.printStackTrace();
+//        }
+//    }
 
     public static boolean validateXMLBeforeSaveToDatabase(String xmlData, String schemaPath) {
         try {
@@ -131,9 +131,9 @@ public class Utilities {
         }
     }
 
-    public static String insertString(String str, int index, String value) {
-        return str.substring(0, index) + value + str.substring(index);
-    }
+//    public static String insertString(String str, int index, String value) {
+//        return str.substring(0, index) + value + str.substring(index);
+//    }
 
     public static String downloadImage(String realPath, String folderPath, String fileName, String uri) {
         String filePath = "";

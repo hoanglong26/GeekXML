@@ -16,28 +16,6 @@ function showResult() {
 }
 
 
-var list = ["banner13.png", "banner16.png", "banner12.png", "banner10.jpg"];
-var i = 0;
-var time_id;
-function picSwap() {
-    var tag = document.getElementById("pic");
-    if (i < 0) {
-        i = 0;
-    }
-    tag.src = "content/img/" + list[i];
-    i++;
-    i = i % 4;
-    time_id = setTimeout("picSwap()", 2000);
-}
-function picStop(flag) {
-    if (flag === true) {
-        time_id = setTimeout("picSwap()", 2000);
-    }
-    else {
-        clearTimeout(time_id);
-    }
-}
-
 
 var m = 1;
 var n = 3;
@@ -112,34 +90,7 @@ function scrollToTop(scrollDuration) {
 //    document.documentElement.scrollTop = 0; // For IE and Firefox
 //}
 
-var xhttp;
-var xDom;
-function getXmlHtmlObj() {
-    var xmlHttp = null;
-    try {
-        xmlHttp = new XMLHttpRequest();
-    } catch (e) {
-        try {
-            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (ex) {
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-    }
-    return xmlHttp;
-}
 
-function loadData(url)
-{
-    xhttp = getXmlHtmlObj();
-    if (xhttp === null) {
-        alert("Your browser doesn't support Ajax");
-        return;
-    }
-
-    xhttp.open("GET", url, true);
-    xhttp.contentType = "application/xml";
-    xhttp.send(null);
-}
 
 function saveArticleListData(from, realPath, ele) {
     var savedData = sessionStorage.getItem("geek_list_article_from_" + from);

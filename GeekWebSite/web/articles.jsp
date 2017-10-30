@@ -33,7 +33,6 @@
 
                 <c:import url="header.jsp" charEncoding="UTF-8" />
 
-                <!-- BEGIN SLIDER-->
                 <div class="content">
 
                     <div class="boxTag">
@@ -43,7 +42,6 @@
                     <div class="accordian">
                         <x:transform xml="${newestArticles}" xslt="${xsldocNewest}" />
                     </div>
-                    <!-- END SLIDER-->
 
                     <div class="boxTag">
                         <span class="tag">Các tin khác</span>

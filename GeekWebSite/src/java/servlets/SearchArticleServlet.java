@@ -8,20 +8,21 @@ package servlets;
 import dao.ArticleDAO;
 import entities.Article;
 import entities.ArticleList;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import utilities.Const;
 
 /**
  *
  * @author hoanglong
  */
-public class ArticleDetail extends HttpServlet {
+public class SearchArticleServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,38 +35,42 @@ public class ArticleDetail extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String id = request.getParameter("articleId");
 
+        StringBuilder buffer = new StringBuilder();
+        BufferedReader reader = request.getReader();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            buffer.append(line);
+        }
+        String query = buffer.toString();
+
+        query = query.toLowerCase();
+        query = query.trim();
         try {
-            Article article = ArticleDAO.findArticleById(Integer.parseInt(id));
-            if (article.getLink().contains("gamek")) {
-                if (article.getDescription().contains("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>")) {
-                    String removedLink = article.getDescription().substring(article.getDescription().indexOf("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>"),
-                            article.getDescription().indexOf("</a></strong></span>"));
+            ArticleList searchArticles = new ArticleList();
+            List<Article> listByTitle = ArticleDAO.findArticleByTitle(query);
+            List<Article> listByDescription = ArticleDAO.findArticleByDescription(query);
+            List<Article> joinedList = new ArrayList();
 
-                    article.setDescription(article.getDescription().replace(removedLink, ""));
-                }
-
-                if (article.getDescription().contains("<div class=\"VCSortableInPreviewMode link-content-footer\"")) {
-                    String removedLink = article.getDescription().substring(article.getDescription().indexOf("<div class=\"VCSortableInPreviewMode link-content-footer\""),
-                            article.getDescription().lastIndexOf("</a></div></div>"));
-
-                    article.setDescription(article.getDescription().replace(removedLink, ""));
-                }
-
+            if (listByDescription != null) {
+                joinedList.addAll(listByDescription);
             }
+            if (listByTitle != null) {
+                joinedList.addAll(listByTitle);
+            }
+            searchArticles.setArticleList(joinedList);
+            String searchArticlesString = utilities.Utilities.marshallerToString(searchArticles);
+            searchArticlesString = searchArticlesString.replace("standalone=\"yes\"", "");
 
-            String articlesString = utilities.Utilities.marshallerToString(article);
-            articlesString = articlesString.replace("standalone=\"yes\"", "");
-
-            request.setAttribute("ARTICLE_DETAIL", articlesString);
-
+            out.print(searchArticlesString);
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(Const.articleDetailPage);
-            rd.forward(request, response);
-            out.close();
+//            RequestDispatcher rd = request.getRequestDispatcher(Const.rankingPage);
+//            rd.forward(request, response);
+
         }
     }
 
