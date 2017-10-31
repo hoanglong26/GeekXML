@@ -35,14 +35,16 @@
 
                 <div class="content">
                     <div class="boxTag">
-                        <span class="tag" style="width: 180px;">Kết quả tìm kiếm</span>
+                        <span class="tag" style="width: max-content;
+                              padding-left: 6px;
+                              padding-right: 6px;">Kết quả tìm kiếm cho</span>
                     </div>
 
-                    <div id="" class="startnews">
+                    <div id="" class="startnews" style="width: 100%;">
                         <ul id="otherArticleList">
                             <%--<x:transform xml="${otherArticles}" xslt="${xsldocOther}" />--%>
                         </ul>
-                        <button class="btn btnMore" onclick="getMoreArticle(null)">Xem thêm</button>
+                        <!--<button class="btn btnMore" onclick="getMoreArticle(null)">Xem thêm</button>-->
                     </div>
                 </div>
                 <c:import url="footer.jsp" charEncoding="UTF-8" />
@@ -59,17 +61,18 @@
             function loadSearchResultPage() {
                 document.getElementById("key").value = sessionStorage.getItem("searchQuery");
                 var query = sessionStorage.getItem("searchQuery");
+                document.getElementsByClassName("tag")[0].innerHTML += " \"" + query + "\"";
 
                 var ele = document.getElementById("otherArticleList");
                 ele.innerHTML = "";
                 var result = sessionStorage.getItem("searchResult");
                 var d = document.createElement("div");
-                if (result === "") {
-                    result = "<h3>Không có kết quả</h3>";
+                if (result === null || result === "") {
+                    result = "</br><h1 style='text-align: center;'>Không có kết quả</h1>";
                 } else {
-                    var regEx = new RegExp(query, "ig");
-                    var queryInDocument = result.match(regEx)[0];
-                    result = result.replace(regEx, "<mark>" + queryInDocument + "</mark>");
+//                    var regEx = new RegExp(query, "ig");
+//                    var queryInDocument = result.match(regEx)[0];
+//                    result = result.replace(regEx, "<mark>" + queryInDocument + "</mark>");
                 }
                 d.innerHTML = result;
                 ele.appendChild(d);

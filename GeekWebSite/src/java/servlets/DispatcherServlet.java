@@ -22,6 +22,7 @@ public class DispatcherServlet extends HttpServlet {
 
     private final String rankingServlet = "ranking.jsp";
     private final String articlesServlet = "ArticlesServlet";
+    private final String searchPage = "searchArticles.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -48,8 +49,13 @@ public class DispatcherServlet extends HttpServlet {
                 if (action.equals("RANKING")) {
                     url = rankingServlet;
                 } else {
-                    url = articlesServlet;
+                    if (action.equals("SEARCH")) {
+                        url = searchPage;
+                    } else {
+                        url = articlesServlet;
+                    }
                 }
+
             }
 
         } finally {

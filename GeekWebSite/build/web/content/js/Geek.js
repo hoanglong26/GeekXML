@@ -1,20 +1,3 @@
-function showResult() {
-    var check = document.getElementById("key")
-
-    if (((event.keyCode === 13) && (check.value === "")) || ((window.event.which === 1) && (check.value === ""))) {
-        alert("Xin nhập từ khóa");
-        check.focus();
-    }
-    if (/\S/.test(check.value) === true) {
-
-        if (((event.keyCode === 13) || (window.event.which === 1)) && (check.value !== "")) {
-            window.open().location = "https://www.google.com/#q=" + check.value + "+site:gamek.vn";
-        }
-    }
-    else
-        check.value = "";
-}
-
 
 
 var m = 1;
@@ -66,7 +49,7 @@ window.onscroll = function () {
     scrollFunction();
 };
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
         document.getElementById("topBtn").style.display = "block";
     } else {
         document.getElementById("topBtn").style.display = "none";
@@ -89,8 +72,6 @@ function scrollToTop(scrollDuration) {
 //    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
 //    document.documentElement.scrollTop = 0; // For IE and Firefox
 //}
-
-
 
 function saveArticleListData(from, realPath, ele) {
     var savedData = sessionStorage.getItem("geek_list_article_from_" + from);

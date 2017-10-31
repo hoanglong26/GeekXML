@@ -35,9 +35,9 @@
     <div class="top">
         <div class="topcontainer">
             <div style="display: inline-block;">
-                <input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="doSearch();" id="key" />
+                <input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="doSearch();showResult();" id="key" />
                 <span class="ltop">
-                    <a href="searchArticles.jsp"><img src="content/img/search.png" /></a>
+                    <a href="DispatcherServlet?action=SEARCH"><img src="content/img/search.png" /></a>
                 </span>
 
                 <div class="startnews search-result" style="display:none;">
@@ -148,7 +148,6 @@
 
 
         function getArticleSearchList(query, ele) {
-
             var realPath = '${pageContext.request.contextPath}';
 //            var url = realPath + '/SearchArticleServlet?query=' + query;
             var url = realPath + '/SearchArticleServlet';
@@ -184,7 +183,6 @@
                     }
                 }
             };
-
         }
 
         function loadMoreSearchArticle(ele, result, query) {
@@ -226,7 +224,25 @@
                         }
                     }
                 });
-            }, 500);
+            }, 700);
         }
+
+        function showResult() {
+            var check = document.getElementById("key");
+
+            if (((event.keyCode === 13) && (check.value === "")) || ((window.event.which === 1) && (check.value === ""))) {
+                alert("Xin nhập từ khóa");
+                check.focus();
+            }
+            if (/\S/.test(check.value) === true) {
+
+                if (((event.keyCode === 13) || (window.event.which === 1)) && (check.value !== "")) {
+                    window.open().location = "DispatcherServlet?action=SEARCH";
+                }
+            }
+           
+        }
+
+
     </script>
 </header>

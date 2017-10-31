@@ -159,7 +159,7 @@ public class ArticleDAO {
             TypedQuery<Article> query = em.createNamedQuery(
                     "Article.findByDescription",
                     Article.class);
-            query.setParameter("title", "%" + str + "%");
+            query.setParameter("description", "%" + str + "%");
 
             List<Article> result = query.getResultList();
             if (!result.isEmpty()) {
