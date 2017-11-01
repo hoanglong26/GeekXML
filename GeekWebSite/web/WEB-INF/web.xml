@@ -35,6 +35,10 @@
         <servlet-name>SearchArticleServlet</servlet-name>
         <servlet-class>servlets.SearchArticleServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GameRankingDownloadServlet</servlet-name>
+        <servlet-class>servlets.GameRankingDownloadServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/DispatcherServlet</url-pattern>
@@ -62,6 +66,10 @@
     <servlet-mapping>
         <servlet-name>SearchArticleServlet</servlet-name>
         <url-pattern>/SearchArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GameRankingDownloadServlet</servlet-name>
+        <url-pattern>/GameRankingDownloadServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

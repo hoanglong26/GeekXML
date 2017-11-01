@@ -72,7 +72,7 @@ tr td:first-child
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 11; 
     padding-top: 100px; 
     left: 0;
     top: 0;
@@ -137,7 +137,7 @@ tr td:first-child
 }
 
 .game-modal-info{
-    height: 150px;
+    height: 170px;
     display: -webkit-box;
 }
 

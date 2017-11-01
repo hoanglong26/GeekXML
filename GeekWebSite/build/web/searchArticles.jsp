@@ -34,6 +34,12 @@
                 <c:import url="header.jsp" charEncoding="UTF-8" />
 
                 <div class="content">
+<!--                    <div>
+                        <input type="text" style="width: 500px;" placeHolder="Nhập từ khóa" class="search" onkeyup="doSearch();
+                                showResult();" id="key" />
+                    </div>-->
+
+
                     <div class="boxTag">
                         <span class="tag" style="width: max-content;
                               padding-left: 6px;
@@ -61,6 +67,9 @@
             function loadSearchResultPage() {
                 document.getElementById("key").value = sessionStorage.getItem("searchQuery");
                 var query = sessionStorage.getItem("searchQuery");
+                if (query === null || query === "null") {
+                    query = "";
+                }
                 document.getElementsByClassName("tag")[0].innerHTML += " \"" + query + "\"";
 
                 var ele = document.getElementById("otherArticleList");

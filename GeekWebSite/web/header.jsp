@@ -32,7 +32,7 @@
         }
 
     </style>
-    <div class="top">
+    <div class="top" id="top-zone" style="position: relative">
         <div class="topcontainer">
             <div style="display: inline-block;">
                 <input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="doSearch();showResult();" id="key" />
@@ -46,7 +46,6 @@
                     </ul>
                 </div>
             </div>
-
 
             <span class="rtop">
                 <a href="https://www.facebook.com/" ><img src="content/img/facebook.png"/></a>

@@ -7,9 +7,7 @@ package dao;
 
 import entities.Article;
 import entities.ArticleList;
-import entities.Game;
-import entities.GameList;
-import entities.Image;
+import static java.rmi.server.LogStream.log;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -43,6 +41,7 @@ public class ArticleDAO {
             em.getTransaction().commit();
         } catch (Exception e) {
 //            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
         } finally {
             em.close();
         }
@@ -62,7 +61,9 @@ public class ArticleDAO {
             }
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
         } finally {
             em.close();
         }
@@ -94,7 +95,9 @@ public class ArticleDAO {
             list.setArticleList(articleList);
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
         } finally {
             em.close();
         }
@@ -113,7 +116,9 @@ public class ArticleDAO {
             result = query.getSingleResult();
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
         } finally {
             em.close();
         }
@@ -145,7 +150,9 @@ public class ArticleDAO {
             }
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
         } finally {
             em.close();
         }
@@ -164,7 +171,7 @@ public class ArticleDAO {
             List<Article> result = query.getResultList();
             if (!result.isEmpty()) {
                 articleList = result;
-                
+
                 for (Article item : articleList) {
                     if (item.getThumbnail().contains("genknews")) {
                         if (item.getImageList().size() > 0) {
@@ -176,7 +183,9 @@ public class ArticleDAO {
             }
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
         } finally {
             em.close();
         }
@@ -193,7 +202,9 @@ public class ArticleDAO {
 
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
         } finally {
             em.close();
         }

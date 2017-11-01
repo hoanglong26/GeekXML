@@ -1,92 +1,154 @@
 <root>
-    <content>
-        <div class="content-detail">
-            <div id="">
-                <table align="center" class="imageBox">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center;">
-                                <img src="http://image1.ictnews.vn/_Files/2017/10/06/thu-hang-cktg-ngay-1.jpg" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="PCaption">
-                                    <span style="font-size:14px;">
-                                        <strong>Bảng xếp hạng các đội tuyển sau ngày thi đấu thứ nhất</strong>
-                                    </span>
-                                </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="text-align: justify;">Ngày thi đấu đầu tiên <strong>Vòng bảng Chung kết Thế giới 2017</strong> đã diễn ra loạt trận đấu đầu tiên với sự góp mặt của những hạ giống hàng đầu thế giới. Kết quả không ngoài dự đoán của giới chuyên môn và người hâm mộ khi những đội tuyển hạt giống khẳng định sức mạnh vốn có. Đâu đó vẫn xuất hiện những bất ngờ với chiến thắng của <strong>AHQ</strong> trước <strong>đương kim vô địch LPL hè 2017 - EDG</strong>.</p>
-                <h2 style="text-align: justify;">
-                    <strong>Sự trỗi dậy của kẻ thách thức đối đầu Sức mạnh của nhà vô địch được khẳng định</strong>
-                </h2>
-                <h3 style="text-align: justify;">
-                    <strong>1. RNG giành chiến thắng khá nhọc nhằn trước 1907 FENERBAHÇE ESPOR</strong>
-                </h3>
-                <p style="text-align: justify;">
-                    <strong>RNG</strong> giành chiến thắng sau trận đấu kéo dài gần 39 phút thi đấu trước <strong>FENERBAHÇE</strong>. Với những con bài mạnh ở meta hiện tại, FENERBAHÇE đã khiến RNG gặp nhất nhiều khó khăn trong việc tiếp cận nhà chính của mình. FENERBAHÇE vươn lên dẫn trước với mạng chiến công đồng thuộc về người đi rừng. Trận đấu diễn ra với những pha ăn miếng trả miếng với những mục tiêu lớn và trụ. Với <strong>Cho'gath</strong> trong tay <strong>Letme</strong> trở nên quá cứng cáp, hứng hết sát thương cho đồng đội, <strong>RNG</strong> ủi thẳng vào nhà chính đối phương và kết thúc trận đấu ở phút thứ 39.</p>
-                <h3 style="text-align: justify;">
-                    <strong>2. Samsung Galaxy hạ gục đương kim vô địch EU LCS</strong>
-                </h3>
-                <p style="text-align: justify;">
-                    <strong>SSG</strong> khẳng định sức mạnh của mình khi giành chiến thắng khá dễ dàng trước <strong>G2 Esports</strong>. Kết thúc trận đấu ở phút thứ 28 trận đấu, với lượng tiền dẫn trước lên đến hơn 10 nghìn, SSG hạ gục G2 đồng thời khẳng định vị trí hạt giống số 1 bảng C của mình. Liệu SSG có thể đè bẹp đội chủ nhà <strong>RNG</strong> để chứng minh mình là số 1?</p>
-                <h3 style="text-align: justify;">
-                    <strong>3. Chiến thắng xứng đáng của Longzhu Gaming </strong>
-                </h3>
-                <p style="text-align: justify;">Sức mạnh của các đội tuyển Hàn Quốc một lần nữa được chứng minh sau chiến thắng của đương kim vô địch LCK hè 2017 <strong>Longzhu Gaming</strong> trước hạt giống số 2 <strong>NA LCS - Immortals</strong>. <strong>Tristana</strong> trong tay <strong>Pray</strong> với đầy đủ trang bị đã bắn nát đội hình của<strong> IMT</strong> và đem về chiến thắng cho <strong>LZ</strong> sau 31 phút thi đấu. </p>
-            </div>
-            <div id="AdAsia"></div>
-            <div id="bs_mobileinpage">
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <p></p><!-- BEGIN TAG - DO NOT MODIFY --><!-- END TAG -->
-            <div id="">
-                <h3 style="text-align: justify;">
-                    <strong>4. Gigabyte Marines bán hành cho Fnatic </strong>
-                </h3>
-                <table align="center" class="imageBox">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center;">
-                                <img src="http://image1.ictnews.vn/_Files/2017/10/06/gam-win.jpg" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="PCaption">
-                                    <span style="font-size:14px;">
-                                        <strong>Chiến thắng áp đảo của Gigabyte Marines trước Fnatic</strong>
-                                    </span>
-                                </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="text-align: justify;">Trận đấu được người hâm mộ trên toàn thế giới đánh giá là <strong>trận đấu đáng xem nhất</strong> ngày thi đấu đầu tiên. Với những sự lựa chọn lạ nhưng đầy hiệu quả của <strong>GAM</strong> đã đè bẹp hạt giống số 3 châu Âu sau 25 phút thi đấu. Không còn ngôn từ hoa mỹ nào có thể diễn tả chiến thắng thuyết phục của<strong> GAM </strong>trước <strong>FNC</strong>. Liệu GAM sẽ tiếp tục tung những sự lựa chọn lạ và chiến thuật out meta hiện tại?</p>
-                <h3 style="text-align: justify;">
-                    <strong>5. SKT T1 hạ gục C9 sau 26 phút thi đấu</strong>
-                </h3>
-                <p style="text-align: justify;">
-                    <strong>Đương kim vô địch CKTG 2016</strong> giành chiến thắng áp đảo trước đại diện Bắc Mỹ <strong>Cloud 9</strong>. Vẫn như thường lệ, <strong>Faker</strong> là địa chỉ hỏi thăm liên tục của rừng <strong>C9</strong>. Tuy nhiên, khoảnh khắc <strong>Faker</strong> thi đấu <strong>1 vs 2</strong> với <strong>Jensen</strong> và <strong>Contractz</strong> cho thấy <strong>SKT T1</strong> không hề dễ bị đánh bại. Đội hình của <strong>SKT T1</strong> với sự dẫn đầu của quỷ vương đã đè bẹp <strong>C9</strong> chỉ sau 26 phút thi đấu. </p>
-                <h3 style="text-align: justify;">
-                    <strong>6. AHQ lật đổ đương kim vô địch LPL hè 2017 - Edward Gaming</strong>
-                </h3>
-                <p style="text-align: justify;">Các đội tuyển Đài Loan thường có những kết quả không tốt khi đối đầu với những đội tuyển Trung Quốc. Tuy vậy, <strong>AHQ</strong> đã khiến cho nhà thi đấu Vũ Hán phải nín lặng khi hạ gục <strong>EDG</strong> sau trận đấu kéo dài 54 phút thi đấu. Trận đấu diễn ra đầy kịch tính với chỉ số điểm hạ gục sát nút, những pha combat hoàn hảo. Tuy nhiên <strong>AHQ</strong> mới là đội phối hợp tốt hơn và hạ gục <strong>EDG</strong> ngay trên đất Trung Quốc. </p>
-                <p style="text-align: justify;">
-                    <strong>Ngày thi đấu thứ nhất vòng bảng CKTG mùa 7</strong> đã kết thúc với nhiều dư vị cho khán giả. Những trận đấu mãn nhãn, tinh thần thi đấy rực lửa đã đem đến một mùa giải cực kì hấp dẫn. Những trận thi đấu tiếp theo sẽ bắt đầu vào <strong>14:00 chiều ngày hôm nay</strong>. Hãy đón xem và cập nhật kết quả các trận đấu <strong>vòng bảng CKTG ngày 2</strong> trên <strong>ICTnews</strong>.</p>
-            </div>
-        </div>
-    </content>
-    <author>
-        <p align="right">
-            <b>Khánh Phạm</b>
-        </p>
-    </author>
+    <rss version="2.0">
+        <channel>
+            <title><![CDATA[ GameK.vn - PC/Console - RSS Feed ]]></title>
+            <link><![CDATA[ http://gamek.vn/pc-console.chn ]]></link>
+            <description><![CDATA[ GameK.vn ]]></description>
+            <ttl>20</ttl>
+            <copyright>GameK.vn</copyright>
+            <pubDate>Wed, 01 Nov 2017 02:29:55 GMT+7</pubDate>
+            <generator>GameK.vn</generator>
+            <docs>http://gamek.vn</docs>
+            <item>
+                <title><![CDATA[ World of Final Fantasy - RPG dễ thương nhất của Square Enix chính thức cập bến PC ]]></title>
+                <link><![CDATA[ http://gamek.vn/world-of-final-fantasy-rpg-de-thuong-nhat-cua-square-enix-chinh-thuc-cap-ben-pc-20171031233206581.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/world-of-final-fantasy-rpg-de-thuong-nhat-cua-square-enix-chinh-thuc-cap-ben-pc-20171031233206581.chn" title="World of Final Fantasy - RPG dễ thương nhất của Square Enix chính thức cập bến PC"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/3-1509467322904.jpg" width="100" border="0" alt="World of Final Fantasy - RPG dễ thương nhất của Square Enix chính thức cập bến PC" /></a><span>Mới đây, Square Enix đã bất ngờ thông báo về việc phát hành tựa game nhập vai World of Final Fantasy trên PC vào ngày 28/11 tới, tức khoảng 1 tháng nữa.</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 23:31:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Chân dung cha đẻ game kinh dị đội lốt anime Doki Doki Literature Club: Dan Salvato ]]></title>
+                <link><![CDATA[ http://gamek.vn/chan-dung-cha-de-game-kinh-di-doi-lot-anime-doki-doki-literature-club-dan-salvato-20171031174932269.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/chan-dung-cha-de-game-kinh-di-doi-lot-anime-doki-doki-literature-club-dan-salvato-20171031174932269.chn" title="Chân dung cha đẻ game kinh dị đội lốt anime Doki Doki Literature Club: Dan Salvato"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/ttgrow80dxzlxdrx7jnj-crop-1509446777851.jpg" width="100" border="0" alt="Chân dung cha đẻ game kinh dị đội lốt anime Doki Doki Literature Club: Dan Salvato" /></a><span>Dù rất kinh dị, nhưng trong Doki Doki Literature Club, những giây phút đầy tình người cũng tồn tại, và đôi lúc chúng nó về những chủ đề hết sức nhạy cảm, ví dụ căn bệnh trầm cảm chẳng hạn</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 17:49:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Giới thiệu game mới Ghost of Tsushima: Hành trình bước vào ngôi đền của những huyền thoại Samurai ]]></title>
+                <link><![CDATA[ http://gamek.vn/gioi-thieu-game-moi-ghost-of-tsushima-hanh-trinh-buoc-vao-ngoi-den-cua-nhung-huyen-thoai-samurai-20171031165939815.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/gioi-thieu-game-moi-ghost-of-tsushima-hanh-trinh-buoc-vao-ngoi-den-cua-nhung-huyen-thoai-samurai-20171031165939815.chn" title="Giới thiệu game mới Ghost of Tsushima: Hành trình bước vào ngôi đền của những huyền thoại Samurai"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/1-1509443802725.jpg" width="100" border="0" alt="Giới thiệu game mới Ghost of Tsushima: Hành trình bước vào ngôi đền của những huyền thoại Samurai" /></a><span>Vào vai một chiến binh Samurai duy nhất còn sót lại, nhiệm vụ của bạn là đánh bại cả đội quân viên chinh hùng mạnh và mang lại hòa bình cho hòn đảo Tsushima.</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 16:59:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Hết "phân biệt đối xử" người chơi, Assassin's Creed: Origins lại bị tố cáo game quá giật lag vì dùng... Denuvo! ]]></title>
+                <link><![CDATA[ http://gamek.vn/het-phan-biet-doi-xu-nguoi-choi-assassins-creed-origins-lai-bi-to-cao-game-qua-giat-lag-vi-dung-denuvo-20171031165656644.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/het-phan-biet-doi-xu-nguoi-choi-assassins-creed-origins-lai-bi-to-cao-game-qua-giat-lag-vi-dung-denuvo-20171031165656644.chn" title="Hết "phân biệt đối xử" người chơi, Assassin's Creed: Origins lại bị tố cáo game quá giật lag vì dùng... Denuvo!"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/photo-0-1509443609185.jpg" width="100" border="0" alt="Hết "phân biệt đối xử" người chơi, Assassin's Creed: Origins lại bị tố cáo game quá giật lag vì dùng... Denuvo!" /></a><span>Ở thời điểm hiện tại, Assassin's Creed: Origins đang sử dụng phiên bản Denuvo 4.8 mới nhất, và chưa có cách nào qua mặt được hệ thống bảo vệ bản quyền của game để tạo ra file crack</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 16:56:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Không thể tin nổi, "đồ cổ" SNES Classic bán được tới 2 triệu bản trên toàn thế giới chỉ trong 1 tháng ]]></title>
+                <link><![CDATA[ http://gamek.vn/khong-the-tin-noi-do-co-snes-classic-ban-duoc-toi-2-trieu-ban-tren-toan-the-gioi-chi-trong-1-thang-20171031165036019.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/khong-the-tin-noi-do-co-snes-classic-ban-duoc-toi-2-trieu-ban-tren-toan-the-gioi-chi-trong-1-thang-20171031165036019.chn" title="Không thể tin nổi, "đồ cổ" SNES Classic bán được tới 2 triệu bản trên toàn thế giới chỉ trong 1 tháng"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/snes-games2-1509443351879.jpg" width="100" border="0" alt="Không thể tin nổi, "đồ cổ" SNES Classic bán được tới 2 triệu bản trên toàn thế giới chỉ trong 1 tháng" /></a><span>Bộ máy chơi game 'đồ cổ' mới được Nintendo hồi sinh thời gian gần đây là SNES Classic đã đạt được doanh thu cực khủng trên toàn thế giới.</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 16:50:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Doki Doki Literature Club - Game kinh dị đội lốt dễ thương đã có Việt hóa, còn chờ gì mà chưa đi đóng bỉm? ]]></title>
+                <link><![CDATA[ http://gamek.vn/doki-doki-literature-club-game-kinh-di-doi-lot-de-thuong-da-co-viet-hoa-con-cho-gi-ma-chua-di-dong-bim-20171031163521159.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/doki-doki-literature-club-game-kinh-di-doi-lot-de-thuong-da-co-viet-hoa-con-cho-gi-ma-chua-di-dong-bim-20171031163521159.chn" title="Doki Doki Literature Club - Game kinh dị đội lốt dễ thương đã có Việt hóa, còn chờ gì mà chưa đi đóng bỉm?"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/photo-0-1509442358799.jpg" width="100" border="0" alt="Doki Doki Literature Club - Game kinh dị đội lốt dễ thương đã có Việt hóa, còn chờ gì mà chưa đi đóng bỉm?" /></a><span>Những game thủ Việt thích khám phá Doki Doki Literature Club, tác phẩm kinh dị đáng sợ nhất năm 2017 sẽ có thể thưởng thức game mà không phải lo nghĩ về rào cản ngôn ngữ</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 16:34:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Sẽ ra sao nếu như có bạn gái cũng là game thủ? ]]></title>
+                <link><![CDATA[ http://gamek.vn/se-ra-sao-neu-nhu-co-ban-gai-cung-la-game-thu-201710311611468.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/se-ra-sao-neu-nhu-co-ban-gai-cung-la-game-thu-201710311611468.chn" title="Sẽ ra sao nếu như có bạn gái cũng là game thủ?"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/2-1509441085981.jpg" width="100" border="0" alt="Sẽ ra sao nếu như có bạn gái cũng là game thủ?" /></a><span>Các cô bạn gái là game thủ thường là những người có cá tính, và biết đâu việc chơi game cùng nhau giữa 2 người sẽ trở nên vui vẻ. Tình huống dưới đây có thể sẽ khiến cho các nam game thủ "vỡ mộng":</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 16:11:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Đánh đấm đã tay, bay nhảy không giới hạn, bom tấn Marvel's Spider-Man tiếp tục khiến người hâm mộ đứng ngồi không yên ]]></title>
+                <link><![CDATA[ http://gamek.vn/danh-dam-da-tay-bay-nhay-khong-gioi-han-bom-tan-marvels-spider-man-tiep-tuc-khien-nguoi-ham-mo-dung-ngoi-khong-yen-20171031154806815.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/danh-dam-da-tay-bay-nhay-khong-gioi-han-bom-tan-marvels-spider-man-tiep-tuc-khien-nguoi-ham-mo-dung-ngoi-khong-yen-20171031154806815.chn" title="Đánh đấm đã tay, bay nhảy không giới hạn, bom tấn Marvel's Spider-Man tiếp tục khiến người hâm mộ đứng ngồi không yên"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/8-1509439451826.jpg" width="100" border="0" alt="Đánh đấm đã tay, bay nhảy không giới hạn, bom tấn Marvel's Spider-Man tiếp tục khiến người hâm mộ đứng ngồi không yên" /></a><span>Dù chỉ có độ dài hơn 2 phút ngắn ngủi, clip này vẫn khiến người hâm mộ phải đừng ngồi không yên vì sự hoàng tráng và hấp dẫn.</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 15:47:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Detroit: Become Human - Game phiêu lưu kỳ quặc cho người chơi vào vai... người giúp việc ]]></title>
+                <link><![CDATA[ http://gamek.vn/detroit-become-human-game-phieu-luu-ky-quac-cho-nguoi-choi-vao-vai-nguoi-giup-viec-20171031154741175.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/detroit-become-human-game-phieu-luu-ky-quac-cho-nguoi-choi-vao-vai-nguoi-giup-viec-20171031154741175.chn" title="Detroit: Become Human - Game phiêu lưu kỳ quặc cho người chơi vào vai... người giúp việc"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/1-1509439217236.jpg" width="100" border="0" alt="Detroit: Become Human - Game phiêu lưu kỳ quặc cho người chơi vào vai... người giúp việc" /></a><span>Thế nhưng bối cảnh của Detroit: Become Human không hề nhẹ nhàng đi một chút nào, trái ngược lại hoàn toàn, nó còn căng thẳng và đầy bạo lực chẳng thua gì câu chuyện của những nhân vật được giới thiệu trước đó</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 15:46:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Trở lại sau hơn 12 năm vắng bóng, Shadow of the Colossus khiến người hâm mộ nức lòng vì quá đẹp và chân thực ]]></title>
+                <link><![CDATA[ http://gamek.vn/tro-lai-sau-hon-12-nam-vang-bong-shadow-of-the-colossus-khien-nguoi-ham-mo-nuc-long-vi-qua-dep-va-chan-thuc-20171031150954815.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/tro-lai-sau-hon-12-nam-vang-bong-shadow-of-the-colossus-khien-nguoi-ham-mo-nuc-long-vi-qua-dep-va-chan-thuc-20171031150954815.chn" title="Trở lại sau hơn 12 năm vắng bóng, Shadow of the Colossus khiến người hâm mộ nức lòng vì quá đẹp và chân thực"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/0-1509437295487.jpg" width="100" border="0" alt="Trở lại sau hơn 12 năm vắng bóng, Shadow of the Colossus khiến người hâm mộ nức lòng vì quá đẹp và chân thực" /></a><span>Hy vọng với phiên bản trên PS4 tới đây, Shadow of the Colossus sẽ tìm lại được hào quang như những gì nó đã có trong quá khứ.</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 15:10:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Sony tung trailer mới toanh cho God of War 4, phát hành đầu năm 2018 ]]></title>
+                <link><![CDATA[ http://gamek.vn/sony-tung-trailer-moi-toanh-cho-god-of-war-4-phat-hanh-dau-nam-2018-20171031020300347.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/sony-tung-trailer-moi-toanh-cho-god-of-war-4-phat-hanh-dau-nam-2018-20171031020300347.chn" title="Sony tung trailer mới toanh cho God of War 4, phát hành đầu năm 2018"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/3-1509390031609.jpg" width="100" border="0" alt="Sony tung trailer mới toanh cho God of War 4, phát hành đầu năm 2018" /></a><span>Vừa qua, tại sự kiện Paris Games Week thì Sony đã giới thiệu thêm một đoạn trailer ngắn dành cho đứa con con God of War 4 (God of War).</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 02:02:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ The Last of Us 2 ra trailer mới, choáng ngợp với đồ họa siêu chất lượng cùng dàn nhân vật mới toanh ]]></title>
+                <link><![CDATA[ http://gamek.vn/the-last-of-us-2-ra-trailer-moi-choang-ngop-voi-do-hoa-sieu-chat-luong-cung-dan-nhan-vat-moi-toanh-20171031011303878.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/the-last-of-us-2-ra-trailer-moi-choang-ngop-voi-do-hoa-sieu-chat-luong-cung-dan-nhan-vat-moi-toanh-20171031011303878.chn" title="The Last of Us 2 ra trailer mới, choáng ngợp với đồ họa siêu chất lượng cùng dàn nhân vật mới toanh"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/1-1509386984963.png" width="100" border="0" alt="The Last of Us 2 ra trailer mới, choáng ngợp với đồ họa siêu chất lượng cùng dàn nhân vật mới toanh" /></a><span>Sau nhiều năm mong đợi thì mới đây, Sony cuối cùng cũng đã giới thiệu đoạn trailer mới dành cho The Last of Us 2 (tên chính thức: The Last of Us Part II), phần tiếp theo của The Last of Us được phát hành độc quyền dành cho PS3 vào năm 2013.</span> ]]></description>
+                <pubDate>Tue, 31 Oct 2017 01:12:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Lạ đời 2 game "anh em chung một nhà" lại bị đem ra cạnh tranh giải game hay nhất năm ]]></title>
+                <link><![CDATA[ http://gamek.vn/la-doi-2-game-anh-em-chung-mot-nha-lai-bi-dem-ra-canh-tranh-giai-game-hay-nhat-nam-20171030210634894.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/la-doi-2-game-anh-em-chung-mot-nha-lai-bi-dem-ra-canh-tranh-giai-game-hay-nhat-nam-20171030210634894.chn" title="Lạ đời 2 game "anh em chung một nhà" lại bị đem ra cạnh tranh giải game hay nhất năm"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/photo-0-1509371987708.jpg" width="100" border="0" alt="Lạ đời 2 game "anh em chung một nhà" lại bị đem ra cạnh tranh giải game hay nhất năm" /></a><span>Chính Nintendo cũng đang rơi vào cảnh cả hai đứa con cưng phải "huynh đệ tương tàn" vì cả hai tựa game ra mắt trong năm 2017 này đều quá hay, quá xuất sắc</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 21:05:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Game Thứ 6 Ngày 13 sắp cho sát nhân Jason hóa thân thành người thường để đi rình rập hạ sát mọi người ]]></title>
+                <link><![CDATA[ http://gamek.vn/game-thu-6-ngay-13-sap-cho-sat-nhan-jason-hoa-than-thanh-nguoi-thuong-de-di-rinh-rap-ha-sat-moi-nguoi-20171030175540862.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/game-thu-6-ngay-13-sap-cho-sat-nhan-jason-hoa-than-thanh-nguoi-thuong-de-di-rinh-rap-ha-sat-moi-nguoi-20171030175540862.chn" title="Game Thứ 6 Ngày 13 sắp cho sát nhân Jason hóa thân thành người thường để đi rình rập hạ sát mọi người"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/1-1509360872163.jpg" width="100" border="0" alt="Game Thứ 6 Ngày 13 sắp cho sát nhân Jason hóa thân thành người thường để đi rình rập hạ sát mọi người" /></a><span>Mới đây, Friday the 13th bất ngờ thông báo về việc ra mắt chế độ chơi mới có tên gọi Paranoia. Được biết, mode chơi mới này sẽ sớm được cập nhật vào trong Friday the 13th, và hoàn toàn miễn phí dành cho những người đang sở hữu bản quyền tựa game này.</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 17:55:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Choáng ngợp với sự rộng lớn của Assassin's Creed: Origins, chim bay mỏi cánh vẫn chưa qua một màn chơi ]]></title>
+                <link><![CDATA[ http://gamek.vn/choang-ngop-voi-su-rong-lon-cua-assassins-creed-origins-chim-bay-moi-canh-van-chua-qua-mot-man-choi-20171030173202269.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/choang-ngop-voi-su-rong-lon-cua-assassins-creed-origins-chim-bay-moi-canh-van-chua-qua-mot-man-choi-20171030173202269.chn" title="Choáng ngợp với sự rộng lớn của Assassin's Creed: Origins, chim bay mỏi cánh vẫn chưa qua một màn chơi"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/0-1509359441952.jpg" width="100" border="0" alt="Choáng ngợp với sự rộng lớn của Assassin's Creed: Origins, chim bay mỏi cánh vẫn chưa qua một màn chơi" /></a><span>Đúng như những gì đã hứa hẹn trước đó, Ubisoft đã mang đến cho người hâm mộ một tựa game thế giới mở đồ sộ nhất mà hãng từng sản xuất.</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 17:32:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Modder ghép cây ngoài đời thực vào trong game Skyrim, kết quả vô cùng ấn tượng ]]></title>
+                <link><![CDATA[ http://gamek.vn/modder-ghep-cay-ngoai-doi-thuc-vao-trong-game-skyrim-ket-qua-vo-cung-an-tuong-20171030164338409.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/modder-ghep-cay-ngoai-doi-thuc-vao-trong-game-skyrim-ket-qua-vo-cung-an-tuong-20171030164338409.chn" title="Modder ghép cây ngoài đời thực vào trong game Skyrim, kết quả vô cùng ấn tượng"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/photo-0-1509356478049.png" width="100" border="0" alt="Modder ghép cây ngoài đời thực vào trong game Skyrim, kết quả vô cùng ấn tượng" /></a><span>Vì không chịu nổi cảnh tượng đi dạo trong rừng ở Skyrim mà "cây nào trông cũng như cây nào", game thủ l3st4t đã tung ra một bản mod thay thế toàn bộ cây trong game bằng cây thật được chụp ở Phần Lan.</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 16:42:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Điểm mặt những tựa game mới hấp dẫn mà bạn không thể bỏ qua trong tháng 11 ]]></title>
+                <link><![CDATA[ http://gamek.vn/diem-mat-nhung-tua-game-moi-hap-dan-ma-ban-khong-the-bo-qua-trong-thang-11-20171030162956675.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/diem-mat-nhung-tua-game-moi-hap-dan-ma-ban-khong-the-bo-qua-trong-thang-11-20171030162956675.chn" title="Điểm mặt những tựa game mới hấp dẫn mà bạn không thể bỏ qua trong tháng 11"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/1-1509355508346.jpg" width="100" border="0" alt="Điểm mặt những tựa game mới hấp dẫn mà bạn không thể bỏ qua trong tháng 11" /></a><span>Tháng 11 đã đến, đây là những tựa game mà bạn không thể bỏ qua trong tháng này.</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 16:29:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ L.A Noire - Kiệt tác game trinh thám tung trailer mới tuyệt đẹp, ra mắt ngày 14/11 trên PS4 ]]></title>
+                <link><![CDATA[ http://gamek.vn/la-noire-kiet-tac-game-trinh-tham-tung-trailer-moi-tuyet-dep-ra-mat-ngay-14-11-tren-ps4-20171030162114269.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/la-noire-kiet-tac-game-trinh-tham-tung-trailer-moi-tuyet-dep-ra-mat-ngay-14-11-tren-ps4-20171030162114269.chn" title="L.A Noire - Kiệt tác game trinh thám tung trailer mới tuyệt đẹp, ra mắt ngày 14/11 trên PS4"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/photo-0-1509354882647.jpg" width="100" border="0" alt="L.A Noire - Kiệt tác game trinh thám tung trailer mới tuyệt đẹp, ra mắt ngày 14/11 trên PS4" /></a><span>Phiên bản L.A Noire được hồi sinh trên PS4 và Xbox One sẽ có đồ họa nâng cấp rõ nét hơn một chút so với phiên bản PC, đi kèm là những cử động khuôn mặt siêu chi tiết mà hiếm có game nào bắt chước được</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 16:19:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Năm tựa game kinh dị chưa cần nhìn thấy quái vật, chỉ cần nghe đã đủ sợ phát khiếp ]]></title>
+                <link><![CDATA[ http://gamek.vn/nam-tua-game-kinh-di-chua-can-nhin-thay-quai-vat-chi-can-nghe-da-du-so-phat-khiep-20171030160600675.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/nam-tua-game-kinh-di-chua-can-nhin-thay-quai-vat-chi-can-nghe-da-du-so-phat-khiep-20171030160600675.chn" title="Năm tựa game kinh dị chưa cần nhìn thấy quái vật, chỉ cần nghe đã đủ sợ phát khiếp"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/photo-0-1509353355527.jpg" width="100" border="0" alt="Năm tựa game kinh dị chưa cần nhìn thấy quái vật, chỉ cần nghe đã đủ sợ phát khiếp" /></a><span>Có những game kinh dị gây ấn tượng mạnh bằng hình ảnh, nhưng cũng có những tác phẩm mà bạn chỉ cần nghe tiếng gió rít hay tiếng bước chân cũng đã đủ để mặt cắt không còn giọt máu rồi</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 16:05:00 GMT+7</pubDate>
+            </item>
+            <item>
+                <title><![CDATA[ Assassin’s Creed: Origins "mất chất" sát thủ, nhận đủ lời khen, tiếng chê ]]></title>
+                <link><![CDATA[ http://gamek.vn/assassins-creed-origins-mat-chat-sat-thu-nhan-du-loi-khen-tieng-che-20171030155217909.chn ]]></link>
+                <guid isPermaLink="false"><![CDATA[ 00000000-0000-0000-0000-000000000000 ]]></guid>
+                <description><![CDATA[ <a href="http://gamek.vn/assassins-creed-origins-mat-chat-sat-thu-nhan-du-loi-khen-tieng-che-20171030155217909.chn" title="Assassin’s Creed: Origins "mất chất" sát thủ, nhận đủ lời khen, tiếng chê"><img src="http://genknews.genkcdn.vn/zoom/100_62/2017/1-1509353285608.jpg" width="100" border="0" alt="Assassin’s Creed: Origins "mất chất" sát thủ, nhận đủ lời khen, tiếng chê" /></a><span>Theo tổng hợp đánh giá trên Metacritic, bom tấn của Ubisoft nhận điểm trung bình 82/100 (bản PS4) và 86/100 (bản PC). Đây được coi là thành tích khá tốt, tuy nhiên vẫn là chưa đủ với một tựa game rất được kỳ vọng như Assassin’s Creed Origins.</span> ]]></description>
+                <pubDate>Mon, 30 Oct 2017 15:51:00 GMT+7</pubDate>
+            </item>
+        </channel>
+    </rss>
 </root>

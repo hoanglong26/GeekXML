@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import utilities.Const;
 
 /**
@@ -40,6 +41,15 @@ public class GetGameListJavaScript extends HttpServlet {
 
         try {
             GameList topGames = GameDAO.getGameRankingRange(Integer.parseInt(from), Integer.parseInt(maxResult));
+//            HttpSession session = request.getSession();
+
+//            if (session.getAttribute("gameRankingList") != null) {
+//                GameList tmpList = (GameList) session.getAttribute("gameRankingList");
+//                tmpList.getGameList().addAll(topGames.getGameList());
+//                session.setAttribute("gameRankingList", tmpList);
+//            } else {
+//                session.setAttribute("gameRankingList", topGames);
+//            }
             String topGamesString = utilities.Utilities.marshallerToString(topGames);
             topGamesString = topGamesString.replace("standalone=\"yes\"", "");
             out.print(topGamesString);

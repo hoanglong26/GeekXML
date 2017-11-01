@@ -31,8 +31,8 @@
                 <c:import url="header.jsp" charEncoding="UTF-8" />
                 <div>
                     <div class="export-zone">
-                        <button class="btn btnExport" style="background-color: #1565C0">In ra PDF</button>
-                        <button class="btn btnExport" style="background-color: #00C853">In ra Excel</button>
+                        <button class="btn btnExport" style="background-color: #1565C0" onclick="saveToPDF(20);">In ra PDF</button>
+                        <!--<button class="btn btnExport" style="background-color: #00C853">In ra Excel</button>-->
 
                     </div>
 
@@ -131,9 +131,25 @@
                     saveGameListData(from, realPath, tableRef);
                 }
 
+                if (from === 1) {
+                    localStorage.setItem("idForSavePDF", 20);
+                } else {
+                    localStorage.setItem("idForSavePDF", parseInt(idOfLastRow.textContent) + 20);
+                }
                 //future load
                 initStorageTimeout(from + 20);
                 saveGameListData(from + 20, realPath, tableRef);
+            }
+
+            function saveToPDF(lastId) {
+                var id = localStorage.getItem("idForSavePDF");
+                if (id !== null) {
+                    lastId = id;
+                }
+                console.log(id);
+                window.open().location = "GameRankingDownloadServlet?lastGameId=" + lastId;
+
+
             }
         </script>
 

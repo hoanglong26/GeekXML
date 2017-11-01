@@ -1,35 +1,4 @@
 
-
-var m = 1;
-var n = 3;
-function expand(begin, end) {
-    m = m + 3;
-    n = n + 3;
-    if (m > begin || n > end) {
-        m = m - 3;
-        n = n - 3;
-    }
-
-    for (i = m; i <= n; i++) {
-        document.getElementById("page" + i).style.visibility = "visible";
-    }
-}
-
-
-function hide(begin, end) {
-    if (m >= begin || n >= end) {
-        for (i = m; i <= n; i++) {
-            document.getElementById("page" + i).style.visibility = "hidden";
-        }
-    }
-    m = m - 3;
-    n = n - 3;
-    if (m < 1 || n < 3) {
-        m = 1;
-        n = 3;
-    }
-}
-
 function hightlightMenuItem(itemName) {
     var menuRow = document.getElementsByClassName("menu");
     for (var i = 0; i < menuRow.length; i++) {
@@ -51,8 +20,12 @@ window.onscroll = function () {
 function scrollFunction() {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
         document.getElementById("topBtn").style.display = "block";
+        document.getElementById("top-zone").style.position = "fixed";
+
     } else {
         document.getElementById("topBtn").style.display = "none";
+        document.getElementById("top-zone").style.position = "relative";
+
     }
 }
 
@@ -90,6 +63,7 @@ function saveArticleListData(from, realPath, ele) {
                             xsltProcessor = new XSLTProcessor();
                             xsltProcessor.importStylesheet(xsl);
                             var resultDocument = xsltProcessor.transformToFragment(xmlRes, document);
+
                             sessionStorage.setItem("geek_list_article_from_" + from, resultDocument.getElementById("articleList").innerHTML);
 
                             if (from === 7) {

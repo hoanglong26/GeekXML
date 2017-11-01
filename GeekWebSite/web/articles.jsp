@@ -95,10 +95,30 @@
                 }
 
                 //future load
-//                initStorageTimeout(from + 20);
                 saveArticleListData(from + 10, realPath, ulRef);
             }
         </script>
+
+<!--        <script>
+            var ws = new WebSocket("ws://localhost:8780/GeekWebsite/ArticleWebSocket/articlews");
+            ws.onopen = function () {
+            };
+
+            ws.onmessage = function (message) {
+                console(message);
+                console(message.data);
+
+//                document.getElementById("chatlog").textContent += message.data + "\n";
+            };
+
+//            function postToServer() {
+//                ws.send(document.getElementById("msg").value);
+//                document.getElementById("msg").value = "";
+//            }
+//            function closeConnect() {
+//                ws.close();
+//            }
+        </script>-->
 
     </body>
 </html>

@@ -8,33 +8,27 @@ package utilities;
 import dao.ArticleDAO;
 import dao.GameDAO;
 import dao.GameRatingDAO;
-import dao.ImageDAO;
 import entities.Article;
 import entities.Game;
-import entities.GameList;
 import entities.GameRating;
 import entities.Image;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import static java.rmi.server.LogStream.log;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletContext;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import servlets.DispatcherServlet;
 
 /**
  *
@@ -77,11 +71,15 @@ public class CrawlData {
             in = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 
         } catch (MalformedURLException ex) {
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
 //            ex.printStackTrace();
+            log(ex.getMessage());
+
         } catch (IOException ex) {
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
 //            ex.printStackTrace();
+            log(ex.getMessage());
+
         }
 
         return in;
@@ -176,9 +174,7 @@ public class CrawlData {
                                         item.addImage(aImage);
                                     }
                                 }
-
                                 ArticleDAO.createArticle(item);
-
                             }
                         }
 
@@ -187,8 +183,9 @@ public class CrawlData {
 
             }
         } catch (Exception e) {
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
 //            e.printStackTrace();
+            log(e.getMessage());
         }
     }
 
@@ -225,9 +222,10 @@ public class CrawlData {
                 }
                 if (inArticleRow) {
                     if (line.contains("<img")) {
-                        String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
-                        line = line.replace(removePart, "");
-
+                        if (line.indexOf("alt") < line.indexOf("src")) {
+                            String removePart = line.substring(line.indexOf("alt"), line.indexOf("src"));
+                            line = line.replace(removePart, "");
+                        }
                         line = line.replace(" \"=\"\"", "");
                         if (line.contains("jpg\">") || line.contains("png\">") || line.contains("gif\">")) {
                             line = line.replace("jpg\">", "jpg\" />");
@@ -294,8 +292,8 @@ public class CrawlData {
 //            System.out.println(document.indexOf("<script"));
 //            System.out.println(document.indexOf("</script>"));
 //            System.out.println(article.getTitle());
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
-
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
             return null;
 
         }
@@ -350,7 +348,7 @@ public class CrawlData {
                     if (line.contains("<span class=\"IMSNoChangeStyle\" style=\"font-size: 22px;\"><strong>")) {
                         line = "";
                     }
-                    
+
                     if (line.contains("<div class=\"VCSortableInPreviewMode link-content-footer\"")) {
                         line = "";
                     }
@@ -447,7 +445,8 @@ public class CrawlData {
 //            System.out.println(document.indexOf("<script"));
 //            System.out.println(document.indexOf("</script>"));
 //            System.out.println(article.getTitle());
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
 
             return null;
 
@@ -485,8 +484,8 @@ public class CrawlData {
             result.setOverview(articleOverviewHandler.getOverView());
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
-
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
             return null;
         }
         return result;
@@ -589,7 +588,8 @@ public class CrawlData {
 //                e.printStackTrace();
 //                System.out.println(pageNum);
 //                System.out.println(gameName);
-                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+                log(e.getMessage());
 
             }
         }
@@ -675,7 +675,8 @@ public class CrawlData {
             result.setGameRatingList(gameDetailHandler.getList());
         } catch (Exception e) {
             //e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
 
         }
         return result;

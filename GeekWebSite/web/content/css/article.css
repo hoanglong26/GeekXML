@@ -3,7 +3,7 @@
 
 .article{
     padding: 10px;
-    background: #ffffffa1;
+    background: #ffffffb5;
     margin-bottom: -20px;
 }
 
@@ -31,6 +31,10 @@
     font-weight:400;
     text-align:justify;
     width:96%;
+}
+
+.article-body iframe{
+    width: 100%;
 }
 
 .article-body img{
