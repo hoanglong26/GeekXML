@@ -5,19 +5,12 @@
  */
 package utilities;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.net.MalformedURLException;
-import java.net.URL;
 import static java.rmi.server.LogStream.log;
-import java.text.Normalizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Pattern;
-import javax.imageio.ImageIO;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -43,7 +36,9 @@ public class Utilities {
         try {
             emf = Persistence.createEntityManagerFactory("GeekWebSitePU");
         } catch (Exception e) {
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
 //            e.printStackTrace();
         }
     }

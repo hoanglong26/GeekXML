@@ -22,6 +22,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import static java.rmi.server.LogStream.log;
 import java.text.SimpleDateFormat;
+import static java.time.temporal.ChronoUnit.DAYS;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletContext;
@@ -83,6 +84,150 @@ public class CrawlData {
         return in;
     }
 
+    public void saxParserForICTNewsHomepage(String uri, String[] categories) {
+        String line = "";
+        String document = "<root>";
+        try {
+            URL url = new URL(uri);
+            URLConnection conn = url.openConnection();
+            conn.addRequestProperty("User-Agent",
+                    "Chrome");
+
+            BufferedReader in = getBufferedReaderFromHtml(uri);
+
+            while ((line = in.readLine()) != null) {
+                if (line.contains("/rss.ict")) {
+                    document += line;
+                    break;
+                }
+            }
+
+            document += "</root>";
+
+            InputStream is = new ByteArrayInputStream(document.getBytes("UTF-8"));
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            ICTHomepageHandler ictHomepageHandler = new ICTHomepageHandler();
+            saxParser.parse(is, ictHomepageHandler);
+            String rssPage = "http://ictnews.vn" + ictHomepageHandler.getRssPage();
+
+            saxParserForICTNewsRsspage(rssPage, categories);
+        } catch (Exception e) {
+            log(e.getMessage());
+
+        }
+    }
+
+    public void saxParserForICTNewsRsspage(String uri, String[] categories) {
+        String line = "";
+        String document = "<root>";
+        try {
+            URL url = new URL(uri);
+            URLConnection conn = url.openConnection();
+            conn.addRequestProperty("User-Agent",
+                    "Chrome");
+
+            BufferedReader in = getBufferedReaderFromHtml(uri);
+
+            while ((line = in.readLine()) != null) {
+                if (line.contains("rss") && !line.contains("<i") && !line.contains("style")) {
+                    for (int i = 0; i < categories.length; i++) {
+                        if (line.contains(categories[i])) {
+                            document += line;
+                        }
+                    }
+                }
+            }
+
+            document += "</root>";
+
+            InputStream is = new ByteArrayInputStream(document.getBytes("UTF-8"));
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            ICTRssPageHandler ictRsspageHandler = new ICTRssPageHandler();
+            saxParser.parse(is, ictRsspageHandler);
+            List<String> rssList = ictRsspageHandler.getRssList();
+
+            for (String rssPage : rssList) {
+                saxParserForArticle(rssPage);
+            }
+        } catch (Exception e) {
+            log(e.getMessage());
+        }
+    }
+
+    public void saxParserForGamekHomepage(String uri, String[] categories) {
+        String line = "";
+        String document = "<root>";
+        try {
+            URL url = new URL(uri);
+            URLConnection conn = url.openConnection();
+            conn.addRequestProperty("User-Agent",
+                    "Chrome");
+
+            BufferedReader in = getBufferedReaderFromHtml(uri);
+
+            while ((line = in.readLine()) != null) {
+                if (line.contains("/rss.chn") && line.contains("class=\"facebook\"") && line.contains("class=\"youtube\"")) {
+                    document += line;
+                    break;
+                }
+            }
+
+            document += "</root>";
+
+            InputStream is = new ByteArrayInputStream(document.getBytes("UTF-8"));
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            GamekHomepageHandler gamekHomepageHandler = new GamekHomepageHandler();
+            saxParser.parse(is, gamekHomepageHandler);
+            String rssPage = "http://gamek.vn" + gamekHomepageHandler.getRssPage();
+
+            saxParserForGamekRsspage(rssPage, categories);
+        } catch (Exception e) {
+            log(e.getMessage());
+
+        }
+    }
+
+    public void saxParserForGamekRsspage(String uri, String[] categories) {
+        String line = "";
+        String document = "<root>";
+        try {
+            URL url = new URL(uri);
+            URLConnection conn = url.openConnection();
+            conn.addRequestProperty("User-Agent",
+                    "Chrome");
+
+            BufferedReader in = getBufferedReaderFromHtml(uri);
+
+            while ((line = in.readLine()) != null) {
+                if (line.contains("RSS") && line.contains("<li><a") && line.contains("target=\"_blank\"")) {
+                    for (int i = 0; i < categories.length; i++) {
+                        if (line.contains(categories[i])) {
+                            document += line;
+                        }
+                    }
+                }
+            }
+
+            document += "</root>";
+
+            InputStream is = new ByteArrayInputStream(document.getBytes("UTF-8"));
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            GamekRssPageHandler gamekRsspageHandler = new GamekRssPageHandler();
+            saxParser.parse(is, gamekRsspageHandler);
+            List<String> rssList = gamekRsspageHandler.getRssList();
+
+            for (String rssPage : rssList) {
+                saxParserForArticle(rssPage);
+            }
+        } catch (Exception e) {
+            log(e.getMessage());
+        }
+    }
+
     public void saxParserForArticle(String uri) {
         String line = "";
         String document = "<root>";
@@ -137,7 +282,6 @@ public class CrawlData {
                 } else {
                     SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss");
                     Date date = sdf.parse(item.getPubDate());
-
                     SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                     item.setPubDate("Đăng vào " + sdf2.format(date));
                 }
@@ -145,9 +289,9 @@ public class CrawlData {
                 //get author and content of article by using article link
                 Article detail = null;
                 if (uri.contains("ictnews")) {
-                    detail = saxParserForArticleDetail(item);
+                    detail = saxParserForICTNewsArticleDetail(item);
                 } else {
-                    detail = saxParserForArticleDetail2(item);
+                    detail = saxParserForGameKArticleDetail(item);
                 }
 
                 if (detail != null) {
@@ -187,7 +331,7 @@ public class CrawlData {
         }
     }
 
-    public Article saxParserForArticleDetail(Article article) {
+    public Article saxParserForICTNewsArticleDetail(Article article) {
         Article result = new Article();
         String line = "";
         String document = "<root>";
@@ -298,7 +442,7 @@ public class CrawlData {
         return result;
     }
 
-    public Article saxParserForArticleDetail2(Article article) {
+    public Article saxParserForGameKArticleDetail(Article article) {
         Article result = new Article();
         String line = "";
         String document = "<root>";
@@ -576,7 +720,7 @@ public class CrawlData {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
+//                e.printStackTrace();
 //                System.out.println(pageNum);
 //                System.out.println(gameName);
 //                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
@@ -589,7 +733,7 @@ public class CrawlData {
 
     public Game saxParserForGameDetail(Game aGame) {
         Game result = new Game();
-        
+
         try {
             URL url = new URL(aGame.getLink());
             URLConnection conn = url.openConnection();
@@ -658,7 +802,7 @@ public class CrawlData {
             saxParser.parse(is, gameDetailHandler);
             result.setGameRatingList(gameDetailHandler.getList());
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
 //            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
             log(e.getMessage());
 

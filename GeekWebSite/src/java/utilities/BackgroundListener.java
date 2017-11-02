@@ -34,30 +34,21 @@ public class BackgroundListener implements ServletContextListener {
                 System.out.println("Deploying...");
 
                 CrawlData crawl = new CrawlData(context);
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/game");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/internet");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt/phan-mem");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/the-gioi-so");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/cntt/phan-cung");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/the-gioi-so/di-dong");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/internet/xa-hoi");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/kinh-doanh/ho-so");
-//                crawl.saxParserForArticle("http://ictnews.vn/rss/the-gioi-so/may-anh-so");
-//
-//                crawl.saxParserForArticle("http://gamek.vn//pc-console.rss");
-//                crawl.saxParserForArticle("http://gamek.vn/game-online.rss");
-//                crawl.saxParserForArticle("http://gamek.vn/mobile-social.rss");
-//                crawl.saxParserForArticle("http://gamek.vn/esport.rss");
-//                crawl.saxParserForArticle("http://gamek.vn/thi-truong.rss");
-//                crawl.saxParserForArticle("http://gamek.vn/gaming-gear.rss");
-//                crawl.saxParserForArticle("http://gamek.vn/thi-truong.rss");
 
-                crawl.saxParserForGameRanking("https://www.gamerankings.com/browse.html?page=", 19);
+                String[] ictCategories = new String[]{"game", "internet", "cntt", "cntt", "cntt/phan-mem",
+                    "the-gioi-so", "cntt/phan-cung", "the-gioi-so/di-dong", "internet/xa-hoi",
+                    "kinh-doanh/ho-so", "the-gioi-so/may-anh-so"};
+                crawl.saxParserForICTNewsHomepage("http://ictnews.vn/", ictCategories);
+
+                String[] gamekCategories = new String[]{"pc-console", "mmo", "mobile-social",
+                    "esport", "thi-truong", "gaming-gear"};
+                crawl.saxParserForGamekHomepage("http://gamek.vn/", gamekCategories);
+
+//                crawl.saxParserForGameRanking("https://www.gamerankings.com/browse.html?page=", 19);
             }
         };
 
-        scheduler.scheduleAtFixedRate(runnable, 0, 50, TimeUnit.MINUTES);
+        scheduler.scheduleAtFixedRate(runnable, 0, 120, TimeUnit.MINUTES);
     }
 
     @Override

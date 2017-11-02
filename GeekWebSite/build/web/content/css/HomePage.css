@@ -480,7 +480,7 @@ a:hover{
     position: fixed;
     bottom: 0px;
     right: 5px;
-    z-index: 99;
+    z-index: 9;
     border: none;
     outline: none;
     background-color: #c60000;

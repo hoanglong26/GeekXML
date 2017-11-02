@@ -78,7 +78,7 @@
 
                         <table style="background: rgba(194, 198, 228, 0.7);">
                             <caption>
-                                <h1>Danh sách các đánh giá</h1>
+                                <h1>Các đánh giá khác</h1>
                             </caption>
                             <thead>
                                 <tr>
@@ -146,8 +146,6 @@
                 }
                 console.log(id);
                 window.open().location = "GameRankingDownloadServlet?lastGameId=" + lastId;
-
-
             }
         </script>
 

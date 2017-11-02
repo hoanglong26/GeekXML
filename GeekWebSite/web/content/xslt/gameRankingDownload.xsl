@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="xml" encoding="UTF-8"/>
-    <!--http://localhost:8780/GeekWebSite/content/img/Geekf.png-->
     <xsl:template match="/">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
@@ -28,11 +27,11 @@
                         </fo:block>
                     </fo:block-container>
                 </fo:static-content>
-<!--                <fo:static-content flow-name="xsl-region-after">
+                <!--                <fo:static-content flow-name="xsl-region-after">
                     <fo:block font-size="18pt" font-family="Arial" line-height="24pt" space-after.optimum="15pt" 
                               text-align="center" padding-top="3pt">
                     </fo:block>
-                </fo:static-content>-->
+                </fo:static-content>--> 
                 <fo:static-content flow-name="xsl-region-after">                                        
                     <fo:block text-align="center">
                         Trang <fo:page-number/>
@@ -152,44 +151,45 @@
                                     </fo:table-body>
                                 </fo:table>  
                             </fo:block>
-        
-                            <fo:table table-layout="fixed" border-color="#888888" border-width="medium" border-style="solid">
-                                <fo:table-column column-width="80mm"/>
-                                <fo:table-column column-width="80mm"/>
-                                <fo:table-column column-width="70mm"/>
-                                <fo:table-header background-color="#DFDFDF">
-                                    <fo:table-cell padding="2mm">
-                                        <fo:block font-family="Arial" > NGƯỜI ĐÁNH GIÁ </fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="2mm">
-                                        <fo:block font-family="Arial"> ĐIỂM </fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="2mm">
-                                        <fo:block font-family="Arial"> NGÀY ĐÁNH GIÁ </fo:block>
-                                    </fo:table-cell>  	   
-                                </fo:table-header>
-                                <fo:table-body>   
-                                    <xsl:for-each select="./*[local-name()='gameRating']">
-                                        <fo:table-row >
-                                            <fo:table-cell padding="2mm" >
-                                                <fo:block>
-                                                    <xsl:value-of select="./*[local-name()='reviewer']" />
-                                                </fo:block>
-                                            </fo:table-cell>
-                                            <fo:table-cell padding="2mm" >
-                                                <fo:block>  
-                                                    <xsl:value-of select="./*[local-name()='score']" />
-                                                </fo:block>
-                                            </fo:table-cell>
-                                            <fo:table-cell padding="2mm" >
-                                                <fo:block> 
-                                                    <xsl:value-of select="./*[local-name()='reviewedDate']" />
-                                                </fo:block>
-                                            </fo:table-cell>        
-                                        </fo:table-row>	
-                                    </xsl:for-each>		
-                                </fo:table-body>
-                            </fo:table>  
+                            <xsl:if test="./*[local-name()='gameRating']">
+                                <fo:table table-layout="fixed" border-color="#888888" border-width="medium" border-style="solid">
+                                    <fo:table-column column-width="80mm"/>
+                                    <fo:table-column column-width="80mm"/>
+                                    <fo:table-column column-width="70mm"/>
+                                    <fo:table-header background-color="#DFDFDF">
+                                        <fo:table-cell padding="2mm">
+                                            <fo:block font-family="Arial" > NGƯỜI ĐÁNH GIÁ </fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="2mm">
+                                            <fo:block font-family="Arial"> ĐIỂM </fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="2mm">
+                                            <fo:block font-family="Arial"> NGÀY ĐÁNH GIÁ </fo:block>
+                                        </fo:table-cell>  	   
+                                    </fo:table-header>
+                                    <fo:table-body>   
+                                        <xsl:for-each select="./*[local-name()='gameRating']">
+                                            <fo:table-row >
+                                                <fo:table-cell padding="2mm" >
+                                                    <fo:block>
+                                                        <xsl:value-of select="./*[local-name()='reviewer']" />
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                                <fo:table-cell padding="2mm" >
+                                                    <fo:block>  
+                                                        <xsl:value-of select="./*[local-name()='score']" />
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                                <fo:table-cell padding="2mm" >
+                                                    <fo:block> 
+                                                        <xsl:value-of select="./*[local-name()='reviewedDate']" />
+                                                    </fo:block>
+                                                </fo:table-cell>        
+                                            </fo:table-row>	
+                                        </xsl:for-each>		
+                                    </fo:table-body>
+                                </fo:table> 
+                            </xsl:if> 
                         </fo:block-container>
                     </xsl:for-each>
                 </fo:flow>

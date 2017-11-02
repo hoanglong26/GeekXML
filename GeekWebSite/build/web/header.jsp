@@ -35,7 +35,7 @@
     <div class="top" id="top-zone" style="position: relative">
         <div class="topcontainer">
             <div style="display: inline-block;">
-                <input type="text" placeHolder="Nhập từ khóa" class="search" onkeyup="doSearch();showResult();" id="key" />
+                <input type="text" placeHolder="Nhập từ khóa để tìm bài viết" class="search" onkeyup="doSearch();showResult();" id="key" />
                 <span class="ltop">
                     <a href="DispatcherServlet?action=SEARCH"><img src="content/img/search.png" /></a>
                 </span>
@@ -48,7 +48,7 @@
             </div>
 
             <span class="rtop">
-                <a href="https://www.facebook.com/" ><img src="content/img/facebook.png"/></a>
+                <a href="https://www.facebook.com/long.lp" ><img src="content/img/facebook.png"/></a>
                 <a href="http://www.vimeo.com/" ><img src="content/img/vimeo.png"/></a>
                 <a href="https://www.yahoo.com/" ><img src="content/img/yahoo.png"/></a>
                 <a href="http://store.steampowered.com/" ><img src="content/img/steam.png"/></a>
@@ -238,10 +238,8 @@
                 if (((event.keyCode === 13) || (window.event.which === 1)) && (check.value !== "")) {
                     window.open().location = "DispatcherServlet?action=SEARCH";
                 }
-            }
-           
+            }      
         }
-
 
     </script>
 </header>

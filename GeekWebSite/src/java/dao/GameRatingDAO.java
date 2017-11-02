@@ -8,6 +8,7 @@ package dao;
 import entities.Article;
 import entities.Game;
 import entities.GameRating;
+import static java.rmi.server.LogStream.log;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -58,7 +59,9 @@ public class GameRatingDAO {
             }
         } catch (Exception e) {
 //            e.printStackTrace();
-            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
+            log(e.getMessage());
+
+//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             em.close();
         }

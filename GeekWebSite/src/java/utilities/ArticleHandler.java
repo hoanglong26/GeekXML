@@ -54,13 +54,6 @@ public class ArticleHandler extends DefaultHandler {
                 inPubDateRow = true;
             }
         }
-//        else if (qName.equalsIgnoreCase("dc:creator")) {
-//            inAuthorRow = true;
-//        } else if (qName.equalsIgnoreCase("media:content")) {
-//            String thumbnail = atrbts.getValue("url");
-//            article.setThumbnail(thumbnail);
-//        }
-
     }
 
     @Override

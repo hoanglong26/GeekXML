@@ -47,29 +47,7 @@
 
         <script>
             var realPath = '${pageContext.request.contextPath}';
-            
-
-
-//            function getMoreArticle(from) {
-//                if (from === null) {
-//                    from = parseInt(sessionStorage.getItem('article_index')) + 10;
-//                } else {
-//                    from = from + 1;
-//
-//                }
-//                sessionStorage.setItem("article_index", from);
-//
-//                var ulRef = document.getElementById('otherArticleList');
-//                if (sessionStorage.getItem("geek_list_article_from_7") !== null) {
-//                    loadMoreArticle(ulRef, from);
-//                } else {
-//                    saveArticleListData(from, realPath, ulRef);
-//                }
-//
-//                //future load
-////                initStorageTimeout(from + 20);
-//                saveArticleListData(from + 10, realPath, ulRef);
-//            }
+ 
         </script>
 
     </body>

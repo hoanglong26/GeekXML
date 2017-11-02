@@ -7,6 +7,7 @@ package dao;
 
 import entities.GameRating;
 import entities.Image;
+import static java.rmi.server.LogStream.log;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -43,7 +44,9 @@ public class ImageDAO {
                 em.getTransaction().commit();
             } catch (Exception ex) {
 //                ex.printStackTrace();
-                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
+                            log(ex.getMessage());
+
+//                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, ex);
 
             }
         } finally {

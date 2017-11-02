@@ -34,11 +34,6 @@
                 <c:import url="header.jsp" charEncoding="UTF-8" />
 
                 <div class="content">
-<!--                    <div>
-                        <input type="text" style="width: 500px;" placeHolder="Nhập từ khóa" class="search" onkeyup="doSearch();
-                                showResult();" id="key" />
-                    </div>-->
-
 
                     <div class="boxTag">
                         <span class="tag" style="width: max-content;
@@ -50,7 +45,6 @@
                         <ul id="otherArticleList">
                             <%--<x:transform xml="${otherArticles}" xslt="${xsldocOther}" />--%>
                         </ul>
-                        <!--<button class="btn btnMore" onclick="getMoreArticle(null)">Xem thêm</button>-->
                     </div>
                 </div>
                 <c:import url="footer.jsp" charEncoding="UTF-8" />
@@ -78,49 +72,11 @@
                 var d = document.createElement("div");
                 if (result === null || result === "") {
                     result = "</br><h1 style='text-align: center;'>Không có kết quả</h1>";
-                } else {
-//                    var regEx = new RegExp(query, "ig");
-//                    var queryInDocument = result.match(regEx)[0];
-//                    result = result.replace(regEx, "<mark>" + queryInDocument + "</mark>");
-                }
+                } 
+                
                 d.innerHTML = result;
                 ele.appendChild(d);
-//                ele.parentNode.setAttribute("style", "display: block");
             }
-
-//            function getArticleOnLoad() {
-//                var lastArticleId = ${lastArticle};
-//                if (sessionStorage.getItem("lastArticleId") === null) {
-//                    sessionStorage.setItem("lastArticleId", lastArticleId);
-//                } else {
-//                    if (sessionStorage.getItem("lastArticleId") !== lastArticleId) {
-//                        sessionStorage.clear();
-//                        sessionStorage.setItem("lastArticleId", lastArticleId);
-//                    }
-//                }
-//                getMoreArticle(6);
-//            }
-//
-//            function getMoreArticle(from) {
-//                if (from === null) {
-//                    from = parseInt(sessionStorage.getItem('article_index')) + 10;
-//                } else {
-//                    from = from + 1;
-//
-//                }
-//                sessionStorage.setItem("article_index", from);
-//
-//                var ulRef = document.getElementById('otherArticleList');
-//                if (sessionStorage.getItem("geek_list_article_from_7") !== null) {
-//                    loadMoreArticle(ulRef, from);
-//                } else {
-//                    saveArticleListData(from, realPath, ulRef);
-//                }
-//
-//                //future load
-////                initStorageTimeout(from + 20);
-//                saveArticleListData(from + 10, realPath, ulRef);
-//            }
         </script>
 
     </body>
