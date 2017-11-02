@@ -86,11 +86,16 @@ public class GameRankingDownloadServlet extends HttpServlet {
             response.getOutputStream().write(content);
             response.getOutputStream().flush();
         } catch (TransformerException ex) {
-            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
+            log(ex.getMessage());
+//            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (FOPException ex) {
-            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
+            log(ex.getMessage());
+
+//            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SAXException ex) {
-            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
+            log(ex.getMessage());
+
+//            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
 //            out.close();
         }
@@ -109,9 +114,11 @@ public class GameRankingDownloadServlet extends HttpServlet {
             StreamResult htmlFile = new StreamResult(output);
             trans.transform(xmlFile, htmlFile);
         } catch (TransformerConfigurationException ex) {
-            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
+            log(ex.getMessage());
+//            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (TransformerException ex) {
-            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
+            log(ex.getMessage());
+//            Logger.getLogger(GameRankingDownloadServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

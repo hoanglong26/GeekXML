@@ -54,6 +54,9 @@ public class GetGameListJavaScript extends HttpServlet {
             topGamesString = topGamesString.replace("standalone=\"yes\"", "");
             out.print(topGamesString);
 //            request.setAttribute("TOP_GAME", topGamesString);
+        } catch (Exception e) {
+            log(e.getMessage());
+
         } finally {
 //            RequestDispatcher rd = request.getRequestDispatcher(Const.rankingPage);
 //            rd.forward(request, response);

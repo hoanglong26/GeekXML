@@ -52,6 +52,9 @@ public class ArticlesServlet extends HttpServlet {
 //
 //            request.setAttribute("OTHER_ARTICLES", otherArticlesString);
 
+        }catch (Exception e) {
+            log(e.getMessage());
+
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(Const.articlesPage);
             rd.forward(request, response);

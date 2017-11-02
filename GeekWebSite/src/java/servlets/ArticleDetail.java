@@ -62,7 +62,10 @@ public class ArticleDetail extends HttpServlet {
 
             request.setAttribute("ARTICLE_DETAIL", articlesString);
 
-        } finally {
+        } catch (Exception e) {
+            log(e.getMessage());
+
+        }finally {
             RequestDispatcher rd = request.getRequestDispatcher(Const.articleDetailPage);
             rd.forward(request, response);
             out.close();

@@ -66,7 +66,8 @@ public class SearchArticleServlet extends HttpServlet {
 
             out.print(searchArticlesString);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            log(e.getMessage());
         } finally {
 //            RequestDispatcher rd = request.getRequestDispatcher(Const.rankingPage);
 //            rd.forward(request, response);

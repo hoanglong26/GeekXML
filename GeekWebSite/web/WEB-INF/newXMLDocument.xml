@@ -1,92 +1,1417 @@
-<root>
-    <ratings>
-        <tbody>
-            <tr>
-                <td>
-                    <a href="/sites/1485-cheat-code-central/index.html">Cheat Code Central</a>
-                </td>
-                <date>08/12/05</date>
-                <linkRating>
-                    <a href="http://platinum.cheatcc.com/free/psxreviews/tonyhawkpsxrev.html" target="_new">Review <img src="https://gamefaqs.akamaized.net/images/ext_link.gif" alt=""/></a>
-                </linkRating>
-                <rating>5 out of 5</rating>
-            </tr>
-            <tr class="even">
-                <td>
-                    <a href="/sites/9-gaming-age/index.html">Gaming Age</a>
-                </td>
-                <date>09/16/04</date>
-                <linkRating>
-                    <a href="http://www.gaming-age.com/reviews/archive/old_reviews/psx/tonyhawk/" target="_new">Review <img src="https://gamefaqs.akamaized.net/images/ext_link.gif" alt=""/></a>
-                </linkRating>
-                <rating>A</rating>
-            </tr>
-            <tr>
-                <td>
-                    <a href="/sites/1353-game-boyz/index.html">Game Boyz</a>
-                </td>
-                <date>07/06/04</date>
-                <linkRating>Review</linkRating>
-                <td>n/a</td>
-            </tr>
-            <tr class="even">
-                <td>
-                    <a href="/sites/33-electric-playground/index.html">Electric Playground</a>
-                </td>
-                <date>05/07/04</date>
-                <linkRating>Review</linkRating>
-                <rating>9 out of 10</rating>
-            </tr>
-            <tr>
-                <td>
-                    <a href="/sites/706-egm/index.html">EGM</a>
-                </td>
-                <date>06/26/03</date>
-                <linkRating>Review</linkRating>
-                <rating>8.37 out of 10</rating>
-            </tr>
-            <tr class="even">
-                <td>
-                    <a href="/sites/15-gamespot/index.html">GameSpot</a>
-                </td>
-                <date>09/29/99</date>
-                <linkRating>
-                    <a href="http://www.gamespot.com/ps/sports/tonyhawksproskater/review.html" target="_new">Review <img src="https://gamefaqs.akamaized.net/images/ext_link.gif" alt=""/></a>
-                </linkRating>
-                <rating>9.3 out of 10</rating>
-            </tr>
-            <tr>
-                <td>
-                    <a href="/sites/1112-game-vortex/index.html">Game Vortex</a>
-                </td>
-                <date>12/17/02</date>
-                <linkRating>Review</linkRating>
-                <rating>92 out of 100</rating>
-            </tr>
-            <tr class="even">
-                <td>
-                    <a href="/sites/1133-pgnx-media/index.html">PGNx Media</a>
-                </td>
-                <date>10/20/02</date>
-                <linkRating>Review</linkRating>
-                <rating>9.5 out of 10</rating>
-            </tr>
-            <tr>
-                <td>
-                    <a href="/sites/776-independent-gamer/index.html">Independent Gamer</a>
-                </td>
-                <date>06/28/02</date>
-                <linkRating>Review</linkRating>
-                <rating>5 out of 5</rating>
-            </tr>
-            <tr class="even">
-                <td>
-                    <a href="/sites/522-psx-extreme/index.html">PSX Extreme</a>
-                </td>
-                <date>01/01/80</date>
-                <linkRating>Review</linkRating>
-                <rating>9.7 out of 10</rating>
-            </tr>
-        </tbody>
-    </ratings>
-</root>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><gameList xmlns="http://www.game.net">
+    <game>
+        <id>1</id>
+        <name>Super Mario Odyssey</name>
+        <link>https://www.gamerankings.com/switch/200275-super-mario-odyssey/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 2017</pulisherAndReleaseDate>
+        <platform>NS</platform>
+        <overallScore>98.11%</overallScore>
+        <totalVote>40 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/6/2/616662_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>1</id>
+            <score>8.7 trên 10</score>
+            <reviewer>Worthplaying</reviewer>
+            <reviewedDate>11/01/17</reviewedDate>
+            <linkRating>http://worthplaying.com/article/2017/11/1/reviews/105905/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>2</id>
+            <score>A</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>10/30/17</reviewedDate>
+            <linkRating>http://www.gaming-age.com/2017/10/super-mario-odyssey-review-nintendo-switch/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>3</id>
+            <score>9 trên 10</score>
+            <reviewer>GameCrate</reviewer>
+            <reviewedDate>10/30/17</reviewedDate>
+            <linkRating>https://www.gamecrate.com/reviews/review-super-mario-odyssey-%E2%80%93-much-more-mario-much-more-fun/17426</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>4</id>
+            <score>10 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>10/31/17</reviewedDate>
+            <linkRating>http://darkzero.co.uk/game-reviews/super-mario-odyssey-switch-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>5</id>
+            <score>5 trên 5</score>
+            <reviewer>Twinfinite</reviewer>
+            <reviewedDate>11/01/17</reviewedDate>
+            <linkRating>http://twinfinite.net/2017/11/super-mario-odyssey-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>6</id>
+            <score>5 trên 5</score>
+            <reviewer>Easy Allies</reviewer>
+            <reviewedDate>11/01/17</reviewedDate>
+            <linkRating>https://easyallies.com/#!/review/super-mario-odyssey</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>7</id>
+            <score>9.5 trên 10</score>
+            <reviewer>Destructoid</reviewer>
+            <reviewedDate>10/27/17</reviewedDate>
+            <linkRating>https://www.destructoid.com/review-super-mario-odyssey-467151.phtml</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>8</id>
+            <score>5 trên 5</score>
+            <reviewer>Hardcore Gamer</reviewer>
+            <reviewedDate>10/29/17</reviewedDate>
+            <linkRating>http://www.hardcoregamer.com/2017/10/29/review-super-mario-odyssey/277397/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>9</id>
+            <score>4.8 trên 5</score>
+            <reviewer>Cheat Code Central</reviewer>
+            <reviewedDate>10/31/17</reviewedDate>
+            <linkRating>http://cheatcc.com/switch/rev/supermarioodysseyreview.html</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>2</id>
+        <name>Super Mario Galaxy</name>
+        <link>https://www.gamerankings.com/wii/915692-super-mario-galaxy/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 2007</pulisherAndReleaseDate>
+        <platform>WII</platform>
+        <overallScore>97.64%</overallScore>
+        <totalVote>78 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/9/7/55597_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>10</id>
+            <score>10 trên 10</score>
+            <reviewer>Nintendo Life</reviewer>
+            <reviewedDate>11/12/07</reviewedDate>
+            <linkRating>http://wii.nintendolife.com/reviews/2007/11/super_mario_galaxy_wii</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>11</id>
+            <score>10 trên 10</score>
+            <reviewer>Digital Chumps</reviewer>
+            <reviewedDate>03/23/08</reviewedDate>
+            <linkRating>http://digitalchumps.com/video-game-reviews/36-wii/253-super-mario-galaxy.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>12</id>
+            <score>9.7 trên 10</score>
+            <reviewer>AusGamers</reviewer>
+            <reviewedDate>11/14/07</reviewedDate>
+            <linkRating>http://www.ausgamers.com/games/super-mario-galaxy/review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>3</id>
+        <name>The Legend of Zelda: Ocarina of Time</name>
+        <link>https://www.gamerankings.com/n64/197771-the-legend-of-zelda-ocarina-of-time/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 1998</pulisherAndReleaseDate>
+        <platform>N64</platform>
+        <overallScore>97.54%</overallScore>
+        <totalVote>28 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/7/6/4/4764_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>13</id>
+            <score>10 trên 10</score>
+            <reviewer>Nintendo Life</reviewer>
+            <reviewedDate>02/24/04</reviewedDate>
+            <linkRating>http://www.nintendolife.com/reviews/2007/02/legend_of_zelda_ocarina_of_time_virtual_console</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>14</id>
+            <score>9.9 trên 10</score>
+            <reviewer>Cubed3</reviewer>
+            <reviewedDate>05/11/03</reviewedDate>
+            <linkRating>http://www.cubed3.com/review/73/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>15</id>
+            <score>9 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>06/09/04</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?console_id=7&amp;review_id=175&amp;game_id=1563</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>4</id>
+        <name>Super Mario Galaxy 2</name>
+        <link>https://www.gamerankings.com/wii/960551-super-mario-galaxy-2/index.html</link>
+        <pulisherAndReleaseDate>Nintendo EAD Tokyo /Nintendo, 2010</pulisherAndReleaseDate>
+        <platform>WII</platform>
+        <overallScore>97.35%</overallScore>
+        <totalVote>56 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/8/2/8/113828_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>16</id>
+            <score>A-</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>06/25/10</reviewedDate>
+            <linkRating>http://www.gaming-age.com/review/wii/supermariogalaxy2</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>17</id>
+            <score>10 trên 10</score>
+            <reviewer>GamingUnion</reviewer>
+            <reviewedDate>06/04/11</reviewedDate>
+            <linkRating>http://www.gamingunion.net/reviews/super-mario-galaxy-2--253.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>18</id>
+            <score>10 trên 10</score>
+            <reviewer>Destructoid</reviewer>
+            <reviewedDate>05/23/10</reviewedDate>
+            <linkRating>http://www.destructoid.com/review-super-mario-galaxy-2-174362.phtml&amp;amp;category=wii</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>19</id>
+            <score>9.2 trên 10</score>
+            <reviewer>AusGamers</reviewer>
+            <reviewedDate>07/01/10</reviewedDate>
+            <linkRating>http://www.ausgamers.com/games/super-mario-galaxy-2/review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>20</id>
+            <score>10 trên 10</score>
+            <reviewer>Cubed3</reviewer>
+            <reviewedDate>06/22/10</reviewedDate>
+            <linkRating>http://www.cubed3.com/review/856</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>21</id>
+            <score>A-</score>
+            <reviewer>Game Revolution</reviewer>
+            <reviewedDate>06/23/10</reviewedDate>
+            <linkRating>http://www.gamerevolution.com/review/wii/super-mario-galaxy-2</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>5</id>
+        <name>The Legend of Zelda: Breath of the Wild</name>
+        <link>https://www.gamerankings.com/switch/189707-the-legend-of-zelda-breath-of-the-wild/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 2017</pulisherAndReleaseDate>
+        <platform>NS</platform>
+        <overallScore>97.28%</overallScore>
+        <totalVote>62 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/6/2/599662_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>22</id>
+            <score>4.5 trên 5</score>
+            <reviewer>DarkStation</reviewer>
+            <reviewedDate>03/17/17</reviewedDate>
+            <linkRating>http://www.darkstation.com/reviews/the-legend-of-zelda-breath-of-the-wild-switch-review</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>23</id>
+            <score>10 trên 10</score>
+            <reviewer>GameSpew</reviewer>
+            <reviewedDate>03/20/17</reviewedDate>
+            <linkRating>http://www.gamespew.com/2017/03/the-legend-of-zelda-breath-of-the-wild-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>24</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Industry News</reviewer>
+            <reviewedDate>03/29/17</reviewedDate>
+            <linkRating>http://www.gameindustry.com/reviews/game-review/breath-wild-best-zelda-ever/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>25</id>
+            <score>9 trên 10</score>
+            <reviewer>gamesTM</reviewer>
+            <reviewedDate>04/03/17</reviewedDate>
+            <linkRating>https://www.gamestm.co.uk/reviews/the-legend-of-the-zelda-breath-of-the-wild-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>26</id>
+            <score>10 trên 10</score>
+            <reviewer>Post Arcade (National Post)</reviewer>
+            <reviewedDate>03/24/17</reviewedDate>
+            <linkRating>http://business.financialpost.com/fp-tech-desk/post-arcade/the-legend-of-zelda-breath-of-the-wild-review-part-iii-not-quite-perfect-but-we-can-expect-no-better?__lsa=6395-1076</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>27</id>
+            <score>96 trên 100</score>
+            <reviewer>RPGFan</reviewer>
+            <reviewedDate>03/21/17</reviewedDate>
+            <linkRating>http://www.rpgfan.com/reviews/The_Legend_of_Zelda_Breath_of_the_Wild/index.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>28</id>
+            <score>5 trên 5</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>03/07/17</reviewedDate>
+            <linkRating>http://www.honestgamers.com/13333/switch/the-legend-of-zelda-breath-of-the-wild/review.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>29</id>
+            <score>5 trên 5</score>
+            <reviewer>RPGamer</reviewer>
+            <reviewedDate>04/03/17</reviewedDate>
+            <linkRating>http://rpgamer.com/games/zelda/zeldawiiu/reviews/zeldawiiustrev1.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>30</id>
+            <score>10 trên 10</score>
+            <reviewer>GamingUnion</reviewer>
+            <reviewedDate>04/03/17</reviewedDate>
+            <linkRating>http://www.gamingunion.net/reviews/2017/the-legend-of-zelda-breath-of-the-wild</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>6</id>
+        <name>Grand Theft Auto IV</name>
+        <link>https://www.gamerankings.com/ps3/933036-grand-theft-auto-iv/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2008</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>97.04%</overallScore>
+        <totalVote>60 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/0/2/76202_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>31</id>
+            <score>95 trên 100</score>
+            <reviewer>Game Over Online</reviewer>
+            <reviewedDate>08/18/08</reviewedDate>
+            <linkRating>http://www.game-over.com/reviews/ps3/Grand_Theft_Auto_IV.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>32</id>
+            <score>9.5 trên 10</score>
+            <reviewer>Playstation Universe</reviewer>
+            <reviewedDate>05/01/08</reviewedDate>
+            <linkRating>http://www.psu.com/Grand-Theft-Auto-IV-Review--a003585-p0.php</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>33</id>
+            <score>9 trên 10</score>
+            <reviewer>PlayStation LifeStyle</reviewer>
+            <reviewedDate>04/01/09</reviewedDate>
+            <linkRating>http://playstationlifestyle.net/2009/04/04/ps3-review-grand-theft-auto-iv/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>7</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/ps3/634490-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2013</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>97.01%</overallScore>
+        <totalVote>34 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/4/6/4/196464_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>34</id>
+            <score>A-</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>09/27/13</reviewedDate>
+            <linkRating>http://www.gaming-age.com/2013/09/grand-theft-auto-v-review-ps3-xbox-360/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>35</id>
+            <score>100 trên 100</score>
+            <reviewer>Gaming Illustrated</reviewer>
+            <reviewedDate>09/24/13</reviewedDate>
+            <linkRating>http://gamingillustrated.com/grand-theft-auto-5-ps3-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>36</id>
+            <score>87 trên 100</score>
+            <reviewer>New Game Network</reviewer>
+            <reviewedDate>10/10/13</reviewedDate>
+            <linkRating>http://www.newgamenetwork.com/article/946/grand-theft-auto-v-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>37</id>
+            <score>9 trên 10</score>
+            <reviewer>Worthplaying</reviewer>
+            <reviewedDate>09/24/13</reviewedDate>
+            <linkRating>http://worthplaying.com/article/2013/9/24/reviews/90264/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>8</id>
+        <name>Grand Theft Auto IV</name>
+        <link>https://www.gamerankings.com/xbox360/933037-grand-theft-auto-iv/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2008</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>96.67%</overallScore>
+        <totalVote>81 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/1/8/76218_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>38</id>
+            <score>98 trên 100</score>
+            <reviewer>XboxAchievements</reviewer>
+            <reviewedDate>05/01/08</reviewedDate>
+            <linkRating>http://www.xbox360achievements.org/game/grand-theft-auto-iv/review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>39</id>
+            <score>9.3 trên 10</score>
+            <reviewer>AusGamers</reviewer>
+            <reviewedDate>05/07/08</reviewedDate>
+            <linkRating>http://www.ausgamers.com/games/grand-theft-auto-4/review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>40</id>
+            <score>95 trên 100</score>
+            <reviewer>Game Over Online</reviewer>
+            <reviewedDate>08/18/08</reviewedDate>
+            <linkRating>http://www.game-over.com/reviews/xbox360/Grand_Theft_Auto_IV.html</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>9</id>
+        <name>SoulCalibur</name>
+        <link>https://www.gamerankings.com/dreamcast/198705-soulcalibur/index.html</link>
+        <pulisherAndReleaseDate>Namco, 1999</pulisherAndReleaseDate>
+        <platform>DC</platform>
+        <overallScore>96.56%</overallScore>
+        <totalVote>25 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/7/9/7379_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>41</id>
+            <score>A</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>09/05/04</reviewedDate>
+            <linkRating>http://www.gaming-age.com/reviews/archive/old_reviews/dreamcast/soulcalibur/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>10</id>
+        <name>Uncharted 2: Among Thieves</name>
+        <link>https://www.gamerankings.com/ps3/955125-uncharted-2-among-thieves/index.html</link>
+        <pulisherAndReleaseDate>Naughty Dog/SCE Australia, 2009</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>96.43%</overallScore>
+        <totalVote>82 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/0/7/106607_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>42</id>
+            <score>10 trên 10</score>
+            <reviewer>PlayStation LifeStyle</reviewer>
+            <reviewedDate>10/01/09</reviewedDate>
+            <linkRating>http://playstationlifestyle.net/2009/10/12/ps3-review-uncharted-2-among-thieves/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>43</id>
+            <score>10 trên 10</score>
+            <reviewer>Push Square</reviewer>
+            <reviewedDate>02/03/12</reviewedDate>
+            <linkRating>http://www.pushsquare.com/reviews/ps3/uncharted_2_among_thieves</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>44</id>
+            <score>9.5 trên 10</score>
+            <reviewer>Destructoid</reviewer>
+            <reviewedDate>10/12/09</reviewedDate>
+            <linkRating>http://www.destructoid.com/review-uncharted-2-among-thieves-151685.phtml&amp;amp;category=ps3</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>45</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Industry News</reviewer>
+            <reviewedDate>12/14/09</reviewedDate>
+            <linkRating>http://www.gameindustry.com/review/item.asp?id=1150</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>46</id>
+            <score>9.2 trên 10</score>
+            <reviewer>AusGamers</reviewer>
+            <reviewedDate>10/29/09</reviewedDate>
+            <linkRating>http://www.ausgamers.com/games/uncharted-2-among-thieves/review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>11</id>
+        <name>Super Mario 64</name>
+        <link>https://www.gamerankings.com/n64/198848-super-mario-64/index.html</link>
+        <pulisherAndReleaseDate>Nintendo, 1996</pulisherAndReleaseDate>
+        <platform>N64</platform>
+        <overallScore>96.41%</overallScore>
+        <totalVote>22 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/7/9/3/7793_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>47</id>
+            <score>9 trên 10</score>
+            <reviewer>Cubed3</reviewer>
+            <reviewedDate>03/27/06</reviewedDate>
+            <linkRating>http://www.cubed3.com/review/350</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>48</id>
+            <score>10 trên 10</score>
+            <reviewer>Nintendo Life</reviewer>
+            <reviewedDate>11/20/06</reviewedDate>
+            <linkRating>http://www.nintendolife.com/reviews/2006/11/super_mario_64_virtual_console</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>12</id>
+        <name>The Orange Box</name>
+        <link>https://www.gamerankings.com/xbox360/934384-the-orange-box/index.html</link>
+        <pulisherAndReleaseDate>Valve Software/EA Games, 2007</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>96.36%</overallScore>
+        <totalVote>58 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/1/5/78315_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>49</id>
+            <score>10 trên 10</score>
+            <reviewer>AusGamers</reviewer>
+            <reviewedDate>10/29/07</reviewedDate>
+            <linkRating>http://www.ausgamers.com/games/the-orange-box/review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>13</id>
+        <name>Metroid Prime</name>
+        <link>https://www.gamerankings.com/gamecube/447244-metroid-prime/index.html</link>
+        <pulisherAndReleaseDate>Retro Studios/Nintendo, 2002</pulisherAndReleaseDate>
+        <platform>GC</platform>
+        <overallScore>96.33%</overallScore>
+        <totalVote>87 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/1/3/1/12131_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>50</id>
+            <score>9.7 trên 10</score>
+            <reviewer>Cubed3</reviewer>
+            <reviewedDate>04/27/03</reviewedDate>
+            <linkRating>http://www.cubed3.com/review/76/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>51</id>
+            <score>10 trên 10</score>
+            <reviewer>Nintendo Life</reviewer>
+            <reviewedDate>08/06/11</reviewedDate>
+            <linkRating>http://www.nintendolife.com/reviews/2011/08/metroid_prime_retro</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>52</id>
+            <score>10 trên 10</score>
+            <reviewer>ZTGD</reviewer>
+            <reviewedDate>07/12/05</reviewedDate>
+            <linkRating>http://www.ztgamedomain.com/view.php?rid=250</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>14</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/ps4/805601-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2014</pulisherAndReleaseDate>
+        <platform>PS4</platform>
+        <overallScore>96.33%</overallScore>
+        <totalVote>41 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/8/6/402386_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>53</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Industry News</reviewer>
+            <reviewedDate>12/10/14</reviewedDate>
+            <linkRating>http://www.gameindustry.com/reviews/game-review/grand-theft-auto-vs-grand-next-gen-leap/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>54</id>
+            <score>5 trên 5</score>
+            <reviewer>ImpulseGamer</reviewer>
+            <reviewedDate>12/01/14</reviewedDate>
+            <linkRating>http://www.impulsegamer.com/gta-v-grand-theft-auto-5-ps4-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>55</id>
+            <score>5 trên 5</score>
+            <reviewer>GamesRadar+</reviewer>
+            <reviewedDate>11/29/14</reviewedDate>
+            <linkRating>http://www.gamesradar.com/gta-5-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>56</id>
+            <score>5 trên 5</score>
+            <reviewer>Quarter to Three</reviewer>
+            <reviewedDate>12/19/14</reviewedDate>
+            <linkRating>http://www.quartertothree.com/fp/2014/12/19/already-played-grand-theft-auto-v-well-now-time-play/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>57</id>
+            <score>9 trên 10</score>
+            <reviewer>Critical Hit</reviewer>
+            <reviewedDate>11/28/14</reviewedDate>
+            <linkRating>http://www.lazygamer.net/review/gta-v-review-hungry-eyes/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>15</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/xbox360/634491-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2013</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>96.10%</overallScore>
+        <totalVote>39 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/4/7/5/196475_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>58</id>
+            <score>8 trên 10</score>
+            <reviewer>GameCritics</reviewer>
+            <reviewedDate>10/03/13</reviewedDate>
+            <linkRating>http://www.gamecritics.com/gene-park/grand-theft-auto-v-review</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>59</id>
+            <score>5 trên 5</score>
+            <reviewer>Quarter to Three</reviewer>
+            <reviewedDate>10/15/13</reviewedDate>
+            <linkRating>http://www.quartertothree.com/fp/2013/10/14/grand-theft-auto-v/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>60</id>
+            <score>10 trên 10</score>
+            <reviewer>The Digital Fix</reviewer>
+            <reviewedDate>09/27/13</reviewedDate>
+            <linkRating>http://gaming.thedigitalfix.com/content/id/1970/grand-theft-auto-v.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>61</id>
+            <score>95 trên 100</score>
+            <reviewer>Game Over Online</reviewer>
+            <reviewedDate>10/09/13</reviewedDate>
+            <linkRating>http://www.game-over.com/content/2013/10/grand-theft-auto-v/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>62</id>
+            <score>9.8 trên 10</score>
+            <reviewer>Gaming Nexus</reviewer>
+            <reviewedDate>09/27/13</reviewedDate>
+            <linkRating>http://www.gamingnexus.com/Article/Grand-Theft-Auto-V/Item4174.aspx</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>63</id>
+            <score>96 trên 100</score>
+            <reviewer>The Gamers Temple</reviewer>
+            <reviewedDate>11/06/13</reviewedDate>
+            <linkRating>http://www.gamerstemple.com/game-reviews/xbox-360/7378/grand-theft-auto-v-review</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>64</id>
+            <score>9 trên 10</score>
+            <reviewer>GamingUnion</reviewer>
+            <reviewedDate>09/27/13</reviewedDate>
+            <linkRating>http://www.gamingunion.net/reviews/grand-theft-auto-v--862.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>65</id>
+            <score>99 trên 100</score>
+            <reviewer>COGconnected</reviewer>
+            <reviewedDate>09/26/13</reviewedDate>
+            <linkRating>http://canadianonlinegamers.com/review/grand-theft-auto-v-xbox-360-review-the-best-sandbox-game-to-grace-this-generation/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>16</id>
+        <name>Batman: Arkham City</name>
+        <link>https://www.gamerankings.com/ps3/981375-batman-arkham-city/index.html</link>
+        <pulisherAndReleaseDate>Rocksteady Studios/Warner Bros. Interactive Entertainment, 2011</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>95.94%</overallScore>
+        <totalVote>33 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/0/3/2/136032_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>66</id>
+            <score>9 trên 10</score>
+            <reviewer>CGMagazine</reviewer>
+            <reviewedDate>10/20/14</reviewedDate>
+            <linkRating>http://www.cgmagonline.com/reviews/batman-arkham-city/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>67</id>
+            <score>9 trên 10</score>
+            <reviewer>GamingUnion</reviewer>
+            <reviewedDate>12/19/11</reviewedDate>
+            <linkRating>http://www.gamingunion.net/reviews/batman-arkham-city--574.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>68</id>
+            <score>10 trên 10</score>
+            <reviewer>The Digital Fix</reviewer>
+            <reviewedDate>11/03/11</reviewedDate>
+            <linkRating>http://gaming.thedigitalfix.com/content/id/441/batman-arkham-city.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>69</id>
+            <score>9 trên 10</score>
+            <reviewer>GameCritics</reviewer>
+            <reviewedDate>11/06/11</reviewedDate>
+            <linkRating>http://www.gamecritics.com/richard-naik/batman-arkham-city-review</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>17</id>
+        <name>The Orange Box</name>
+        <link>https://www.gamerankings.com/pc/938210-the-orange-box/index.html</link>
+        <pulisherAndReleaseDate>Valve Software/EA Games, 2007</pulisherAndReleaseDate>
+        <platform>PC</platform>
+        <overallScore>95.88%</overallScore>
+        <totalVote>30 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/0/8/78308_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>70</id>
+            <score>9.3 trên 10</score>
+            <reviewer>Worthplaying</reviewer>
+            <reviewedDate>11/20/07</reviewedDate>
+            <linkRating>http://www.worthplaying.com/article.php?sid=47766&amp;mode=thread&amp;order=0</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>71</id>
+            <score>9 trên 10</score>
+            <reviewer>Hooked Gamers</reviewer>
+            <reviewedDate>11/08/07</reviewedDate>
+            <linkRating>http://www.hookedgamers.com/articles/review/375/half-life_2_-_the_orange_box</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>18</id>
+        <name>Resident Evil 4</name>
+        <link>https://www.gamerankings.com/ps2/925156-resident-evil-4/index.html</link>
+        <pulisherAndReleaseDate>Capcom, 2005</pulisherAndReleaseDate>
+        <platform>PS2</platform>
+        <overallScore>95.85%</overallScore>
+        <totalVote>54 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/2/8/15528_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>72</id>
+            <score>10 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>05/29/08</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?review_id=7101&amp;platform=PlayStation+2&amp;abr=PS2&amp;gametitle=Resident+Evil+4</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>73</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Industry News</reviewer>
+            <reviewedDate>03/06/06</reviewedDate>
+            <linkRating>http://www.gameindustry.com/review/item.asp?id=634</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>19</id>
+        <name>Resident Evil 4</name>
+        <link>https://www.gamerankings.com/gamecube/535840-resident-evil-4/index.html</link>
+        <pulisherAndReleaseDate>Capcom, 2005</pulisherAndReleaseDate>
+        <platform>GC</platform>
+        <overallScore>95.83%</overallScore>
+        <totalVote>99 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/2/2/15522_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>74</id>
+            <score>10 trên 10</score>
+            <reviewer>Nintendo Life</reviewer>
+            <reviewedDate>09/28/06</reviewedDate>
+            <linkRating>http://www.nintendolife.com/reviews/2006/09/resident_evil_4_gamecube</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>20</id>
+        <name>Tekken 3</name>
+        <link>https://www.gamerankings.com/ps/198900-tekken-3/index.html</link>
+        <pulisherAndReleaseDate>Namco, 1998</pulisherAndReleaseDate>
+        <platform>PS</platform>
+        <overallScore>95.80%</overallScore>
+        <totalVote>23 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/9/6/5/7965_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>75</id>
+            <score>9 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>12/04/03</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?console_id=8&amp;review_id=105&amp;game_id=746</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>76</id>
+            <score>A-</score>
+            <reviewer>Game Revolution</reviewer>
+            <reviewedDate>04/01/98</reviewedDate>
+            <linkRating>http://www.game-revolution.com/games/sony/action/tekken3.htm</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>77</id>
+            <score>9.3 trên 10</score>
+            <reviewer>IGN</reviewer>
+            <reviewedDate>08/23/98</reviewedDate>
+            <linkRating>http://psx.ign.com/articles/152/152294p1.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>78</id>
+            <score>97 trên 100</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>02/03/01</reviewedDate>
+            <linkRating>http://www.gaming-age.com/reviews/archive/old_reviews/psx/tekken3/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>21</id>
+        <name>Mass Effect 2</name>
+        <link>https://www.gamerankings.com/xbox360/944907-mass-effect-2/index.html</link>
+        <pulisherAndReleaseDate>BioWare/Electronic Arts, 2010</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>95.77%</overallScore>
+        <totalVote>75 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/6/6/94366_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>79</id>
+            <score>10 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>02/21/10</reviewedDate>
+            <linkRating>http://darkzero.co.uk/game-reviews/mass-effect-2-xbox-360-pc/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>80</id>
+            <score>10 trên 10</score>
+            <reviewer>Destructoid</reviewer>
+            <reviewedDate>01/26/10</reviewedDate>
+            <linkRating>http://www.destructoid.com/review-mass-effect-2-161584.phtml&amp;amp;category=xbox360</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>81</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Industry News</reviewer>
+            <reviewedDate>03/08/10</reviewedDate>
+            <linkRating>http://www.gameindustry.com/review/item.asp?id=1185</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>82</id>
+            <score>94 trên 100</score>
+            <reviewer>XboxAchievements</reviewer>
+            <reviewedDate>02/01/10</reviewedDate>
+            <linkRating>http://www.xbox360achievements.org/game/mass-effect-2/review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>22</id>
+        <name>The Last of Us Remastered</name>
+        <link>https://www.gamerankings.com/ps4/783739-the-last-of-us-remastered/index.html</link>
+        <pulisherAndReleaseDate>Naughty Dog/SCEA, 2014</pulisherAndReleaseDate>
+        <platform>PS4</platform>
+        <overallScore>95.70%</overallScore>
+        <totalVote>43 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/8/1/2/378812_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>83</id>
+            <score>9 trên 10</score>
+            <reviewer>ZTGD</reviewer>
+            <reviewedDate>08/18/14</reviewedDate>
+            <linkRating>http://www.ztgd.com/reviews/the-last-of-us-remastered-ps4-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>84</id>
+            <score>9.5 trên 10</score>
+            <reviewer>Softpedia</reviewer>
+            <reviewedDate>08/22/14</reviewedDate>
+            <linkRating>http://www.softpedia.com/reviews/games/playstation-4/The-Last-of-Us-Remastered-Review-455974.shtml</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>85</id>
+            <score>93 trên 100</score>
+            <reviewer>Gaming Illustrated</reviewer>
+            <reviewedDate>08/19/14</reviewedDate>
+            <linkRating>http://gamingillustrated.com/the-last-of-us-remastered-ps4-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>86</id>
+            <score>8.5 trên 10</score>
+            <reviewer>Gaming Nexus</reviewer>
+            <reviewedDate>08/13/14</reviewedDate>
+            <linkRating>http://www.gamingnexus.com/Article/4491/The-Last-of-Us-Remastered/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>23</id>
+        <name>Halo: Combat Evolved</name>
+        <link>https://www.gamerankings.com/xbox/472132-halo-combat-evolved/index.html</link>
+        <pulisherAndReleaseDate>Bungie/Microsoft Game Studios, 2001</pulisherAndReleaseDate>
+        <platform>XBOX</platform>
+        <overallScore>95.54%</overallScore>
+        <totalVote>78 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/5/6/0/10560_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>87</id>
+            <score>9.2 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>01/29/03</reviewedDate>
+            <linkRating>http://darkzero.co.uk/index2.php?articleid=14</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>88</id>
+            <score>9.5 trên 10</score>
+            <reviewer>ZTGD</reviewer>
+            <reviewedDate>06/14/05</reviewedDate>
+            <linkRating>http://www.ztgamedomain.com/view.php?rid=72</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>89</id>
+            <score>5 trên 5</score>
+            <reviewer>Cheat Code Central</reviewer>
+            <reviewedDate>08/25/05</reviewedDate>
+            <linkRating>http://www.cheatcc.com/xb/rev/halorev.html</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>24</id>
+        <name>Half-Life 2</name>
+        <link>https://www.gamerankings.com/pc/914642-half-life-2/index.html</link>
+        <pulisherAndReleaseDate>Valve Software/VU Games, 2004</pulisherAndReleaseDate>
+        <platform>PC</platform>
+        <overallScore>95.48%</overallScore>
+        <totalVote>86 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/9/6/5/43965_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>90</id>
+            <score>95 trên 100</score>
+            <reviewer>GamingTrend</reviewer>
+            <reviewedDate>10/30/05</reviewedDate>
+            <linkRating>http://www.gamingtrend.com/Reviews/review/review.php?ReviewID=297</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>91</id>
+            <score>9.6 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>06/06/06</reviewedDate>
+            <linkRating>http://www.darkzero.co.uk/index2.php?articleid=667</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>25</id>
+        <name>Grand Theft Auto III</name>
+        <link>https://www.gamerankings.com/ps2/466217-grand-theft-auto-iii/index.html</link>
+        <pulisherAndReleaseDate>DMA Design/Capcom, 2001</pulisherAndReleaseDate>
+        <platform>PS2</platform>
+        <overallScore>95.19%</overallScore>
+        <totalVote>69 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/4/9/12649_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>92</id>
+            <score>9 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>12/22/02</reviewedDate>
+            <linkRating>http://darkzero.co.uk/index2.php?articleid=22</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>93</id>
+            <score>9 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>01/01/99</reviewedDate>
+            <linkRating>http://www.honestgamers.com/73/playstation-2/grand-theft-auto-iii/review.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>94</id>
+            <score>97 trên 100</score>
+            <reviewer>GamingTrend</reviewer>
+            <reviewedDate>10/30/05</reviewedDate>
+            <linkRating>http://www.gamingtrend.com/Reviews/review/review.php?ReviewID=182</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>26</id>
+        <name>Portal 2</name>
+        <link>https://www.gamerankings.com/pc/991073-portal-2/index.html</link>
+        <pulisherAndReleaseDate>Valve Software, 2011</pulisherAndReleaseDate>
+        <platform>PC</platform>
+        <overallScore>95.16%</overallScore>
+        <totalVote>38 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/7/9/146279_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>95</id>
+            <score>9 trên 10</score>
+            <reviewer>GamingUnion</reviewer>
+            <reviewedDate>12/19/11</reviewedDate>
+            <linkRating>http://www.gamingunion.net/reviews/portal-2--482.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>96</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Industry News</reviewer>
+            <reviewedDate>06/29/11</reviewedDate>
+            <linkRating>http://www.gameindustry.com/review/item.asp?id=1370</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>97</id>
+            <score>10 trên 10</score>
+            <reviewer>GameCritics</reviewer>
+            <reviewedDate>05/08/11</reviewedDate>
+            <linkRating>http://www.gamecritics.com/richard-naik/portal-2-review</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>27</id>
+        <name>The Elder Scrolls V: Skyrim</name>
+        <link>https://www.gamerankings.com/xbox360/615803-the-elder-scrolls-v-skyrim/index.html</link>
+        <pulisherAndReleaseDate>Bethesda Game Studios/Bethesda Softworks, 2011</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>95.15%</overallScore>
+        <totalVote>75 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/6/5/174665_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>98</id>
+            <score>9 trên 10</score>
+            <reviewer>GamingUnion</reviewer>
+            <reviewedDate>12/19/11</reviewedDate>
+            <linkRating>http://www.gamingunion.net/reviews/the-elder-scrolls-v-skyrim--592.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>99</id>
+            <score>9 trên 10</score>
+            <reviewer>The Digital Fix</reviewer>
+            <reviewedDate>12/05/11</reviewedDate>
+            <linkRating>http://gaming.thedigitalfix.com/content/id/494/the-elder-scrolls-v-skyrim.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>100</id>
+            <score>10 trên 10</score>
+            <reviewer>EGM</reviewer>
+            <reviewedDate>01/05/12</reviewedDate>
+            <linkRating>http://www.egmnow.com/articles/reviews/egm-review-the-elder-scrolls-v-skyrim/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>101</id>
+            <score>96 trên 100</score>
+            <reviewer>New Game Network</reviewer>
+            <reviewedDate>03/26/12</reviewedDate>
+            <linkRating>http://www.newgamenetwork.com/article/573/elder-scrolls-v-skyrim-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>102</id>
+            <score>99 trên 100</score>
+            <reviewer>XboxAchievements</reviewer>
+            <reviewedDate>03/09/12</reviewedDate>
+            <linkRating>http://www.xbox360achievements.org/game/elder-scrolls-v/review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>28</id>
+        <name>The Last of Us</name>
+        <link>https://www.gamerankings.com/ps3/652686-the-last-of-us/index.html</link>
+        <pulisherAndReleaseDate>Naughty Dog/SCEE, 2013</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>95.09%</overallScore>
+        <totalVote>68 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/9/1/216291_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>103</id>
+            <score>9 trên 10</score>
+            <reviewer>Metro GameCentral</reviewer>
+            <reviewedDate>06/05/13</reviewedDate>
+            <linkRating>http://metro.co.uk/2013/06/05/the-last-of-us-review-clicking-together-3829335/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>104</id>
+            <score>9.8 trên 10</score>
+            <reviewer>Critical Hit</reviewer>
+            <reviewedDate>06/26/13</reviewedDate>
+            <linkRating>http://www.lazygamer.net/ps3/the-last-of-us-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>105</id>
+            <score>10 trên 10</score>
+            <reviewer>God is a Geek</reviewer>
+            <reviewedDate>06/04/13</reviewedDate>
+            <linkRating>http://www.godisageek.com/2013/06/the-last-of-us-review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>29</id>
+        <name>Metal Gear Solid 2: Sons of Liberty</name>
+        <link>https://www.gamerankings.com/ps2/913941-metal-gear-solid-2-sons-of-liberty/index.html</link>
+        <pulisherAndReleaseDate>KCEJ/Konami, 2001</pulisherAndReleaseDate>
+        <platform>PS2</platform>
+        <overallScore>95.09%</overallScore>
+        <totalVote>68 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/6/6/1/9661_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>106</id>
+            <score>10 trên 10</score>
+            <reviewer>ZTGD</reviewer>
+            <reviewedDate>06/30/05</reviewedDate>
+            <linkRating>http://www.ztgamedomain.com/view.php?rid=182</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>107</id>
+            <score>9.3 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>11/27/01</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?console_id=4&amp;review_id=26&amp;game_id=161</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>108</id>
+            <score>98 trên 100</score>
+            <reviewer>GamingTrend</reviewer>
+            <reviewedDate>10/29/05</reviewedDate>
+            <linkRating>http://www.gamingtrend.com/Reviews/review/review.php?ReviewID=181</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>30</id>
+        <name>Grand Theft Auto: San Andreas</name>
+        <link>https://www.gamerankings.com/ps2/914983-grand-theft-auto-san-andreas/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2004</pulisherAndReleaseDate>
+        <platform>PS2</platform>
+        <overallScore>95.08%</overallScore>
+        <totalVote>94 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/8/5/6/53856_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>109</id>
+            <score>85 trên 100</score>
+            <reviewer>GamingTrend</reviewer>
+            <reviewedDate>10/30/05</reviewedDate>
+            <linkRating>http://www.gamingtrend.com/Reviews/review/review.php?ReviewID=345</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>110</id>
+            <score>9.7 trên 10</score>
+            <reviewer>NZGamer</reviewer>
+            <reviewedDate>11/19/04</reviewedDate>
+            <linkRating>http://nzgamer.com/hub-ps2-reviews-68</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>111</id>
+            <score>10 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>09/14/07</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?review_id=6289&amp;platform=PlayStation+2&amp;abr=PS2&amp;gametitle=Grand+Theft+Auto%3A+San+</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>31</id>
+        <name>BioShock</name>
+        <link>https://www.gamerankings.com/xbox360/931329-bioshock/index.html</link>
+        <pulisherAndReleaseDate>Irrational Games/2K Games, 2007</pulisherAndReleaseDate>
+        <platform>X360</platform>
+        <overallScore>95.07%</overallScore>
+        <totalVote>101 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/8/5/1/63851_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>112</id>
+            <score>10 trên 10</score>
+            <reviewer>Destructoid</reviewer>
+            <reviewedDate>08/17/07</reviewedDate>
+            <linkRating>http://www.destructoid.com/destructoid-review-bioshock-38912.phtml&amp;amp;category=xbox360</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>113</id>
+            <score>97 trên 100</score>
+            <reviewer>XboxAchievements</reviewer>
+            <reviewedDate>08/01/07</reviewedDate>
+            <linkRating>http://www.xbox360achievements.org/game/bioshock/review/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>32</id>
+        <name>Grand Theft Auto V</name>
+        <link>https://www.gamerankings.com/pc/805606-grand-theft-auto-v/index.html</link>
+        <pulisherAndReleaseDate>Rockstar North/Rockstar Games, 2015</pulisherAndReleaseDate>
+        <platform>PC</platform>
+        <overallScore>95.07%</overallScore>
+        <totalVote>30 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/9/1/402391_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>114</id>
+            <score>10 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>05/04/15</reviewedDate>
+            <linkRating>http://darkzero.co.uk/game-reviews/grand-theft-auto-v-pc/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>115</id>
+            <score>7 trên 10</score>
+            <reviewer>CGMagazine</reviewer>
+            <reviewedDate>05/01/15</reviewedDate>
+            <linkRating>http://www.cgmagonline.com/reviews/grand-theft-auto-v-pc-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>116</id>
+            <score>A-</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>04/30/15</reviewedDate>
+            <linkRating>http://www.gaming-age.com/2015/04/grand-theft-auto-v-review-for-pc/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>117</id>
+            <score>5 trên 5</score>
+            <reviewer>DarkStation</reviewer>
+            <reviewedDate>07/02/15</reviewedDate>
+            <linkRating>http://www.darkstation.com/reviews/grand-theft-auto-v-2/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>118</id>
+            <score>5 trên 5</score>
+            <reviewer>ImpulseGamer</reviewer>
+            <reviewedDate>05/11/15</reviewedDate>
+            <linkRating>http://www.impulsegamer.com/gta-v-pc-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>119</id>
+            <score>9.2 trên 10</score>
+            <reviewer>Worthplaying</reviewer>
+            <reviewedDate>04/28/15</reviewedDate>
+            <linkRating>http://worthplaying.com/article/2015/4/28/reviews/95699/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>120</id>
+            <score>4.5 trên 5</score>
+            <reviewer>Digitally Downloaded</reviewer>
+            <reviewedDate>04/30/15</reviewedDate>
+            <linkRating>http://www.digitallydownloaded.net/2015/04/review-grand-theft-auto-v-pc.html</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>33</id>
+        <name>Gran Turismo</name>
+        <link>https://www.gamerankings.com/ps/197468-gran-turismo/index.html</link>
+        <pulisherAndReleaseDate>Polyphony Digital/SCEE, 1998</pulisherAndReleaseDate>
+        <platform>PS</platform>
+        <overallScore>94.95%</overallScore>
+        <totalVote>20 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/9/9/5/3995_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>121</id>
+            <score>8.6 trên 10</score>
+            <reviewer>GameSpot</reviewer>
+            <reviewedDate>01/15/98</reviewedDate>
+            <linkRating>http://www.gamespot.com/ps/driving/granturismo/review.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>122</id>
+            <score>97 trên 100</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>02/03/01</reviewedDate>
+            <linkRating>http://www.gaming-age.com/reviews/archive/old_reviews/psx/gt/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>123</id>
+            <score>10 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>05/23/04</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?console_id=8&amp;review_id=86&amp;game_id=564</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>34</id>
+        <name>Journey</name>
+        <link>https://www.gamerankings.com/ps4/827504-journey/index.html</link>
+        <pulisherAndReleaseDate>Tricky Pixels/SCEA, 2015</pulisherAndReleaseDate>
+        <platform>PS4</platform>
+        <overallScore>94.80%</overallScore>
+        <totalVote>25 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/0/6/4/426064_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>124</id>
+            <score>5 trên 5</score>
+            <reviewer>Game Revolution</reviewer>
+            <reviewedDate>08/04/15</reviewedDate>
+            <linkRating>http://www.gamerevolution.com/review/journey-ps4</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>125</id>
+            <score>9.5 trên 10</score>
+            <reviewer>NZGamer</reviewer>
+            <reviewedDate>08/03/15</reviewedDate>
+            <linkRating>http://nzgamer.com/reviews/2312/journey.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>126</id>
+            <score>10 trên 10</score>
+            <reviewer>PSNation</reviewer>
+            <reviewedDate>08/03/15</reviewedDate>
+            <linkRating>http://www.psnation.com/2015/07/31/review-journey-ps4/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>127</id>
+            <score>9 trên 10</score>
+            <reviewer>gamesTM</reviewer>
+            <reviewedDate>09/24/15</reviewedDate>
+            <linkRating>http://www.gamestm.co.uk/reviews/journey-ps4-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>128</id>
+            <score>9.8 trên 10</score>
+            <reviewer>Gaming Nexus</reviewer>
+            <reviewedDate>09/01/15</reviewedDate>
+            <linkRating>http://www.gamingnexus.com/Article/4881/Journey/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>129</id>
+            <score>9 trên 10</score>
+            <reviewer>The Digital Fix</reviewer>
+            <reviewedDate>08/04/15</reviewedDate>
+            <linkRating>http://gaming.thedigitalfix.com/content/id/3100/journey.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>130</id>
+            <score>5 trên 5</score>
+            <reviewer>Digitally Downloaded</reviewer>
+            <reviewedDate>07/31/15</reviewedDate>
+            <linkRating>http://www.digitallydownloaded.net/2015/07/review-journey-sony-playstation-4.html</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>35</id>
+        <name>Ninja Gaiden Black</name>
+        <link>https://www.gamerankings.com/xbox/928401-ninja-gaiden-black/index.html</link>
+        <pulisherAndReleaseDate>Team Ninja/Tecmo, 2005</pulisherAndReleaseDate>
+        <platform>XBOX</platform>
+        <overallScore>94.76%</overallScore>
+        <totalVote>38 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/9/0/3/68903_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>131</id>
+            <score>98 trên 100</score>
+            <reviewer>Game Over Online</reviewer>
+            <reviewedDate>11/14/05</reviewedDate>
+            <linkRating>http://www.game-over.net/reviews.php?page=xboxreviews&amp;id=256</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>36</id>
+        <name>Tony Hawk''s Pro Skater 2</name>
+        <link>https://www.gamerankings.com/ps/199061-tony-hawks-pro-skater-2/index.html</link>
+        <pulisherAndReleaseDate>Neversoft Entertainment/Success, 2000</pulisherAndReleaseDate>
+        <platform>PS</platform>
+        <overallScore>94.75%</overallScore>
+        <totalVote>28 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/3/1/3/8313_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>132</id>
+            <score>A</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>09/16/04</reviewedDate>
+            <linkRating>http://www.gaming-age.com/cgi-bin/reviews/review.pl?sys=psx&amp;game=tonyhawk2</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>133</id>
+            <score>4 trên 5</score>
+            <reviewer>Gameplanet</reviewer>
+            <reviewedDate>09/28/00</reviewedDate>
+            <linkRating>http://www.gameplanet.co.nz/mag.dyn/Reviews/2226.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>134</id>
+            <score>5 trên 5</score>
+            <reviewer>Cheat Code Central</reviewer>
+            <reviewedDate>08/12/05</reviewedDate>
+            <linkRating>http://platinum.cheatcc.com/free/psxreviews/thps2rev.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>135</id>
+            <score>9.9 trên 10</score>
+            <reviewer>GameSpot</reviewer>
+            <reviewedDate>09/20/00</reviewedDate>
+            <linkRating>http://www.gamespot.com/ps/sports/tonyhawksproskater2/review.html</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>37</id>
+        <name>LittleBigPlanet</name>
+        <link>https://www.gamerankings.com/ps3/938583-littlebigplanet/index.html</link>
+        <pulisherAndReleaseDate>Medi</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>94.75%</overallScore>
+        <totalVote>77 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/8/1/84281_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>136</id>
+            <score>10 trên 10</score>
+            <reviewer>PlayStation LifeStyle</reviewer>
+            <reviewedDate>11/01/08</reviewedDate>
+            <linkRating>http://playstationlifestyle.net/2008/11/06/psls-littlebigplanet-review/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>137</id>
+            <score>9.5 trên 10</score>
+            <reviewer>Playstation Universe</reviewer>
+            <reviewedDate>10/01/08</reviewedDate>
+            <linkRating>http://www.psu.com/LittleBigPlanet-Review--a005132-p0.php</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>38</id>
+        <name>GoldenEye 007</name>
+        <link>https://www.gamerankings.com/n64/197462-goldeneye-007/index.html</link>
+        <pulisherAndReleaseDate>Rare Ltd./Nintendo, 1997</pulisherAndReleaseDate>
+        <platform>N64</platform>
+        <overallScore>94.70%</overallScore>
+        <totalVote>21 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/9/7/2/3972_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>138</id>
+            <score>91 trên 100</score>
+            <reviewer>Gaming Age</reviewer>
+            <reviewedDate>09/19/04</reviewedDate>
+            <linkRating>http://www.gaming-age.com/reviews/archive/old_reviews/n64/goldeneye/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>139</id>
+            <score>9 trên 10</score>
+            <reviewer>HonestGamers</reviewer>
+            <reviewedDate>06/13/04</reviewedDate>
+            <linkRating>http://www.honestgamers.com/systems/content.php?console_id=7&amp;review_id=150&amp;game_id=1538</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>140</id>
+            <score>9 trên 10</score>
+            <reviewer>Cubed3</reviewer>
+            <reviewedDate>08/18/03</reviewedDate>
+            <linkRating>http://www.cubed3.com/review/65/</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>141</id>
+            <score>8 trên 10</score>
+            <reviewer>Nintendo Life</reviewer>
+            <reviewedDate>10/08/11</reviewedDate>
+            <linkRating>http://retro.nintendolife.com/reviews/2011/10/goldeneye_007_retro</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>39</id>
+        <name>Red Dead Redemption</name>
+        <link>https://www.gamerankings.com/ps3/957923-red-dead-redemption/index.html</link>
+        <pulisherAndReleaseDate>Rockstar San Diego/Take-Two Interactive, 2010</pulisherAndReleaseDate>
+        <platform>PS3</platform>
+        <overallScore>94.66%</overallScore>
+        <totalVote>50 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/2/2/4/109224_thumb.jpg</thumbnail>
+        <gameRating>
+            <id>142</id>
+            <score>96 trên 100</score>
+            <reviewer>The Gamers Temple</reviewer>
+            <reviewedDate>06/20/10</reviewedDate>
+            <linkRating>http://www.gamerstemple.com/vgreview.asp?r=5047</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>143</id>
+            <score>9 trên 10</score>
+            <reviewer>Push Square</reviewer>
+            <reviewedDate>02/07/12</reviewedDate>
+            <linkRating>http://www.pushsquare.com/reviews/ps3/red_dead_redemption</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>144</id>
+            <score>95 trên 100</score>
+            <reviewer>Game Over Online</reviewer>
+            <reviewedDate>07/02/10</reviewedDate>
+            <linkRating>http://www.game-over.com/reviews/ps3/Red_Dead_Redemption.html</linkRating>
+        </gameRating>
+        <gameRating>
+            <id>145</id>
+            <score>8 trên 10</score>
+            <reviewer>DarkZero</reviewer>
+            <reviewedDate>07/09/10</reviewedDate>
+            <linkRating>http://darkzero.co.uk/game-reviews/red-dead-redemption-xbox-360-ps3/</linkRating>
+        </gameRating>
+    </game>
+    <game>
+        <id>40</id>
+        <name>Grand Theft Auto Double Pack</name>
+        <link>https://www.gamerankings.com/xbox/468550-grand-theft-auto-double-pack/index.html</link>
+        <pulisherAndReleaseDate>Rockstar Vienna/Rockstar Games, 2003</pulisherAndReleaseDate>
+        <platform>XBOX</platform>
+        <overallScore>94.60%</overallScore>
+        <totalVote>50 đánh giá</totalVote>
+        <thumbnail>https://gamefaqs.akamaized.net/box/7/8/4/12784_thumb.jpg</thumbnail>
+    </game>
+</gameList>

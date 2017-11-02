@@ -58,6 +58,9 @@ public class DispatcherServlet extends HttpServlet {
 
             }
 
+        }catch (Exception e) {
+            log(e.getMessage());
+
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
