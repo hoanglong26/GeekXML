@@ -54,6 +54,9 @@
                                     <xsl:attribute name="data-reviewdate">
                                         <xsl:value-of select="./*[local-name()='reviewedDate']" />
                                     </xsl:attribute>
+                                    <xsl:attribute name="data-linkrating">
+                                        <xsl:value-of select="./*[local-name()='linkRating']" />
+                                    </xsl:attribute>
                                 </input>
                             </xsl:for-each>
                         </td>

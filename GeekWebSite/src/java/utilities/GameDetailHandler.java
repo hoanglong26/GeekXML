@@ -19,14 +19,12 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 public class GameDetailHandler extends DefaultHandler {
 
-    String description;
     List<GameRating> list = new ArrayList<GameRating>();
     GameRating gameRating;
     boolean inGameRatingRow = false;
     boolean inReviewerRow = false;
     boolean inDateRow = false;
     boolean inScoreRow = false;
-    boolean inDescriptionRow = false;
 
     public List<GameRating> getList() {
         return list;
@@ -36,24 +34,18 @@ public class GameDetailHandler extends DefaultHandler {
         this.list = list;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     @Override
     public void startElement(String uri, String localName, String qName, Attributes atrbts) throws SAXException {
-        if (qName.equalsIgnoreCase("description")) {
-            inDescriptionRow = true;
-        } else if (qName.equalsIgnoreCase("tr")) {
+        if (qName.equalsIgnoreCase("tr")) {
             gameRating = new GameRating();
             gameRating.setId(list.size());
-            inGameRatingRow=true;
+            inGameRatingRow = true;
         } else if (qName.equalsIgnoreCase("a")) {
-            inReviewerRow = true;
+            if (atrbts.getValue("target") != null && atrbts.getValue("target").equals("_new")) {
+                gameRating.setLinkRating(atrbts.getValue("href"));
+            } else {
+                inReviewerRow = true;
+            }
         } else if (qName.equalsIgnoreCase("date")) {
             inDateRow = true;
         } else if (qName.equalsIgnoreCase("rating")) {
@@ -72,10 +64,7 @@ public class GameDetailHandler extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        if (inDescriptionRow) {
-            description = new String(ch, start, length);
-            inDescriptionRow = false;
-        } else if (inGameRatingRow && inReviewerRow) {
+        if (inGameRatingRow && inReviewerRow) {
             String reviewer = new String(ch, start, length);
             gameRating.setReviewer(reviewer);
             inReviewerRow = false;

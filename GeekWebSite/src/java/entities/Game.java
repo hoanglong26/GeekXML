@@ -70,9 +70,6 @@ public class Game implements Serializable {
     @Column(name = "TotalVote")
     @XmlElement(namespace = Const.gameNamespace)
     private String totalVote;
-    @Column(name = "Description")
-    @XmlElement(namespace = Const.gameNamespace)
-    private String description;
     @Column(name = "Thumbnail")
     @XmlElement(namespace = Const.gameNamespace)
     private String thumbnail;
@@ -159,14 +156,6 @@ public class Game implements Serializable {
     @Override
     public String toString() {
         return "dao.Game[ id=" + id + " ]";
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getPulisherAndReleaseDate() {

@@ -34,12 +34,9 @@ import utilities.Const;
 @XmlRootElement(namespace = Const.gameNamespace)
 @XmlAccessorType(XmlAccessType.FIELD)
 @NamedQueries({
-    @NamedQuery(name = "GameRating.findAll", query = "SELECT g FROM GameRating g")
-    ,
-    @NamedQuery(name = "GameRating.findById", query = "SELECT g FROM GameRating g WHERE g.id = :id")
-    ,
-    @NamedQuery(name = "GameRating.findByReviewedDate", query = "SELECT g FROM GameRating g WHERE g.reviewedDate = :reviewedDate")
-    ,
+    @NamedQuery(name = "GameRating.findAll", query = "SELECT g FROM GameRating g"),
+    @NamedQuery(name = "GameRating.findById", query = "SELECT g FROM GameRating g WHERE g.id = :id"),
+    @NamedQuery(name = "GameRating.findByReviewedDate", query = "SELECT g FROM GameRating g WHERE g.reviewedDate = :reviewedDate"),
     @NamedQuery(name = "GameRating.findByScore", query = "SELECT g FROM GameRating g WHERE g.score = :score")})
 public class GameRating implements Serializable {
 
@@ -59,6 +56,9 @@ public class GameRating implements Serializable {
     @Column(name = "ReviewedDate")
     @XmlElement(namespace = Const.gameNamespace)
     private String reviewedDate;
+    @Column(name = "LinkRating")
+    @XmlElement(namespace = Const.gameNamespace)
+    private String linkRating;
     @JoinColumn(name = "GameId", referencedColumnName = "ID")
     @ManyToOne(cascade = CascadeType.ALL)
     @XmlTransient
@@ -134,6 +134,14 @@ public class GameRating implements Serializable {
 
     public void setScore(String score) {
         this.score = score;
+    }
+
+    public String getLinkRating() {
+        return linkRating;
+    }
+
+    public void setLinkRating(String linkRating) {
+        this.linkRating = linkRating;
     }
 
 }

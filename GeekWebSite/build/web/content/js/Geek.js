@@ -12,8 +12,7 @@ function hightlightMenuItem(itemName) {
     }
 }
 
-
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 40px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction();
 };
@@ -39,12 +38,6 @@ function scrollToTop(scrollDuration) {
             clearInterval(scrollInterval);
     }, 15);
 }
-
-//// When the user clicks on the button, scroll to the top of the document
-//function topFunction() {
-//    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-//    document.documentElement.scrollTop = 0; // For IE and Firefox
-//}
 
 function saveArticleListData(from, realPath, ele) {
     var savedData = sessionStorage.getItem("geek_list_article_from_" + from);
@@ -74,23 +67,14 @@ function saveArticleListData(from, realPath, ele) {
                 }
             }
         };
-    } else {
-//        loadMoreGame(ele, from);
-    }
+    } 
 }
 
 function loadMoreArticle(ele, from) {
-//    while (ele.firstChild) {
-//        ele.removeChild(ele.firstChild);
-//    }
-
     var d = document.createElement("div");
     d.innerHTML = sessionStorage.getItem("geek_list_article_from_" + from);
 
     ele.appendChild(d);
-//    bindingModalClick(true);
-//    scroll(0, 0);
-
 }
 
 function bindingModalClick(isLoadFromXSLT) {
@@ -138,7 +122,7 @@ function bindingModalClick(isLoadFromXSLT) {
             var arrInput = tdNameChild.getElementsByTagName("input");
             for (var i = 0; i < arrInput.length; i++) {
                 ratingList.innerHTML += "<tr>\n" +
-                        "<td>" + arrInput[i].dataset.reviewer + "</td>" +
+                        "<td><a href='"+arrInput[i].dataset.linkrating+"' style='color: #1e1eb5;'>" + arrInput[i].dataset.reviewer + "</a></td>" +
                         "<td>" + arrInput[i].dataset.score + "</td>" +
                         "<td>" + arrInput[i].dataset.reviewdate + "</td>" +
                         "</tr>";
@@ -182,21 +166,15 @@ function saveGameListData(from, realPath, ele) {
                 }
             }
         };
-    } else {
-//        loadMoreGame(ele, from);
     }
 }
 
 function loadMoreGame(ele, from) {
-//    while (ele.firstChild) {
-//        ele.removeChild(ele.firstChild);
-//    }
 
     var d = document.createElement("tbody");
     d.innerHTML = ele.innerHTML + localStorage.getItem("geek_list_game_from_" + from);
     ele.replaceWith(d);
     bindingModalClick(true);
-//    scroll(0, 0);
 
 }
 
@@ -240,37 +218,4 @@ function initStorageTimeout(from) {
     } else {
         localStorage.setItem("geek_last_date_list_from_" + from, currentDate);
     }
-}
-
-
-
-
-function applyXSL(xml, realPath, xslFilePath, ele) {
-//    var xslPath = realPath + xslFilePath;
-//    loadData(xslPath);
-
-//    var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-//    xmlDoc.async = "false";
-//    xmlDoc.loadXML(xml);
-//    console.log(xmlDoc);
-
-//    xhttp.onreadystatechange = function () {
-//        if (this.readyState === 4 && this.status === 200) {
-//            xsl = this.responseXML;
-
-//            xsltProcessor = new XSLTProcessor();
-//            xsltProcessor.importStylesheet(xsl);
-//
-//            var oParser = new DOMParser();
-//            var oDOM = oParser.parseFromString(xml, "text/xml");
-//            console.log(oDOM);
-//            var resultDocument = xsltProcessor.transformToFragment(oDOM, document);
-//            console.log(resultDocument);
-//
-//            var htmlResult = resultDocument;
-////            document.getElementById(eleId).innerHTML = '';
-//            ele.appendChild(htmlResult);
-//        }
-//    }
-//    ;
 }

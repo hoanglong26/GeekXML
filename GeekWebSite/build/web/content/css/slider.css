@@ -31,12 +31,10 @@
 
 .accordian ul li:hover {width: 490px;}
 
-
 .accordian li img {
     display: block;
 }
 
-/*Image title styles*/
 .image_title {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;

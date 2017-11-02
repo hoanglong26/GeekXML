@@ -20,7 +20,6 @@ and open the template in the editor.
             <xs:element name="platform" type="xs:string"/>
             <xs:element name="overallScore" type="xs:string"/>
             <xs:element name="totalVote" type="xs:string"/>
-            <xs:element name="description" type="xs:string"/>
             <xs:element name="thumbnail" type="xs:string"/>
             <xs:any minOccurs="0" namespace="##any" processContents="skip" maxOccurs="20"/>
         </xs:sequence>

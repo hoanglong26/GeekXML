@@ -32,8 +32,6 @@
                 <div>
                     <div class="export-zone">
                         <button class="btn btnExport" style="background-color: #1565C0" onclick="saveToPDF(20);">In ra PDF</button>
-                        <!--<button class="btn btnExport" style="background-color: #00C853">In ra Excel</button>-->
-
                     </div>
 
                     <table id="gameListTable">

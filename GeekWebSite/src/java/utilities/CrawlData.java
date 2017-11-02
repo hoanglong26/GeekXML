@@ -24,8 +24,6 @@ import static java.rmi.server.LogStream.log;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletContext;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -557,10 +555,7 @@ public class CrawlData {
                     String name = item.getName().replaceAll("'", "''");
                     item.setName(name.trim());
                     gameName = name.trim();
-                    item.setDescription(tmp.getDescription().replaceAll("'", "''").trim());
-//                GameDAO.createGame2(item);
-//                    item.setGameRatingList(tmp.getGameRatingList());
-//                    String t = Utilities.marshallerToString(item);
+
                     //validate game data by using schema
                     boolean isValidGame = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(item), gameDataFilepath);
                     if (isValidGame) {
@@ -573,11 +568,7 @@ public class CrawlData {
                             boolean isValidRating = Utilities.validateXMLBeforeSaveToDatabase(Utilities.marshallerToString(aRating), gameRatingDataFilepath);
                             if (isValidRating) {
                                 item.addRating(aRating);
-//                                GameRatingDAO.createGameRating(aRating);
                             }
-//                            else{
-//                                System.out.println(document);
-//                            }
                         }
                         GameDAO.createGame(item);
                     }
@@ -585,7 +576,7 @@ public class CrawlData {
                 }
 
             } catch (Exception e) {
-//                e.printStackTrace();
+                e.printStackTrace();
 //                System.out.println(pageNum);
 //                System.out.println(gameName);
 //                Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
@@ -598,7 +589,7 @@ public class CrawlData {
 
     public Game saxParserForGameDetail(Game aGame) {
         Game result = new Game();
-
+        
         try {
             URL url = new URL(aGame.getLink());
             URLConnection conn = url.openConnection();
@@ -610,7 +601,6 @@ public class CrawlData {
             String line;
 
             String document = "<root>";
-            boolean inDescriptionRow = false;
             boolean inReviewRow = false;
 
             while ((line = in.readLine()) != null) {
@@ -619,8 +609,7 @@ public class CrawlData {
 
                 if (line.contains("<div") && line.contains("class=\"details\"")
                         && !line.contains("style=\"text-align:center\"")) {
-                    inDescriptionRow = true;
-                    document += "<description>";
+                    line = "";
                 }
 
                 if (line.contains("<tbody")) {
@@ -628,29 +617,25 @@ public class CrawlData {
                     document += "<ratings>";
                 }
 
-                if (inDescriptionRow) {
-                    document += line;
-                    if (line.contains("</div>")) {
-                        inDescriptionRow = false;
-                        document += "</description>";
-                    }
-                }
-
                 if (inReviewRow) {
-                    if (line.contains("out of")) {
-                        line = line.replace("td", "rating");
-                    }
 
-                    if (line.indexOf("<td>") != -1 && line.indexOf("</td>") != -1) {
+                    if (line.contains("<td>") && line.contains("</td>")) {
+                        String infoString = line.substring(line.indexOf("<td>") + 4, line.indexOf("</td>"));
+
+                        //get review link
+                        if (infoString.contains("Review")) {
+                            line = line.replace("td", "linkRating");
+                        }
+
+                        //get rating string
+                        if (infoString.contains("out of") || infoString.matches("[A-D][+-]?|A|B|C|D")) {
+                            line = line.replace("td", "rating");
+                        }
+
                         //get date string and check valid
-                        String dateString = line.substring(line.indexOf("<td>") + 4, line.indexOf("</td>"));
-                        if (dateString.matches("^\\d{2}\\/\\d{2}\\/\\d{2}$")) {
+                        if (infoString.matches("^\\d{2}\\/\\d{2}\\/\\d{2}$")) {
                             line = line.replace("td", "date");
                         }
-                    }
-
-                    if (line.contains(">Review")) {
-                        line = "";
                     }
 
                     document += line;
@@ -671,10 +656,9 @@ public class CrawlData {
             GameDetailHandler gameDetailHandler = new GameDetailHandler();
             is.reset();
             saxParser.parse(is, gameDetailHandler);
-            result.setDescription(gameDetailHandler.getDescription());
             result.setGameRatingList(gameDetailHandler.getList());
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
 //            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
             log(e.getMessage());
 

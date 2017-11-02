@@ -55,44 +55,6 @@ public class GameDAO {
         return aGame.getId();
     }
 
-    public static int createGame2(Game aGame) {
-        EntityManager em = Utilities.getEntityManager();
-        String query = "INSERT INTO [GeekDB].[dbo].[Game]\n"
-                + "           ([Name]\n"
-                + "           ,[Description]\n"
-                + "           ,[PulisherAndReleaseDate]\n"
-                + "           ,[Platform]\n"
-                + "           ,[OverallScore]\n"
-                + "           ,[Thumbnail]\n"
-                + "           ,[TotalVote]\n"
-                + "           ,[Link])\n"
-                + "     VALUES\n"
-                + "('" + aGame.getName() + "',\n"
-                + "'" + aGame.getDescription() + "',\n"
-                + "'" + aGame.getPulisherAndReleaseDate() + "',\n"
-                + "'" + aGame.getPlatform() + "',\n"
-                + "'" + aGame.getOverallScore() + "',\n"
-                + "'" + aGame.getThumbnail() + "',\n"
-                + "'" + aGame.getTotalVote() + "',\n"
-                + "'" + aGame.getLink() + "')";
-        try {
-            em.getTransaction().begin();
-            em.createNativeQuery(query).executeUpdate();
-            em.flush();
-            em.getTransaction().commit();
-
-        } catch (Exception e) {
-//            e.printStackTrace();
-//            Logger.getLogger(Utilities.class.getName()).log(Level.SEVERE, null, e);
-            log(e.getMessage());
-
-        } finally {
-            em.close();
-        }
-
-        return aGame.getId();
-    }
-
     public static List<Game> getAllGame() {
         EntityManager em = Utilities.getEntityManager();
         try {

@@ -17,6 +17,7 @@ and open the template in the editor.
             <xs:element name="score" type="xs:string"/>
             <xs:element name="reviewer" type="xs:string"/>
             <xs:element name="reviewedDate" type="xs:string"/>
+            <xs:element name="linkRating" type="xs:string"/>
         </xs:all>
     </xs:complexType>
 </xs:schema>
